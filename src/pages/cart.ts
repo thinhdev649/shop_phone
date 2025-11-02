@@ -1,6 +1,7 @@
 // Shopping cart page
 import { renderHeader, updateCartBadge } from '../components/header';
 import { cartManager } from '../utils/cart';
+import { router } from '../utils/router';
 
 export function renderCartPage(): void {
   const app = document.querySelector<HTMLDivElement>('#app');
@@ -154,7 +155,7 @@ function setupEventListeners(): void {
   // Checkout button
   const checkoutBtn = document.getElementById('checkout-btn');
   checkoutBtn?.addEventListener('click', () => {
-    alert('Checkout functionality will be implemented soon!');
+    router.navigate('/checkout');
   });
 
   // Subscribe to cart changes
