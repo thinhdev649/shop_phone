@@ -336,6 +336,12 @@ function setupCheckoutListeners(): void {
     e.preventDefault();
     
     const formData = new FormData(form);
+    const cart = cartManager.getCart();
+    const subtotal = cart.total;
+    const shipping = subtotal >= 100 ? 0 : 10;
+    const tax = subtotal * 0.1;
+    const total = subtotal + shipping + tax;
+    
     const orderData = {
       contact: {
         email: formData.get('email'),
@@ -354,15 +360,15 @@ function setupCheckoutListeners(): void {
       payment: {
         method: formData.get('paymentMethod'),
       },
-      items: cartManager.getCart().items,
-      total: cartManager.getCart().total,
+      items: cart.items,
+      total: total,
     };
 
     // In a real application, this would send to a backend API
     console.log('Order placed:', orderData);
     
     // Show success message
-    alert(`✅ Order placed successfully!\n\nOrder Total: $${(cartManager.getCart().total * 1.1 + (cartManager.getCart().total >= 100 ? 0 : 10)).toFixed(2)}\n\nThank you for your purchase!`);
+    alert(`✅ Order placed successfully!\n\nOrder Total: $${total.toFixed(2)}\n\nThank you for your purchase!`);
     
     // Clear cart and redirect to home
     cartManager.clearCart();
