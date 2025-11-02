@@ -6,6 +6,7 @@ import { renderBrandsPage } from './pages/brands'
 import { renderPhonesPage } from './pages/phones'
 import { renderPhoneDetailPage } from './pages/phoneDetail'
 import { renderCartPage } from './pages/cart'
+import { renderCheckoutPage } from './pages/checkout'
 
 // Define routes
 router.addRoute('/', () => {
@@ -30,6 +31,10 @@ router.addRoute('/phone/:phoneId', ({ phoneId }) => {
 
 router.addRoute('/cart', () => {
   renderCartPage()
+})
+
+router.addRoute('/checkout', () => {
+  renderCheckoutPage()
 })
 
 // Start the router
