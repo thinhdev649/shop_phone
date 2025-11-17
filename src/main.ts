@@ -7,6 +7,8 @@ import { renderPhonesPage } from './pages/phones'
 import { renderPhoneDetailPage } from './pages/phoneDetail'
 import { renderCartPage } from './pages/cart'
 import { renderCheckoutPage } from './pages/checkout'
+import { renderCategoriesPage } from './pages/categories'
+import { renderCategoryProductsPage } from './pages/categoryProducts'
 
 // Define routes
 router.addRoute('/', () => {
@@ -35,6 +37,15 @@ router.addRoute('/cart', () => {
 
 router.addRoute('/checkout', () => {
   renderCheckoutPage()
+})
+
+// New routes for API integration
+router.addRoute('/categories', () => {
+  renderCategoriesPage()
+})
+
+router.addRoute('/category/:categoryId', ({ categoryId }) => {
+  renderCategoryProductsPage(categoryId)
 })
 
 // Start the router

@@ -35,3 +35,28 @@ export interface Cart {
   items: CartItem[];
   total: number;
 }
+
+// API Response types
+export interface Category {
+  id: string;
+  name: string;
+  description?: string;
+  image?: string;
+}
+
+export interface ApiResponse<T> {
+  success: boolean;
+  data: T;
+  message?: string;
+}
+
+export interface PaginatedResponse<T> {
+  success: boolean;
+  data: {
+    items: T[];
+    total: number;
+    page: number;
+    pageSize: number;
+  };
+  message?: string;
+}
