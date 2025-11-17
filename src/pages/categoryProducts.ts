@@ -1,6 +1,5 @@
 // Category products page - demonstrates API 2: Get products by category
 import { apiService } from '../api/apiService';
-import { mockAPI } from '../api/mockApi';
 import type { Phone } from '../types';
 import { renderHeader, updateCartBadge } from '../components/header';
 import { cartManager } from '../utils/cart';
@@ -15,15 +14,23 @@ export async function renderCategoryProductsPage(categoryId: string): Promise<vo
   try {
     // API 2: Get list of products by category
     const products = await apiService.getProductsByCategory(categoryId);
-    const category = await apiService.getCategoryById(categoryId);
+    let categoryName = categoryId;
+    let categoryDescription = 'Browse products in this category';
+    try {
+      const category = await apiService.getCategoryById(categoryId);
+      categoryName = category?.name ?? categoryId;
+      categoryDescription = category?.description ?? categoryDescription;
+    } catch (_) {
+      // If category details endpoint is unavailable, fall back to ID
+    }
 
     app.innerHTML = `
       ${renderHeader()}
       <main class="main">
         <section class="page-header">
           <div class="container">
-            <h1 class="page-title">${category.name}</h1>
-            <p class="page-subtitle">${category.description || 'Browse products in this category'}</p>
+            <h1 class="page-title">${categoryName}</h1>
+            <p class="page-subtitle">${categoryDescription}</p>
           </div>
         </section>
 
@@ -45,7 +52,7 @@ export async function renderCategoryProductsPage(categoryId: string): Promise<vo
     `;
 
     updateCartBadge();
-    setupEventListeners();
+    setupEventListeners(products);
   } catch (error) {
     app.innerHTML = `
       ${renderHeader()}
@@ -82,14 +89,14 @@ function renderProductCard(product: Phone): string {
   `;
 }
 
-function setupEventListeners(): void {
+function setupEventListeners(products: Phone[]): void {
   document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
     btn.addEventListener('click', async (e) => {
       const button = e.target as HTMLButtonElement;
       const phoneId = button.dataset.phoneId;
       if (!phoneId) return;
 
-      const phone = await mockAPI.getPhoneById(phoneId);
+      const phone = products.find(p => p.id === phoneId);
       if (phone) {
         cartManager.addItem(phone);
         button.textContent = 'Added! ✓';

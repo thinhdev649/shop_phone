@@ -1,6 +1,6 @@
-// Brands listing page
-import { mockAPI } from '../api/mockApi';
-import type {Brand} from '../types.ts';
+// Brands listing page - using real API categories
+import { apiService } from '../api/apiService';
+import type { Category } from '../types';
 import { renderHeader, updateCartBadge } from '../components/header';
 
 export async function renderBrandsPage(): Promise<void> {
@@ -11,7 +11,7 @@ export async function renderBrandsPage(): Promise<void> {
   updateCartBadge();
 
   try {
-    const brands = await mockAPI.getBrands();
+    const categories = await apiService.getCategories();
 
     app.innerHTML = `
       ${renderHeader()}
@@ -26,7 +26,7 @@ export async function renderBrandsPage(): Promise<void> {
         <section class="section">
           <div class="container">
             <div class="brands-grid-large">
-              ${brands.map(brand => renderBrandCard(brand)).join('')}
+              ${categories.map(category => renderBrandCard(category)).join('')}
             </div>
           </div>
         </section>
@@ -40,12 +40,17 @@ export async function renderBrandsPage(): Promise<void> {
   }
 }
 
-function renderBrandCard(brand: Brand): string {
+function renderBrandCard(category: Category): string {
+  // Use iconLink as image if available, otherwise show first letter
+  const brandLogo = category.iconLink
+    ? `<img src="${category.iconLink}" alt="${category.name}" style="width: 80px; height: 80px; object-fit: contain;">`
+    : `<div style="font-size: 48px;">${category.name.charAt(0).toUpperCase()}</div>`;
+
   return `
-    <a href="/brand/${brand.id}" data-link class="brand-card-large">
-      <div class="brand-logo-large">${brand.logo}</div>
-      <h3 class="brand-name">${brand.name}</h3>
-      <p class="brand-description">${brand.description}</p>
+    <a href="/brand/${category.code}" data-link class="brand-card-large">
+      <div class="brand-logo-large">${brandLogo}</div>
+      <h3 class="brand-name">${category.name}</h3>
+      <p class="brand-description">${category.description || 'View all products'}</p>
       <span class="brand-link">View Phones →</span>
     </a>
   `;

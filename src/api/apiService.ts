@@ -1,5 +1,5 @@
 // Real API service to connect to backend
-import type { Category, Phone, ApiResponse, PaginatedResponse } from '../types';
+import type { Category, Phone, ApiResponse } from '../types';
 
 const API_BASE_URL = 'https://test.nicehairvietnam.com';
 
@@ -27,11 +27,11 @@ class ApiService {
 
   /**
    * API 1: Get list of all product categories
-   * Endpoint: GET /api/categories
+   * Endpoint: GET /api/category
    */
   async getCategories(): Promise<Category[]> {
     try {
-      const response = await this.fetchApi<ApiResponse<Category[]>>('/api/categories');
+      const response = await this.fetchApi<ApiResponse<Category[]>>('/api/category');
       return response.data;
     } catch (error) {
       console.error('Error fetching categories:', error);
@@ -41,14 +41,32 @@ class ApiService {
 
   /**
    * API 2: Get list of products by category ID
-   * Endpoint: GET /api/categories/{categoryId}/products
+   * Endpoint: GET /api/list-product-by-category/{categoryId}
    */
-  async getProductsByCategory(categoryId: string, page: number = 1, pageSize: number = 20): Promise<Phone[]> {
+  async getProductsByCategory(categoryId: string): Promise<Phone[]> {
     try {
-      const response = await this.fetchApi<PaginatedResponse<Phone>>(
-        `/api/categories/${categoryId}/products?page=${page}&pageSize=${pageSize}`
+      const response = await this.fetchApi<ApiResponse<any[]>>(
+        `/api/list-product-by-category/${categoryId}`
       );
-      return response.data.items;
+      const items = Array.isArray(response?.data) ? response.data : [];
+      return items.map((item: any) => ({
+        id: item.code,
+        name: item.name,
+        brand: categoryId,
+        price: Number(item.priceShow) || 0,
+        image: item.iconLink,
+        description: `${item.productDisplay || ''} ${item.productStorage || ''}`.trim(),
+        specs: {
+          screen: item.productDisplay || '',
+          cpu: '',
+          ram: item.productStorage || '',
+          storage: item.productStorage || '',
+          camera: '',
+          battery: '',
+        },
+        inStock: true,
+        featured: false,
+      }));
     } catch (error) {
       console.error(`Error fetching products for category ${categoryId}:`, error);
       throw error;
