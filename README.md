@@ -167,6 +167,26 @@ Shopping cart with:
 - Flexible grid layouts
 - Touch-friendly interfaces
 
+## Backend API Integration
+
+This project now includes integration with real backend APIs:
+
+### Product Category APIs
+Two APIs from "Danh mục sản phẩm" (Product Category) section:
+
+1. **Get Categories List** - `GET /api/categories`
+   - Fetches all product categories from backend
+   - Displays on `/categories` page
+
+2. **Get Products by Category** - `GET /api/categories/{categoryId}/products`
+   - Fetches products filtered by category
+   - Supports pagination
+   - Displays on `/category/:categoryId` page
+
+**Backend URL:** `https://test.nicehairvietnam.com`
+
+For detailed API documentation, see [API_INTEGRATION.md](./API_INTEGRATION.md)
+
 ## Future Enhancements
 
 Potential improvements:
