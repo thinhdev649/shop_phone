@@ -1,5 +1,5 @@
 // Real API service to connect to backend
-import type { Category, Phone, ApiResponse } from '../types';
+import type { Category, Phone, ApiResponse, ProductDetail } from '../types';
 
 const API_BASE_URL = 'https://test.nicehairvietnam.com';
 
@@ -83,6 +83,25 @@ class ApiService {
     } catch (error) {
       console.error(`Error fetching category ${categoryId}:`, error);
       throw error;
+    }
+  }
+
+  /**
+   * API 3: Get product detail by product code
+   * Endpoint: GET /api/product-detail/{code}
+   */
+  async getProductDetail(productCode: string): Promise<ProductDetail | null> {
+    try {
+      const response = await this.fetchApi<ApiResponse<ProductDetail>>(
+        `/api/product-detail/${productCode}`
+      );
+      if (response.success) {
+        return response.data;
+      }
+      return null;
+    } catch (error) {
+      console.error(`Error fetching product detail for ${productCode}:`, error);
+      return null;
     }
   }
 }

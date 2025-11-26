@@ -62,3 +62,34 @@ export interface PaginatedResponse<T> {
   };
   message?: string;
 }
+
+// Product Detail API types
+export interface TechnicalSpec {
+  key: string;
+  value: string;
+}
+
+export interface ProductVariant {
+  href: string;
+  name: string;
+  src: string;
+  price: number;
+  priority: number;
+}
+
+export interface ProductGalleryImage {
+  title: string;
+  alt: string;
+  src: string;
+  priority: number;
+}
+
+export interface ProductDetail {
+  name: string;
+  technicalContent: TechnicalSpec[];
+  boxLinked: string;
+  salePrice: number;
+  basePrice: number;
+  variants: ProductVariant[];
+  boxGallery: ProductGalleryImage[];
+}
