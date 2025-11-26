@@ -1,6 +1,7 @@
 // Homepage
 import { mockAPI } from '../api/mockApi';
-import type { Brand, Phone } from '../types.ts';
+import { apiService } from '../api/apiService';
+import type { Phone, Category } from '../types.ts';
 import { renderHeader, updateCartBadge } from '../components/header';
 import { cartManager } from '../utils/cart';
 
@@ -13,8 +14,9 @@ export async function renderHomePage(): Promise<void> {
   updateCartBadge();
 
   try {
-    const [brands, featuredPhones] = await Promise.all([
-      mockAPI.getBrands(),
+    // Fetch categories from API and featured phones from mock
+    const [categories, featuredPhones] = await Promise.all([
+      apiService.getCategories(),
       mockAPI.getFeaturedPhones()
     ]);
 
@@ -34,7 +36,7 @@ export async function renderHomePage(): Promise<void> {
           <div class="container">
             <h2 class="section-title">Shop by Brand</h2>
             <div class="brands-grid">
-              ${brands.map(brand => renderBrandCard(brand)).join('')}
+              ${categories.map(category => renderCategoryCard(category)).join('')}
             </div>
           </div>
         </section>
@@ -75,12 +77,16 @@ export async function renderHomePage(): Promise<void> {
   }
 }
 
-function renderBrandCard(brand: Brand): string {
+function renderCategoryCard(category: Category): string {
+  const categoryId = category.code || category.id;
   return `
-    <a href="/brand/${brand.id}" data-link class="brand-card">
-      <div class="brand-logo">${brand.logo}</div>
-      <h3 class="brand-name">${brand.name}</h3>
-      <p class="brand-description">${brand.description}</p>
+    <a href="/brand/${categoryId}" data-link class="brand-card">
+      <div class="brand-logo">
+        ${category.iconLink 
+          ? `<img src="${category.iconLink}" alt="${category.name}" class="brand-icon-img" loading="lazy">` 
+          : '📱'}
+      </div>
+      <h3 class="brand-name">${category.name}</h3>
     </a>
   `;
 }

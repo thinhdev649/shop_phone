@@ -52,13 +52,18 @@ export async function renderCategoriesPage(): Promise<void> {
 }
 
 function renderCategoryCard(category: Category): string {
+  // Use iconLink from API or fallback to image
+  const imageUrl = category.iconLink || category.image;
+  
   return `
     <div class="category-card">
-      ${category.image ? `<img src="${category.image}" alt="${category.name}" class="category-image" loading="lazy">` : ''}
+      <div class="category-icon-wrapper">
+        ${imageUrl ? `<img src="${imageUrl}" alt="${category.name}" class="category-icon" loading="lazy">` : '<div class="category-icon-placeholder">📱</div>'}
+      </div>
       <div class="category-info">
         <h3 class="category-name">${category.name}</h3>
         ${category.description ? `<p class="category-description">${category.description}</p>` : ''}
-        <button class="btn btn-primary view-products-btn" data-category-id="${category.id}">
+        <button class="btn btn-primary view-products-btn" data-category-id="${category.code || category.id}">
           View Products
         </button>
       </div>
@@ -73,8 +78,8 @@ function setupEventListeners(): void {
       const categoryId = button.dataset.categoryId;
       if (!categoryId) return;
 
-      // Navigate to category products page
-      window.history.pushState({}, '', `/category/${categoryId}`);
+      // Navigate to brand page (which shows products by category)
+      window.history.pushState({}, '', `/brand/${categoryId}`);
       window.dispatchEvent(new PopStateEvent('popstate'));
     });
   });
