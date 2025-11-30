@@ -14,9 +14,8 @@ export function renderHeader(): string {
           </a>
           
           <nav class="nav">
-            <a href="/" data-link class="nav-link">Home</a>
-            <a href="/brands" data-link class="nav-link">Brands</a>
-            <a href="/phones" data-link class="nav-link">All Phones</a>
+            <a href="/" data-link class="nav-link">Trang chủ</a>
+            <a href="/phones" data-link class="nav-link">Tất cả điện thoại</a>
           </nav>
           
           <div class="header-actions">

@@ -1,7 +1,7 @@
 // Real API service to connect to backend
 import type { Category, Phone, ApiResponse, ProductDetail } from '../types';
 
-const API_BASE_URL = 'https://test.nicehairvietnam.com';
+const API_BASE_URL = ''; // Use relative path to leverage Vite proxy
 
 class ApiService {
   private async fetchApi<T>(endpoint: string, options?: RequestInit): Promise<T> {

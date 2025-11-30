@@ -16,58 +16,57 @@ export function renderCheckoutPage(): void {
   }
 
   const subtotal = cart.total;
-  const shipping = subtotal >= 100 ? 0 : 10;
-  const tax = subtotal * 0.1;
-  const total = subtotal + shipping + tax;
+  const shipping = subtotal >= 2000000 ? 0 : 30000;
+  const total = subtotal + shipping;
 
   app.innerHTML = `
     ${renderHeader()}
     <main class="main">
       <div class="container">
         <div class="breadcrumb">
-          <a href="/" data-link>Home</a>
+          <a href="/" data-link>Trang chủ</a>
           <span>/</span>
-          <a href="/cart" data-link>Cart</a>
+          <a href="/cart" data-link>Giỏ hàng</a>
           <span>/</span>
-          <span>Checkout</span>
+          <span>Thanh toán</span>
         </div>
 
-        <h1 class="page-title">Checkout</h1>
+        <h1 class="page-title">Thanh toán</h1>
 
         <div class="checkout-container">
           <div class="checkout-form-section">
             <form id="checkout-form" class="checkout-form">
               <div class="checkout-section">
-                <h2 class="checkout-section-title">Contact Information</h2>
+                <h2 class="checkout-section-title">Thông tin liên hệ</h2>
                 <div class="form-group">
-                  <label for="email" class="form-label">Email Address *</label>
+                  <label for="email" class="form-label">Email *</label>
                   <input 
                     type="email" 
                     id="email" 
                     name="email" 
                     class="form-input" 
-                    placeholder="your.email@example.com"
+                    placeholder="email.cua.ban@example.com"
                     required
                   >
                 </div>
                 <div class="form-group">
-                  <label for="phone" class="form-label">Phone Number *</label>
+                  <label for="phone" class="form-label">Số điện thoại *</label>
                   <input 
                     type="tel" 
                     id="phone" 
                     name="phone" 
                     class="form-input" 
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="0912 345 678"
                     required
                   >
                 </div>
               </div>
 
               <div class="checkout-section">
-                <h2 class="checkout-section-title">Shipping Address</h2>
+                <h2 class="checkout-section-title">Địa chỉ giao hàng</h2>
                 <div class="form-row">
                   <div class="form-group">
-                    <label for="firstName" class="form-label">First Name *</label>
+                    <label for="firstName" class="form-label">Tên *</label>
                     <input 
                       type="text" 
                       id="firstName" 
@@ -77,7 +76,7 @@ export function renderCheckoutPage(): void {
                     >
                   </div>
                   <div class="form-group">
-                    <label for="lastName" class="form-label">Last Name *</label>
+                    <label for="lastName" class="form-label">Họ *</label>
                     <input 
                       type="text" 
                       id="lastName" 
@@ -89,31 +88,31 @@ export function renderCheckoutPage(): void {
                 </div>
 
                 <div class="form-group">
-                  <label for="address" class="form-label">Street Address *</label>
+                  <label for="address" class="form-label">Địa chỉ *</label>
                   <input 
                     type="text" 
                     id="address" 
                     name="address" 
                     class="form-input" 
-                    placeholder="123 Main Street"
+                    placeholder="Số nhà, tên đường"
                     required
                   >
                 </div>
 
                 <div class="form-group">
-                  <label for="apartment" class="form-label">Apartment, suite, etc. (optional)</label>
+                  <label for="apartment" class="form-label">Căn hộ, tòa nhà (tùy chọn)</label>
                   <input 
                     type="text" 
                     id="apartment" 
                     name="apartment" 
                     class="form-input" 
-                    placeholder="Apt 4B"
+                    placeholder="Tầng 4, Tòa nhà A"
                   >
                 </div>
 
                 <div class="form-row">
                   <div class="form-group">
-                    <label for="city" class="form-label">City *</label>
+                    <label for="city" class="form-label">Thành phố / Tỉnh *</label>
                     <input 
                       type="text" 
                       id="city" 
@@ -123,70 +122,47 @@ export function renderCheckoutPage(): void {
                     >
                   </div>
                   <div class="form-group">
-                    <label for="state" class="form-label">State / Province *</label>
+                    <label for="district" class="form-label">Quận / Huyện *</label>
                     <input 
                       type="text" 
-                      id="state" 
-                      name="state" 
+                      id="district" 
+                      name="district" 
                       class="form-input" 
                       required
                     >
                   </div>
-                  <div class="form-group">
-                    <label for="zipCode" class="form-label">ZIP / Postal Code *</label>
-                    <input 
-                      type="text" 
-                      id="zipCode" 
-                      name="zipCode" 
-                      class="form-input" 
-                      required
-                    >
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="country" class="form-label">Country *</label>
-                  <select id="country" name="country" class="form-select" required>
-                    <option value="">Select a country</option>
-                    <option value="US">United States</option>
-                    <option value="CA">Canada</option>
-                    <option value="UK">United Kingdom</option>
-                    <option value="AU">Australia</option>
-                    <option value="VN">Vietnam</option>
-                    <option value="other">Other</option>
-                  </select>
                 </div>
               </div>
 
               <div class="checkout-section">
-                <h2 class="checkout-section-title">Payment Method</h2>
+                <h2 class="checkout-section-title">Phương thức thanh toán</h2>
                 <div class="payment-methods">
                   <label class="payment-method">
-                    <input type="radio" name="paymentMethod" value="card" checked>
-                    <span class="payment-method-label">
-                      <span class="payment-icon">💳</span>
-                      Credit / Debit Card
-                    </span>
-                  </label>
-                  <label class="payment-method">
-                    <input type="radio" name="paymentMethod" value="paypal">
-                    <span class="payment-method-label">
-                      <span class="payment-icon">🅿️</span>
-                      PayPal
-                    </span>
-                  </label>
-                  <label class="payment-method">
-                    <input type="radio" name="paymentMethod" value="cod">
+                    <input type="radio" name="paymentMethod" value="cod" checked>
                     <span class="payment-method-label">
                       <span class="payment-icon">💵</span>
-                      Cash on Delivery
+                      Thanh toán khi nhận hàng (COD)
+                    </span>
+                  </label>
+                  <label class="payment-method">
+                    <input type="radio" name="paymentMethod" value="card">
+                    <span class="payment-method-label">
+                      <span class="payment-icon">💳</span>
+                      Thẻ tín dụng / Ghi nợ
+                    </span>
+                  </label>
+                  <label class="payment-method">
+                    <input type="radio" name="paymentMethod" value="momo">
+                    <span class="payment-method-label">
+                      <span class="payment-icon">📱</span>
+                      Ví MoMo
                     </span>
                   </label>
                 </div>
 
-                <div id="card-details" class="card-details">
+                <div id="card-details" class="card-details" style="display: none;">
                   <div class="form-group">
-                    <label for="cardNumber" class="form-label">Card Number *</label>
+                    <label for="cardNumber" class="form-label">Số thẻ *</label>
                     <input 
                       type="text" 
                       id="cardNumber" 
@@ -198,7 +174,7 @@ export function renderCheckoutPage(): void {
                   </div>
                   <div class="form-row">
                     <div class="form-group">
-                      <label for="expiryDate" class="form-label">Expiry Date *</label>
+                      <label for="expiryDate" class="form-label">Ngày hết hạn *</label>
                       <input 
                         type="text" 
                         id="expiryDate" 
@@ -225,17 +201,17 @@ export function renderCheckoutPage(): void {
 
               <div class="checkout-actions">
                 <a href="/cart" data-link class="btn btn-secondary">
-                  ← Back to Cart
+                  ← Quay lại giỏ hàng
                 </a>
                 <button type="submit" class="btn btn-primary btn-large">
-                  Place Order - $${total.toFixed(2)}
+                  Đặt hàng - ${total.toLocaleString()} ₫
                 </button>
               </div>
             </form>
           </div>
 
           <div class="checkout-summary">
-            <h2 class="checkout-summary-title">Order Summary</h2>
+            <h2 class="checkout-summary-title">Đơn hàng của bạn</h2>
             
             <div class="checkout-items">
               ${cart.items.map(item => `
@@ -243,43 +219,38 @@ export function renderCheckoutPage(): void {
                   <img src="${item.phone.image}" alt="${item.phone.name}" class="checkout-item-image">
                   <div class="checkout-item-details">
                     <div class="checkout-item-name">${item.phone.name}</div>
-                    <div class="checkout-item-quantity">Qty: ${item.quantity}</div>
+                    <div class="checkout-item-quantity">SL: ${item.quantity}</div>
                   </div>
-                  <div class="checkout-item-price">$${(item.phone.price * item.quantity).toLocaleString()}</div>
+                  <div class="checkout-item-price">${(item.phone.price * item.quantity).toLocaleString()} ₫</div>
                 </div>
               `).join('')}
             </div>
 
             <div class="checkout-summary-details">
               <div class="checkout-summary-row">
-                <span>Subtotal (${cart.items.reduce((sum, item) => sum + item.quantity, 0)} items)</span>
-                <span>$${subtotal.toLocaleString()}</span>
+                <span>Tạm tính (${cart.items.reduce((sum, item) => sum + item.quantity, 0)} sản phẩm)</span>
+                <span>${subtotal.toLocaleString()} ₫</span>
               </div>
               
               <div class="checkout-summary-row">
-                <span>Shipping</span>
-                <span>${shipping === 0 ? 'FREE' : '$' + shipping}</span>
-              </div>
-              
-              <div class="checkout-summary-row">
-                <span>Tax (10%)</span>
-                <span>$${tax.toFixed(2)}</span>
+                <span>Phí vận chuyển</span>
+                <span>${shipping === 0 ? 'MIỄN PHÍ' : shipping.toLocaleString() + ' ₫'}</span>
               </div>
               
               <hr class="checkout-divider">
               
               <div class="checkout-summary-row checkout-total">
-                <span>Total</span>
-                <span>$${total.toFixed(2)}</span>
+                <span>Tổng cộng</span>
+                <span>${total.toLocaleString()} ₫</span>
               </div>
             </div>
 
             <div class="checkout-security">
               <div class="security-badge">
                 <span class="security-icon">🔒</span>
-                <span>Secure Checkout</span>
+                <span>Thanh toán an toàn</span>
               </div>
-              <p class="security-text">Your payment information is encrypted and secure</p>
+              <p class="security-text">Thông tin thanh toán của bạn được mã hóa và bảo mật tuyệt đối</p>
             </div>
           </div>
         </div>
@@ -301,7 +272,7 @@ function setupCheckoutListeners(): void {
       const value = (e.target as HTMLInputElement).value;
       if (cardDetails) {
         cardDetails.style.display = value === 'card' ? 'block' : 'none';
-        
+
         // Update required fields based on payment method
         const cardInputs = cardDetails.querySelectorAll('input');
         cardInputs.forEach(input => {
@@ -334,14 +305,13 @@ function setupCheckoutListeners(): void {
   // Handle form submission
   form?.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     const formData = new FormData(form);
     const cart = cartManager.getCart();
     const subtotal = cart.total;
-    const shipping = subtotal >= 100 ? 0 : 10;
-    const tax = subtotal * 0.1;
-    const total = subtotal + shipping + tax;
-    
+    const shipping = subtotal >= 2000000 ? 0 : 30000;
+    const total = subtotal + shipping;
+
     const orderData = {
       contact: {
         email: formData.get('email'),
@@ -353,9 +323,7 @@ function setupCheckoutListeners(): void {
         address: formData.get('address'),
         apartment: formData.get('apartment'),
         city: formData.get('city'),
-        state: formData.get('state'),
-        zipCode: formData.get('zipCode'),
-        country: formData.get('country'),
+        district: formData.get('district'),
       },
       payment: {
         method: formData.get('paymentMethod'),
@@ -366,10 +334,10 @@ function setupCheckoutListeners(): void {
 
     // In a real application, this would send to a backend API
     console.log('Order placed:', orderData);
-    
+
     // Show success message
-    alert(`✅ Order placed successfully!\n\nOrder Total: $${total.toFixed(2)}\n\nThank you for your purchase!`);
-    
+    alert(`✅ Đặt hàng thành công!\n\nTổng đơn hàng: ${total.toLocaleString()} ₫\n\nCảm ơn bạn đã mua sắm!`);
+
     // Clear cart and redirect to home
     cartManager.clearCart();
     router.navigate('/');

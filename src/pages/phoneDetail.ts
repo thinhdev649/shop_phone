@@ -9,7 +9,7 @@ export async function renderPhoneDetailPage(phoneId: string): Promise<void> {
   const app = document.querySelector<HTMLDivElement>('#app');
   if (!app) return;
 
-  app.innerHTML = renderHeader() + '<div class="loading">Loading...</div>';
+  app.innerHTML = renderHeader() + '<div class="loading">Đang tải...</div>';
   updateCartBadge();
 
   try {
@@ -20,23 +20,21 @@ export async function renderPhoneDetailPage(phoneId: string): Promise<void> {
     ]);
 
     if (!phone && !productDetail) {
-      app.innerHTML = renderHeader() + '<div class="error">Phone not found</div>';
+      app.innerHTML = renderHeader() + '<div class="error">Không tìm thấy điện thoại</div>';
       return;
     }
 
     const brand = phone ? await mockAPI.getBrandById(phone.brand) : null;
-    
+
     // Create a merged phone object with API details if available
-    const displayPhone = createDisplayPhone(phone, productDetail);
+    const displayPhone = createDisplayPhone(phone, productDetail, phoneId);
 
     app.innerHTML = `
       ${renderHeader()}
       <main class="main">
         <div class="container">
           <div class="breadcrumb">
-            <a href="/" data-link>Home</a>
-            <span>/</span>
-            <a href="/brand/${displayPhone.brand}" data-link>${brand?.name || displayPhone.brand}</a>
+            <a href="/" data-link>Trang chủ</a>
             <span>/</span>
             <span>${displayPhone.name}</span>
           </div>
@@ -48,7 +46,7 @@ export async function renderPhoneDetailPage(phoneId: string): Promise<void> {
               <h1 class="phone-detail-title">${displayPhone.name}</h1>
               <div class="phone-detail-brand">
                 <span class="brand-badge">${brand?.name || displayPhone.brand}</span>
-                ${displayPhone.inStock ? '<span class="stock-badge in-stock">In Stock</span>' : '<span class="stock-badge out-of-stock">Out of Stock</span>'}
+                ${displayPhone.inStock ? '<span class="stock-badge in-stock">Còn hàng</span>' : '<span class="stock-badge out-of-stock">Hết hàng</span>'}
               </div>
               
               ${renderPriceSection(productDetail, displayPhone)}
@@ -64,7 +62,7 @@ export async function renderPhoneDetailPage(phoneId: string): Promise<void> {
                   <button class="quantity-btn" id="increase-qty">+</button>
                 </div>
                 <button class="btn btn-primary btn-large" id="add-to-cart" ${!displayPhone.inStock ? 'disabled' : ''}>
-                  ${displayPhone.inStock ? 'Add to Cart' : 'Out of Stock'}
+                  ${displayPhone.inStock ? 'Thêm vào giỏ' : 'Hết hàng'}
                 </button>
               </div>
 
@@ -82,13 +80,13 @@ export async function renderPhoneDetailPage(phoneId: string): Promise<void> {
     setupEventListeners(displayPhone);
     setupVariantListeners();
   } catch (error) {
-    app.innerHTML = renderHeader() + '<div class="error">Failed to load phone details</div>';
+    app.innerHTML = renderHeader() + '<div class="error">Không thể tải thông tin sản phẩm</div>';
     console.error('Error rendering phone detail page:', error);
   }
 }
 
 // Helper function to create display phone from API data
-function createDisplayPhone(phone: Phone | undefined, productDetail: ProductDetail | null): Phone {
+function createDisplayPhone(phone: Phone | undefined, productDetail: ProductDetail | null, phoneId: string): Phone {
   if (phone && productDetail) {
     // Merge data - prefer API detail data where available
     const techSpecs = productDetail.technicalContent.reduce((acc, spec) => {
@@ -110,7 +108,7 @@ function createDisplayPhone(phone: Phone | undefined, productDetail: ProductDeta
       }
     };
   }
-  
+
   if (productDetail) {
     // Create phone from API detail only
     const techSpecs = productDetail.technicalContent.reduce((acc, spec) => {
@@ -119,7 +117,7 @@ function createDisplayPhone(phone: Phone | undefined, productDetail: ProductDeta
     }, {} as Record<string, string>);
 
     return {
-      id: '',
+      id: phoneId,
       name: productDetail.name,
       brand: '',
       price: productDetail.salePrice,
@@ -182,7 +180,7 @@ function renderPriceSection(productDetail: ProductDetail | null, displayPhone: P
       </div>
     `;
   }
-  
+
   const price = productDetail?.salePrice || displayPhone.price;
   return `<p class="phone-detail-price">${formatVND(price)}</p>`;
 }
@@ -242,14 +240,14 @@ function renderTechnicalSpecs(productDetail: ProductDetail | null, displayPhone:
   // Fallback to basic specs
   return `
     <div class="phone-specs">
-      <h2 class="specs-title">Specifications</h2>
+      <h2 class="specs-title">Thông số kỹ thuật</h2>
       <div class="specs-grid">
         <div class="spec-item">
-          <span class="spec-label">Screen</span>
+          <span class="spec-label">Màn hình</span>
           <span class="spec-value">${displayPhone.specs.screen}</span>
         </div>
         <div class="spec-item">
-          <span class="spec-label">Processor</span>
+          <span class="spec-label">Chip</span>
           <span class="spec-value">${displayPhone.specs.cpu}</span>
         </div>
         <div class="spec-item">
@@ -257,7 +255,7 @@ function renderTechnicalSpecs(productDetail: ProductDetail | null, displayPhone:
           <span class="spec-value">${displayPhone.specs.ram}</span>
         </div>
         <div class="spec-item">
-          <span class="spec-label">Storage</span>
+          <span class="spec-label">Bộ nhớ</span>
           <span class="spec-value">${displayPhone.specs.storage}</span>
         </div>
         <div class="spec-item">
@@ -265,7 +263,7 @@ function renderTechnicalSpecs(productDetail: ProductDetail | null, displayPhone:
           <span class="spec-value">${displayPhone.specs.camera}</span>
         </div>
         <div class="spec-item">
-          <span class="spec-label">Battery</span>
+          <span class="spec-label">Pin</span>
           <span class="spec-value">${displayPhone.specs.battery}</span>
         </div>
       </div>
@@ -284,7 +282,7 @@ function setupVariantListeners(): void {
     item.addEventListener('click', () => {
       variantItems.forEach(v => v.classList.remove('active'));
       item.classList.add('active');
-      
+
       const newSrc = item.getAttribute('data-variant-src');
       if (mainImage && newSrc) {
         mainImage.src = newSrc;
@@ -296,7 +294,7 @@ function setupVariantListeners(): void {
     thumb.addEventListener('click', () => {
       galleryThumbs.forEach(t => t.classList.remove('active'));
       thumb.classList.add('active');
-      
+
       const newSrc = thumb.getAttribute('data-src');
       if (mainImage && newSrc) {
         mainImage.src = newSrc;
@@ -320,7 +318,7 @@ async function renderRelatedPhones(phone: Phone): Promise<string> {
 
   return `
     <section class="related-phones">
-      <h2 class="section-title">More from this brand</h2>
+      <h2 class="section-title">Sản phẩm cùng thương hiệu</h2>
       <div class="phones-grid">
         ${filtered.map(p => `
           <div class="phone-card">
@@ -331,7 +329,7 @@ async function renderRelatedPhones(phone: Phone): Promise<string> {
               <h3 class="phone-name">
                 <a href="/phone/${p.id}" data-link>${p.name}</a>
               </h3>
-              <p class="phone-price">$${p.price.toLocaleString()}</p>
+              <p class="phone-price">${p.price.toLocaleString()} ₫</p>
             </div>
           </div>
         `).join('')}
@@ -359,13 +357,13 @@ function setupEventListeners(phone: Phone): void {
   addToCartBtn?.addEventListener('click', () => {
     const quantity = parseInt(quantityInput.value);
     cartManager.addItem(phone, quantity);
-    
-    addToCartBtn.textContent = `Added ${quantity} to Cart! ✓`;
+
+    addToCartBtn.textContent = `Đã thêm ${quantity} vào giỏ! ✓`;
     addToCartBtn.classList.add('btn-success');
     updateCartBadge();
-    
+
     setTimeout(() => {
-      addToCartBtn.textContent = 'Add to Cart';
+      addToCartBtn.textContent = 'Thêm vào giỏ';
       addToCartBtn.classList.remove('btn-success');
     }, 2000);
   });

@@ -1,43 +1,43 @@
 // Mock data for phone shop
 // Mock data for phone shop
-import type {Brand, Phone} from '../types.ts';
+import type { Brand, Phone } from '../types.ts';
 
 export const brands: Brand[] = [
   {
     id: 'apple',
     name: 'Apple',
     logo: '🍎',
-    description: 'Premium smartphones with iOS'
+    description: 'Điện thoại cao cấp với hệ điều hành iOS'
   },
   {
     id: 'samsung',
     name: 'Samsung',
     logo: '📱',
-    description: 'Innovation and technology leader'
+    description: 'Tiên phong về công nghệ và đổi mới'
   },
   {
     id: 'xiaomi',
     name: 'Xiaomi',
     logo: '🔥',
-    description: 'Best value for money'
+    description: 'Hiệu năng tốt nhất trong tầm giá'
   },
   {
     id: 'oppo',
     name: 'OPPO',
     logo: '💚',
-    description: 'Photography focused smartphones'
+    description: 'Điện thoại chuyên chụp ảnh'
   },
   {
     id: 'vivo',
     name: 'Vivo',
     logo: '💙',
-    description: 'Sleek design and innovation'
+    description: 'Thiết kế thời trang và sáng tạo'
   },
   {
     id: 'google',
     name: 'Google',
     logo: '🔷',
-    description: 'Pure Android experience'
+    description: 'Trải nghiệm Android thuần khiết'
   }
 ];
 
@@ -47,9 +47,9 @@ export const phones: Phone[] = [
     id: 'iphone-15-pro-max',
     name: 'iPhone 15 Pro Max',
     brand: 'apple',
-    price: 1199,
+    price: 34990000,
     image: 'https://images.unsplash.com/photo-1696446702183-cbd5818c8b0c?w=400&h=400&fit=crop',
-    description: 'The ultimate iPhone with titanium design and A17 Pro chip',
+    description: 'Chiếc iPhone tối thượng với thiết kế titan và chip A17 Pro',
     specs: {
       screen: '6.7" Super Retina XDR',
       cpu: 'A17 Pro',
@@ -65,9 +65,9 @@ export const phones: Phone[] = [
     id: 'iphone-15',
     name: 'iPhone 15',
     brand: 'apple',
-    price: 799,
+    price: 22990000,
     image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400&h=400&fit=crop',
-    description: 'Dynamic Island and powerful performance',
+    description: 'Dynamic Island và hiệu năng mạnh mẽ',
     specs: {
       screen: '6.1" Super Retina XDR',
       cpu: 'A16 Bionic',
@@ -83,9 +83,9 @@ export const phones: Phone[] = [
     id: 'iphone-14',
     name: 'iPhone 14',
     brand: 'apple',
-    price: 699,
+    price: 19990000,
     image: 'https://images.unsplash.com/photo-1678652197831-2d180705cd2c?w=400&h=400&fit=crop',
-    description: 'Reliable iPhone with great camera',
+    description: 'iPhone đáng tin cậy với camera tuyệt vời',
     specs: {
       screen: '6.1" Super Retina XDR',
       cpu: 'A15 Bionic',
@@ -97,15 +97,15 @@ export const phones: Phone[] = [
     inStock: true,
     featured: false
   },
-  
+
   // Samsung phones
   {
     id: 'galaxy-s24-ultra',
     name: 'Galaxy S24 Ultra',
     brand: 'samsung',
-    price: 1299,
+    price: 33990000,
     image: 'https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400&h=400&fit=crop',
-    description: 'Ultimate Samsung flagship with S Pen',
+    description: 'Flagship Samsung đỉnh cao với bút S Pen',
     specs: {
       screen: '6.8" Dynamic AMOLED 2X',
       cpu: 'Snapdragon 8 Gen 3',
@@ -121,9 +121,9 @@ export const phones: Phone[] = [
     id: 'galaxy-s24',
     name: 'Galaxy S24',
     brand: 'samsung',
-    price: 799,
+    price: 22990000,
     image: 'https://images.unsplash.com/photo-1591337676887-a217a6970a8a?w=400&h=400&fit=crop',
-    description: 'Compact flagship with AI features',
+    description: 'Flagship nhỏ gọn với tính năng AI',
     specs: {
       screen: '6.2" Dynamic AMOLED 2X',
       cpu: 'Snapdragon 8 Gen 3',
@@ -139,9 +139,9 @@ export const phones: Phone[] = [
     id: 'galaxy-z-fold5',
     name: 'Galaxy Z Fold5',
     brand: 'samsung',
-    price: 1799,
+    price: 40990000,
     image: 'https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=400&h=400&fit=crop',
-    description: 'Foldable phone with productivity features',
+    description: 'Điện thoại gập với các tính năng năng suất',
     specs: {
       screen: '7.6" Foldable AMOLED',
       cpu: 'Snapdragon 8 Gen 2',
@@ -159,9 +159,9 @@ export const phones: Phone[] = [
     id: 'xiaomi-14-pro',
     name: 'Xiaomi 14 Pro',
     brand: 'xiaomi',
-    price: 999,
+    price: 24990000,
     image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=400&fit=crop',
-    description: 'Flagship with Leica camera system',
+    description: 'Flagship với hệ thống camera Leica',
     specs: {
       screen: '6.73" AMOLED',
       cpu: 'Snapdragon 8 Gen 3',
@@ -177,9 +177,9 @@ export const phones: Phone[] = [
     id: 'xiaomi-13',
     name: 'Xiaomi 13',
     brand: 'xiaomi',
-    price: 649,
+    price: 15990000,
     image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop',
-    description: 'Balanced performance and price',
+    description: 'Hiệu năng và giá cả cân bằng',
     specs: {
       screen: '6.36" AMOLED',
       cpu: 'Snapdragon 8 Gen 2',
@@ -197,9 +197,9 @@ export const phones: Phone[] = [
     id: 'oppo-find-x6-pro',
     name: 'OPPO Find X6 Pro',
     brand: 'oppo',
-    price: 1099,
+    price: 28990000,
     image: 'https://images.unsplash.com/photo-1580910051074-3eb694886505?w=400&h=400&fit=crop',
-    description: 'Photography powerhouse',
+    description: 'Sức mạnh nhiếp ảnh',
     specs: {
       screen: '6.82" AMOLED',
       cpu: 'Snapdragon 8 Gen 2',
@@ -215,9 +215,9 @@ export const phones: Phone[] = [
     id: 'oppo-reno-11',
     name: 'OPPO Reno 11',
     brand: 'oppo',
-    price: 449,
+    price: 10990000,
     image: 'https://images.unsplash.com/photo-1560743173-567a3b5658b1?w=400&h=400&fit=crop',
-    description: 'Mid-range with excellent camera',
+    description: 'Tầm trung với camera xuất sắc',
     specs: {
       screen: '6.7" AMOLED',
       cpu: 'Dimensity 8200',
@@ -235,9 +235,9 @@ export const phones: Phone[] = [
     id: 'vivo-x100-pro',
     name: 'Vivo X100 Pro',
     brand: 'vivo',
-    price: 1199,
+    price: 29990000,
     image: 'https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=400&h=400&fit=crop',
-    description: 'Flagship with Zeiss optics',
+    description: 'Flagship với ống kính Zeiss',
     specs: {
       screen: '6.78" AMOLED',
       cpu: 'Dimensity 9300',
@@ -253,9 +253,9 @@ export const phones: Phone[] = [
     id: 'vivo-v29',
     name: 'Vivo V29',
     brand: 'vivo',
-    price: 399,
+    price: 9990000,
     image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?w=400&h=400&fit=crop',
-    description: 'Stylish design and great selfies',
+    description: 'Thiết kế thời trang và selfie tuyệt đẹp',
     specs: {
       screen: '6.78" AMOLED',
       cpu: 'Snapdragon 778G',
@@ -273,9 +273,9 @@ export const phones: Phone[] = [
     id: 'pixel-8-pro',
     name: 'Pixel 8 Pro',
     brand: 'google',
-    price: 999,
+    price: 24990000,
     image: 'https://images.unsplash.com/photo-1598618443855-232ee0f819f1?w=400&h=400&fit=crop',
-    description: 'Best Android camera with AI features',
+    description: 'Camera Android tốt nhất với tính năng AI',
     specs: {
       screen: '6.7" LTPO OLED',
       cpu: 'Google Tensor G3',
@@ -291,9 +291,9 @@ export const phones: Phone[] = [
     id: 'pixel-8',
     name: 'Pixel 8',
     brand: 'google',
-    price: 699,
+    price: 16990000,
     image: 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=400&h=400&fit=crop',
-    description: 'Pure Android with great camera',
+    description: 'Android thuần khiết với camera tuyệt vời',
     specs: {
       screen: '6.2" OLED',
       cpu: 'Google Tensor G3',

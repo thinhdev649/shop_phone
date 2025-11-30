@@ -1,26 +1,41 @@
 // All phones listing page
-import { mockAPI } from '../api/mockApi';
+import { apiService } from '../api/apiService';
 import type { Phone } from '../types.ts';
 import { renderHeader, updateCartBadge } from '../components/header';
-import { cartManager } from '../utils/cart';
 
 export async function renderPhonesPage(): Promise<void> {
   const app = document.querySelector<HTMLDivElement>('#app');
   if (!app) return;
 
-  app.innerHTML = renderHeader() + '<div class="loading">Loading...</div>';
+  app.innerHTML = renderHeader() + '<div class="loading">Đang tải...</div>';
   updateCartBadge();
 
   try {
-    const phones = await mockAPI.getPhones();
+    // Fetch all categories to get all products
+    const categories = await apiService.getCategories();
+
+    // Fetch products for all categories
+    const allProductsArrays = await Promise.all(
+      categories.map(async (category) => {
+        try {
+          return await apiService.getProductsByCategory(category.code || category.id);
+        } catch (e) {
+          console.error(`Failed to load products for ${category.name}`, e);
+          return [];
+        }
+      })
+    );
+
+    // Flatten array
+    const phones = allProductsArrays.flat();
 
     app.innerHTML = `
       ${renderHeader()}
       <main class="main">
         <section class="page-header">
           <div class="container">
-            <h1 class="page-title">All Phones</h1>
-            <p class="page-subtitle">Browse our complete collection of smartphones</p>
+            <h1 class="page-title">Tất cả điện thoại</h1>
+            <p class="page-subtitle">Khám phá bộ sưu tập smartphone đầy đủ của chúng tôi</p>
           </div>
         </section>
 
@@ -35,9 +50,8 @@ export async function renderPhonesPage(): Promise<void> {
     `;
 
     updateCartBadge();
-    setupEventListeners();
   } catch (error) {
-    app.innerHTML = renderHeader() + '<div class="error">Failed to load phones</div>';
+    app.innerHTML = renderHeader() + '<div class="error">Không thể tải danh sách điện thoại</div>';
     console.error('Error rendering phones page:', error);
   }
 }
@@ -52,35 +66,9 @@ function renderPhoneCard(phone: Phone): string {
         <h3 class="phone-name">
           <a href="/phone/${phone.id}" data-link>${phone.name}</a>
         </h3>
-        <p class="phone-price">$${phone.price.toLocaleString()}</p>
+        <p class="phone-price">${phone.price.toLocaleString()} ₫</p>
         <p class="phone-description">${phone.description}</p>
-        <button class="btn btn-primary add-to-cart-btn" data-phone-id="${phone.id}">
-          Add to Cart
-        </button>
       </div>
     </div>
   `;
-}
-
-function setupEventListeners(): void {
-  document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
-    btn.addEventListener('click', async (e) => {
-      const button = e.target as HTMLButtonElement;
-      const phoneId = button.dataset.phoneId;
-      if (!phoneId) return;
-
-      const phone = await mockAPI.getPhoneById(phoneId);
-      if (phone) {
-        cartManager.addItem(phone);
-        button.textContent = 'Added! ✓';
-        button.classList.add('btn-success');
-        updateCartBadge();
-        
-        setTimeout(() => {
-          button.textContent = 'Add to Cart';
-          button.classList.remove('btn-success');
-        }, 2000);
-      }
-    });
-  });
 }

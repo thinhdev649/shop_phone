@@ -13,14 +13,14 @@ export function renderCartPage(): void {
     ${renderHeader()}
     <main class="main">
       <div class="container">
-        <h1 class="page-title">Shopping Cart</h1>
+        <h1 class="page-title">Giỏ hàng</h1>
 
         ${cart.items.length === 0 ? `
           <div class="empty-cart">
             <div class="empty-cart-icon">🛒</div>
-            <h2>Your cart is empty</h2>
-            <p>Add some phones to get started!</p>
-            <a href="/phones" data-link class="btn btn-primary">Browse Phones</a>
+            <h2>Giỏ hàng của bạn đang trống</h2>
+            <p>Hãy thêm vài chiếc điện thoại để bắt đầu!</p>
+            <a href="/phones" data-link class="btn btn-primary">Xem điện thoại</a>
           </div>
         ` : `
           <div class="cart-container">
@@ -29,36 +29,31 @@ export function renderCartPage(): void {
             </div>
 
             <div class="cart-summary">
-              <h2 class="cart-summary-title">Order Summary</h2>
+              <h2 class="cart-summary-title">Tổng đơn hàng</h2>
               
               <div class="cart-summary-row">
-                <span>Subtotal (${cart.items.reduce((sum, item) => sum + item.quantity, 0)} items)</span>
-                <span>$${cart.total.toLocaleString()}</span>
+                <span>Tạm tính (${cart.items.reduce((sum, item) => sum + item.quantity, 0)} sản phẩm)</span>
+                <span>${cart.total.toLocaleString()} ₫</span>
               </div>
               
               <div class="cart-summary-row">
-                <span>Shipping</span>
-                <span>${cart.total >= 100 ? 'FREE' : '$10'}</span>
-              </div>
-              
-              <div class="cart-summary-row">
-                <span>Tax (10%)</span>
-                <span>$${(cart.total * 0.1).toFixed(2)}</span>
+                <span>Phí vận chuyển</span>
+                <span>${cart.total >= 2000000 ? 'MIỄN PHÍ' : '30.000 ₫'}</span>
               </div>
               
               <hr class="cart-divider">
               
               <div class="cart-summary-row cart-total">
-                <span>Total</span>
-                <span>$${(cart.total + (cart.total >= 100 ? 0 : 10) + cart.total * 0.1).toFixed(2)}</span>
+                <span>Tổng cộng</span>
+                <span>${(cart.total + (cart.total >= 2000000 ? 0 : 30000)).toLocaleString()} ₫</span>
               </div>
 
               <button class="btn btn-primary btn-block" id="checkout-btn">
-                Proceed to Checkout
+                Tiến hành thanh toán
               </button>
 
               <a href="/phones" data-link class="continue-shopping">
-                ← Continue Shopping
+                ← Tiếp tục mua sắm
               </a>
             </div>
           </div>
@@ -78,7 +73,7 @@ function renderCartItem(item: any): string {
       
       <div class="cart-item-details">
         <h3 class="cart-item-name">${item.phone.name}</h3>
-        <p class="cart-item-price">$${item.phone.price.toLocaleString()}</p>
+        <p class="cart-item-price">${item.phone.price.toLocaleString()} ₫</p>
       </div>
 
       <div class="cart-item-quantity">
@@ -88,10 +83,10 @@ function renderCartItem(item: any): string {
       </div>
 
       <div class="cart-item-total">
-        $${(item.phone.price * item.quantity).toLocaleString()}
+        ${(item.phone.price * item.quantity).toLocaleString()} ₫
       </div>
 
-      <button class="cart-item-remove" data-phone-id="${item.phone.id}" title="Remove">
+      <button class="cart-item-remove" data-phone-id="${item.phone.id}" title="Xóa">
         ✕
       </button>
     </div>
@@ -144,7 +139,7 @@ function setupEventListeners(): void {
       const target = e.target as HTMLInputElement;
       const phoneId = target.dataset.phoneId;
       const quantity = parseInt(target.value);
-      
+
       if (phoneId && quantity > 0) {
         cartManager.updateQuantity(phoneId, quantity);
         renderCartPage();

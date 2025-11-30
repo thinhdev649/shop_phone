@@ -1,24 +1,32 @@
 // Homepage
-import { mockAPI } from '../api/mockApi';
 import { apiService } from '../api/apiService';
 import type { Phone, Category } from '../types.ts';
 import { renderHeader, updateCartBadge } from '../components/header';
-import { cartManager } from '../utils/cart';
 
 export async function renderHomePage(): Promise<void> {
   const app = document.querySelector<HTMLDivElement>('#app');
   if (!app) return;
 
   // Show loading state
-  app.innerHTML = renderHeader() + '<div class="loading">Loading...</div>';
+  app.innerHTML = renderHeader() + '<div class="loading">Đang tải...</div>';
   updateCartBadge();
 
   try {
-    // Fetch categories from API and featured phones from mock
-    const [categories, featuredPhones] = await Promise.all([
-      apiService.getCategories(),
-      mockAPI.getFeaturedPhones()
-    ]);
+    // Fetch categories from API
+    const categories = await apiService.getCategories();
+
+    // Fetch products for each category
+    const categoriesWithProducts = await Promise.all(
+      categories.map(async (category) => {
+        try {
+          const products = await apiService.getProductsByCategory(category.code || category.id);
+          return { ...category, products };
+        } catch (e) {
+          console.error(`Failed to load products for ${category.name}`, e);
+          return { ...category, products: [] };
+        }
+      })
+    );
 
     app.innerHTML = `
       ${renderHeader()}
@@ -26,35 +34,33 @@ export async function renderHomePage(): Promise<void> {
         <!-- Hero Section -->
         <section class="hero">
           <div class="container">
-            <h1 class="hero-title">Find Your Perfect Phone</h1>
-            <p class="hero-subtitle">Explore the latest smartphones from top brands</p>
+            <h1 class="hero-title">Tìm chiếc điện thoại hoàn hảo của bạn</h1>
+            <p class="hero-subtitle">Khám phá những mẫu smartphone mới nhất từ các thương hiệu hàng đầu</p>
           </div>
         </section>
 
-        <!-- Brands Section -->
-        <section class="section">
-          <div class="container">
-            <h2 class="section-title">Shop by Brand</h2>
-            <div class="brands-grid">
-              ${categories.map(category => renderCategoryCard(category)).join('')}
-            </div>
-          </div>
-        </section>
-
-        <!-- Featured Phones -->
-        <section class="section section-alt">
-          <div class="container">
-            <h2 class="section-title">Featured Phones</h2>
-            <div class="phones-grid">
-              ${featuredPhones.map(phone => renderPhoneCard(phone)).join('')}
-            </div>
-          </div>
-        </section>
+        <!-- Category Sections -->
+        ${categoriesWithProducts.map(cat => {
+      if (cat.products.length === 0) return '';
+      return `
+            <section class="section">
+              <div class="container">
+                <div class="section-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2 class="section-title" style="margin-bottom: 0;">${cat.name}</h2>
+                    <a href="/brand/${cat.code || cat.id}" data-link class="view-all-link" style="color: var(--primary); font-weight: 600;">Xem tất cả &rarr;</a>
+                </div>
+                <div class="phones-grid">
+                  ${cat.products.slice(0, 5).map(phone => renderPhoneCard(phone)).join('')} 
+                </div>
+              </div>
+            </section>
+            `;
+    }).join('')}
 
         <!-- Why Choose Us -->
-        <section class="section">
+        <section class="section section-alt">
           <div class="container">
-            <h2 class="section-title">Why Choose Us</h2>
+            <h2 class="section-title">Tại sao chọn chúng tôi</h2>
             <div class="features-grid">
               ${renderFeatures()}
             </div>
@@ -70,25 +76,11 @@ export async function renderHomePage(): Promise<void> {
     `;
 
     updateCartBadge();
-    setupEventListeners();
+    // No event listeners needed for add to cart anymore on homepage
   } catch (error) {
-    app.innerHTML = renderHeader() + '<div class="error">Failed to load page. Please try again.</div>';
+    app.innerHTML = renderHeader() + '<div class="error">Tải trang thất bại. Vui lòng thử lại.</div>';
     console.error('Error rendering home page:', error);
   }
-}
-
-function renderCategoryCard(category: Category): string {
-  const categoryId = category.code || category.id;
-  return `
-    <a href="/brand/${categoryId}" data-link class="brand-card">
-      <div class="brand-logo">
-        ${category.iconLink 
-          ? `<img src="${category.iconLink}" alt="${category.name}" class="brand-icon-img" loading="lazy">` 
-          : '📱'}
-      </div>
-      <h3 class="brand-name">${category.name}</h3>
-    </a>
-  `;
 }
 
 function renderPhoneCard(phone: Phone): string {
@@ -101,11 +93,8 @@ function renderPhoneCard(phone: Phone): string {
         <h3 class="phone-name">
           <a href="/phone/${phone.id}" data-link>${phone.name}</a>
         </h3>
-        <p class="phone-price">$${phone.price.toLocaleString()}</p>
+        <p class="phone-price">${phone.price.toLocaleString()} ₫</p>
         <p class="phone-description">${phone.description}</p>
-        <button class="btn btn-primary add-to-cart-btn" data-phone-id="${phone.id}">
-          Add to Cart
-        </button>
       </div>
     </div>
   `;
@@ -113,10 +102,10 @@ function renderPhoneCard(phone: Phone): string {
 
 function renderFeatures(): string {
   const features = [
-    { icon: '✅', title: 'Authentic Products', desc: '100% genuine phones from authorized distributors' },
-    { icon: '🚚', title: 'Fast Delivery', desc: 'Free shipping on all orders above $100' },
-    { icon: '💯', title: 'Best Prices', desc: 'Competitive prices with regular discounts' },
-    { icon: '🔧', title: 'Warranty', desc: 'Official warranty on all products' }
+    { icon: '✅', title: 'Sản phẩm chính hãng', desc: '100% điện thoại chính hãng từ các nhà phân phối ủy quyền' },
+    { icon: '🚚', title: 'Giao hàng nhanh', desc: 'Miễn phí vận chuyển cho đơn hàng trên 2.000.000 ₫' },
+    { icon: '💯', title: 'Giá tốt nhất', desc: 'Giá cả cạnh tranh với nhiều ưu đãi hấp dẫn' },
+    { icon: '🔧', title: 'Bảo hành', desc: 'Bảo hành chính hãng cho tất cả sản phẩm' }
   ];
 
   return features.map(f => `
@@ -126,27 +115,4 @@ function renderFeatures(): string {
       <p class="feature-desc">${f.desc}</p>
     </div>
   `).join('');
-}
-
-function setupEventListeners(): void {
-  document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
-    btn.addEventListener('click', async (e) => {
-      const button = e.target as HTMLButtonElement;
-      const phoneId = button.dataset.phoneId;
-      if (!phoneId) return;
-
-      const phone = await mockAPI.getPhoneById(phoneId);
-      if (phone) {
-        cartManager.addItem(phone);
-        button.textContent = 'Added! ✓';
-        button.classList.add('btn-success');
-        updateCartBadge();
-        
-        setTimeout(() => {
-          button.textContent = 'Add to Cart';
-          button.classList.remove('btn-success');
-        }, 2000);
-      }
-    });
-  });
 }
