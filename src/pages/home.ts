@@ -15,7 +15,7 @@ export async function renderHomePage(): Promise<void> {
       <section class="hero">
         <div class="container">
           <div class="hero-content">
-            <span class="hero-badge">Công nghệ mới nhất 2024</span>
+            <span class="hero-badge">Công nghệ mới nhất 2025</span>
             <h1 class="hero-title">TechVision <br> Tương lai trong tầm tay</h1>
             <p class="hero-subtitle">Trải nghiệm đỉnh cao công nghệ với bộ sưu tập smartphone flagship hàng đầu thế giới. Chính hãng, uy tín và đẳng cấp.</p>
             <div class="hero-actions">
@@ -69,7 +69,7 @@ export async function renderHomePage(): Promise<void> {
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 TechVision. All rights reserved.</p>
+          <p>&copy; 2025 TechVision. All rights reserved.</p>
         </div>
       </div>
     </footer>

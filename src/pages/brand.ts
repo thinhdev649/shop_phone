@@ -94,7 +94,7 @@ export async function renderBrandPage(brandId: string): Promise<void> {
             </div>
           </div>
           <div class="footer-bottom">
-            <p>&copy; 2024 TechVision. All rights reserved.</p>
+            <p>&copy; 2025 TechVision. All rights reserved.</p>
           </div>
         </div>
       </footer>
