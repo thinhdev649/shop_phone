@@ -1,35 +1,23 @@
-// Brand page - shows phones by category using real API
+// Brand page
 import { apiService } from '../api/apiService';
-import type { Phone } from '../types';
+import type { Phone } from '../types.ts';
 import { renderHeader, updateCartBadge } from '../components/header';
-import { cartManager } from '../utils/cart';
 
 export async function renderBrandPage(brandId: string): Promise<void> {
   const app = document.querySelector<HTMLDivElement>('#app');
   if (!app) return;
 
-  app.innerHTML = renderHeader() + '<div class="loading">Loading...</div>';
+  app.innerHTML = renderHeader() + '<div class="loading">Đang tải...</div>';
   updateCartBadge();
 
   try {
-    // Fetch products by category and all categories to get brand info
-    const [phones, categories] = await Promise.all([
-      apiService.getProductsByCategory(brandId),
-      apiService.getCategories()
-    ]);
+    // Fetch all categories to find the current brand name
+    const categories = await apiService.getCategories();
+    const currentCategory = categories.find(c => (c.code || c.id) === brandId);
+    const brandName = currentCategory ? currentCategory.name : brandId;
 
-    // Find the current category/brand
-    const brand = categories.find(cat => cat.code === brandId);
-
-    if (!brand) {
-      app.innerHTML = renderHeader() + '<div class="error">Brand not found</div>';
-      return;
-    }
-
-    // Use iconLink as logo if available
-    const brandLogo = brand.iconLink
-      ? `<img src="${brand.iconLink}" alt="${brand.name}" style="width: 80px; height: 80px; object-fit: contain;">`
-      : `<div style="font-size: 48px;">${brand.name.charAt(0).toUpperCase()}</div>`;
+    // Fetch products for this brand
+    const products = await apiService.getProductsByCategory(brandId);
 
     app.innerHTML = `
       ${renderHeader()}
@@ -37,10 +25,19 @@ export async function renderBrandPage(brandId: string): Promise<void> {
         <section class="brand-hero">
           <div class="container">
             <div class="brand-header">
-              <span class="brand-logo-large">${brandLogo}</span>
+              ${currentCategory?.image ? `
+                <div class="brand-logo-large">
+                  <img src="${currentCategory.image}" alt="${brandName}">
+                </div>
+              ` : ''}
               <div>
-                <h1 class="brand-title">${brand.name}</h1>
-                <p class="brand-subtitle">${brand.description || 'Premium quality products'}</p>
+                <div class="breadcrumb" style="margin-bottom: 8px; padding: 0;">
+                  <a href="/" data-link>Trang chủ</a>
+                  <span>/</span>
+                  <span>${brandName}</span>
+                </div>
+                <h1 class="brand-title">${brandName}</h1>
+                <p class="brand-subtitle">Danh sách sản phẩm chính hãng từ ${brandName}</p>
               </div>
             </div>
           </div>
@@ -48,23 +45,64 @@ export async function renderBrandPage(brandId: string): Promise<void> {
 
         <section class="section">
           <div class="container">
-            <h2 class="section-title">${brand.name} Products (${phones.length})</h2>
-            ${phones.length > 0 ? `
+            ${products.length > 0 ? `
               <div class="phones-grid">
-                ${phones.map(phone => renderPhoneCard(phone)).join('')}
+                ${products.map(phone => renderPhoneCard(phone)).join('')}
               </div>
             ` : `
-              <p class="empty-state">No products available for this brand.</p>
+              <div class="empty-state">
+                <p>Chưa có sản phẩm nào cho thương hiệu này.</p>
+                <a href="/" data-link class="btn btn-primary">Quay lại trang chủ</a>
+              </div>
             `}
           </div>
         </section>
       </main>
+      
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-column">
+              <div class="footer-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">TechVision</span>
+              </div>
+              <p class="footer-desc">Hệ thống bán lẻ điện thoại di động chính hãng uy tín hàng đầu.</p>
+            </div>
+            <div class="footer-column">
+              <h3 class="footer-title">Sản phẩm</h3>
+              <ul class="footer-links">
+                <li><a href="/brand/apple" data-link>Apple</a></li>
+                <li><a href="/brand/samsung" data-link>Samsung</a></li>
+                <li><a href="/brand/xiaomi" data-link>Xiaomi</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3 class="footer-title">Chính sách</h3>
+              <ul class="footer-links">
+                <li><a href="#">Bảo hành</a></li>
+                <li><a href="#">Đổi trả</a></li>
+                <li><a href="#">Vận chuyển</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3 class="footer-title">Liên hệ</h3>
+              <ul class="footer-contact">
+                <li>📞 1900 123 456</li>
+                <li>✉️ support@techvision.vn</li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2024 TechVision. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     `;
 
     updateCartBadge();
-    setupEventListeners();
   } catch (error) {
-    app.innerHTML = renderHeader() + '<div class="error">Failed to load brand page</div>';
+    app.innerHTML = renderHeader() + '<div class="error">Không thể tải thông tin thương hiệu</div>';
     console.error('Error rendering brand page:', error);
   }
 }
@@ -79,55 +117,9 @@ function renderPhoneCard(phone: Phone): string {
         <h3 class="phone-name">
           <a href="/phone/${phone.id}" data-link>${phone.name}</a>
         </h3>
-        <p class="phone-price">$${phone.price.toLocaleString()}</p>
+        <p class="phone-price">${phone.price.toLocaleString()} ₫</p>
         <p class="phone-description">${phone.description}</p>
-        <button class="btn btn-primary add-to-cart-btn" data-phone-id="${phone.id}">
-          Add to Cart
-        </button>
       </div>
     </div>
   `;
-}
-
-function setupEventListeners(): void {
-  document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const button = e.target as HTMLButtonElement;
-      const phoneId = button.dataset.phoneId;
-      if (!phoneId) return;
-
-      // Get phone data from the current page
-      const phoneCard = button.closest('.phone-card');
-      if (!phoneCard) return;
-
-      const nameElement = phoneCard.querySelector('.phone-name a');
-      const priceElement = phoneCard.querySelector('.phone-price');
-      const imageElement = phoneCard.querySelector('.phone-image') as HTMLImageElement;
-      const descElement = phoneCard.querySelector('.phone-description');
-
-      if (!nameElement || !priceElement || !imageElement) return;
-
-      const phone: Phone = {
-        id: phoneId,
-        name: nameElement.textContent || '',
-        brand: '',
-        price: parseFloat(priceElement.textContent?.replace(/[^0-9.]/g, '') || '0'),
-        image: imageElement.src,
-        description: descElement?.textContent || '',
-        specs: { screen: '', cpu: '', ram: '', storage: '', camera: '', battery: '' },
-        inStock: true,
-        featured: false
-      };
-
-      cartManager.addItem(phone);
-      button.textContent = 'Added! ✓';
-      button.classList.add('btn-success');
-      updateCartBadge();
-
-      setTimeout(() => {
-        button.textContent = 'Add to Cart';
-        button.classList.remove('btn-success');
-      }, 2000);
-    });
-  });
 }

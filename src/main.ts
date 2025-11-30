@@ -5,12 +5,17 @@ import { renderPhonesPage } from './pages/phones'
 import { renderPhoneDetailPage } from './pages/phoneDetail'
 import { renderCartPage } from './pages/cart'
 import { renderCheckoutPage } from './pages/checkout'
+import { renderBrandPage } from './pages/brand'
+import { renderCategoriesPage } from './pages/categories'
 
 // Define routes
 router.addRoute('/', () => {
   renderHomePage()
 })
 
+router.addRoute('/categories', () => {
+  renderCategoriesPage()
+})
 
 router.addRoute('/phones', () => {
   renderPhonesPage()
@@ -18,6 +23,10 @@ router.addRoute('/phones', () => {
 
 router.addRoute('/phone/:phoneId', ({ phoneId }) => {
   renderPhoneDetailPage(phoneId)
+})
+
+router.addRoute('/brand/:brandId', ({ brandId }) => {
+  renderBrandPage(brandId)
 })
 
 router.addRoute('/cart', () => {

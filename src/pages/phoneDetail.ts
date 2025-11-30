@@ -1,5 +1,4 @@
 // Phone detail page
-import { mockAPI } from '../api/mockApi';
 import { apiService } from '../api/apiService';
 import type { Phone, ProductDetail } from '../types.ts';
 import { renderHeader, updateCartBadge } from '../components/header';
@@ -13,21 +12,22 @@ export async function renderPhoneDetailPage(phoneId: string): Promise<void> {
   updateCartBadge();
 
   try {
-    // Fetch basic phone info and detailed product info in parallel
-    const [phone, productDetail] = await Promise.all([
-      mockAPI.getPhoneById(phoneId),
-      apiService.getProductDetail(phoneId)
-    ]);
+    // Fetch detailed product info
+    const productDetail = await apiService.getProductDetail(phoneId);
 
-    if (!phone && !productDetail) {
+    if (!productDetail) {
       app.innerHTML = renderHeader() + '<div class="error">Không tìm thấy điện thoại</div>';
       return;
     }
 
-    const brand = phone ? await mockAPI.getBrandById(phone.brand) : null;
+    // Create display phone object from API data
+    const displayPhone = createDisplayPhoneFromDetail(productDetail, phoneId);
 
-    // Create a merged phone object with API details if available
-    const displayPhone = createDisplayPhone(phone, productDetail, phoneId);
+    // We need to find the brand. Since the API doesn't return brand ID directly in product detail,
+    // we might need to infer it or fetch categories. For now, let's try to guess or leave it empty.
+    // Ideally, the product detail should contain the category/brand code.
+    // If not available, we can skip the brand badge or fetch all categories to find where this product belongs (expensive).
+    // Let's assume we can't easily get the brand name without extra calls, so we'll just show the name.
 
     app.innerHTML = `
       ${renderHeader()}
@@ -45,7 +45,6 @@ export async function renderPhoneDetailPage(phoneId: string): Promise<void> {
             <div class="phone-detail-info">
               <h1 class="phone-detail-title">${displayPhone.name}</h1>
               <div class="phone-detail-brand">
-                <span class="brand-badge">${brand?.name || displayPhone.brand}</span>
                 ${displayPhone.inStock ? '<span class="stock-badge in-stock">Còn hàng</span>' : '<span class="stock-badge out-of-stock">Hết hàng</span>'}
               </div>
               
@@ -71,7 +70,7 @@ export async function renderPhoneDetailPage(phoneId: string): Promise<void> {
           </div>
 
           <!-- Related phones section -->
-          ${phone ? await renderRelatedPhones(phone) : ''}
+          <div id="related-phones-container"></div>
         </div>
       </main>
     `;
@@ -79,64 +78,40 @@ export async function renderPhoneDetailPage(phoneId: string): Promise<void> {
     updateCartBadge();
     setupEventListeners(displayPhone);
     setupVariantListeners();
+
+    // Load related phones in background
+    loadRelatedPhones(phoneId);
+
   } catch (error) {
     app.innerHTML = renderHeader() + '<div class="error">Không thể tải thông tin sản phẩm</div>';
     console.error('Error rendering phone detail page:', error);
   }
 }
 
-// Helper function to create display phone from API data
-function createDisplayPhone(phone: Phone | undefined, productDetail: ProductDetail | null, phoneId: string): Phone {
-  if (phone && productDetail) {
-    // Merge data - prefer API detail data where available
-    const techSpecs = productDetail.technicalContent.reduce((acc, spec) => {
-      acc[spec.key] = spec.value;
-      return acc;
-    }, {} as Record<string, string>);
+function createDisplayPhoneFromDetail(productDetail: ProductDetail, phoneId: string): Phone {
+  const techSpecs = productDetail.technicalContent.reduce((acc, spec) => {
+    acc[spec.key] = spec.value;
+    return acc;
+  }, {} as Record<string, string>);
 
-    return {
-      ...phone,
-      name: productDetail.name || phone.name,
-      price: productDetail.salePrice || phone.price,
-      specs: {
-        screen: techSpecs['Kích thước màn hình'] || phone.specs.screen,
-        cpu: techSpecs['Chipset'] || techSpecs['Loại CPU'] || phone.specs.cpu,
-        ram: techSpecs['Dung lượng RAM'] || phone.specs.ram,
-        storage: techSpecs['Bộ nhớ trong'] || phone.specs.storage,
-        camera: techSpecs['Camera sau'] || phone.specs.camera,
-        battery: techSpecs['Pin'] || phone.specs.battery,
-      }
-    };
-  }
-
-  if (productDetail) {
-    // Create phone from API detail only
-    const techSpecs = productDetail.technicalContent.reduce((acc, spec) => {
-      acc[spec.key] = spec.value;
-      return acc;
-    }, {} as Record<string, string>);
-
-    return {
-      id: phoneId,
-      name: productDetail.name,
-      brand: '',
-      price: productDetail.salePrice,
-      image: productDetail.boxGallery[0]?.src || '',
-      description: productDetail.boxLinked || '',
-      specs: {
-        screen: techSpecs['Kích thước màn hình'] || '',
-        cpu: techSpecs['Chipset'] || techSpecs['Loại CPU'] || '',
-        ram: techSpecs['Dung lượng RAM'] || '',
-        storage: techSpecs['Bộ nhớ trong'] || '',
-        camera: techSpecs['Camera sau'] || '',
-        battery: techSpecs['Pin'] || '',
-      },
-      inStock: true,
-      featured: false,
-    };
-  }
-
-  return phone!;
+  return {
+    id: phoneId,
+    name: productDetail.name,
+    brand: '', // We don't have this easily from detail
+    price: productDetail.salePrice,
+    image: productDetail.boxGallery[0]?.src || '',
+    description: productDetail.boxLinked || '',
+    specs: {
+      screen: techSpecs['Kích thước màn hình'] || '',
+      cpu: techSpecs['Chipset'] || techSpecs['Loại CPU'] || '',
+      ram: techSpecs['Dung lượng RAM'] || '',
+      storage: techSpecs['Bộ nhớ trong'] || '',
+      camera: techSpecs['Camera sau'] || '',
+      battery: techSpecs['Pin'] || '',
+    },
+    inStock: true,
+    featured: false,
+  };
 }
 
 // Render product gallery with multiple images
@@ -310,32 +285,47 @@ function setupVariantListeners(): void {
   });
 }
 
-async function renderRelatedPhones(phone: Phone): Promise<string> {
-  const relatedPhones = await mockAPI.getPhonesByBrand(phone.brand);
-  const filtered = relatedPhones.filter(p => p.id !== phone.id).slice(0, 4);
+async function loadRelatedPhones(currentPhoneId: string): Promise<void> {
+  const container = document.getElementById('related-phones-container');
+  if (!container) return;
 
-  if (filtered.length === 0) return '';
+  try {
+    // Since we don't know the brand easily, we'll fetch a default category like 'apple' or 'samsung'
+    // Or better, try to guess from the ID if possible, or just show some popular phones.
+    // A simple heuristic: check if ID contains brand name
+    let brandToFetch = 'apple';
+    if (currentPhoneId.toLowerCase().includes('samsung')) brandToFetch = 'samsung';
+    else if (currentPhoneId.toLowerCase().includes('xiaomi')) brandToFetch = 'xiaomi';
+    else if (currentPhoneId.toLowerCase().includes('oppo')) brandToFetch = 'oppo';
 
-  return `
-    <section class="related-phones">
-      <h2 class="section-title">Sản phẩm cùng thương hiệu</h2>
-      <div class="phones-grid">
-        ${filtered.map(p => `
-          <div class="phone-card">
-            <a href="/phone/${p.id}" data-link class="phone-image-link">
-              <img src="${p.image}" alt="${p.name}" class="phone-image" loading="lazy">
-            </a>
-            <div class="phone-info">
-              <h3 class="phone-name">
-                <a href="/phone/${p.id}" data-link>${p.name}</a>
-              </h3>
-              <p class="phone-price">${p.price.toLocaleString()} ₫</p>
+    const relatedPhones = await apiService.getProductsByCategory(brandToFetch);
+    const filtered = relatedPhones.filter(p => p.id !== currentPhoneId).slice(0, 4);
+
+    if (filtered.length === 0) return;
+
+    container.innerHTML = `
+      <section class="related-phones">
+        <h2 class="section-title">Sản phẩm tương tự</h2>
+        <div class="phones-grid">
+          ${filtered.map(p => `
+            <div class="phone-card">
+              <a href="/phone/${p.id}" data-link class="phone-image-link">
+                <img src="${p.image}" alt="${p.name}" class="phone-image" loading="lazy">
+              </a>
+              <div class="phone-info">
+                <h3 class="phone-name">
+                  <a href="/phone/${p.id}" data-link>${p.name}</a>
+                </h3>
+                <p class="phone-price">${p.price.toLocaleString()} ₫</p>
+              </div>
             </div>
-          </div>
-        `).join('')}
-      </div>
-    </section>
-  `;
+          `).join('')}
+        </div>
+      </section>
+    `;
+  } catch (e) {
+    console.error('Failed to load related phones', e);
+  }
 }
 
 function setupEventListeners(phone: Phone): void {

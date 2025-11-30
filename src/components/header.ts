@@ -2,28 +2,21 @@
 import { cartManager } from '../utils/cart';
 
 export function renderHeader(): string {
-  const itemCount = cartManager.getItemCount();
-  
+
   return `
     <header class="header">
       <div class="container">
         <div class="header-content">
           <a href="/" data-link class="logo">
-            <span class="logo-icon">📱</span>
-            <span class="logo-text">PhoneShop</span>
+            <span class="logo-icon">⚡</span>
+            <span class="logo-text">TechVision</span>
           </a>
           
           <nav class="nav">
             <a href="/" data-link class="nav-link">Trang chủ</a>
-            <a href="/phones" data-link class="nav-link">Tất cả điện thoại</a>
+            <a href="/categories" data-link class="nav-link">Danh mục</a>
+            <a href="/phones" data-link class="nav-link">Tất cả sản phẩm</a>
           </nav>
-          
-          <div class="header-actions">
-            <a href="/cart" data-link class="cart-button">
-              <span class="cart-icon">🛒</span>
-              ${itemCount > 0 ? `<span class="cart-badge">${itemCount}</span>` : ''}
-            </a>
-          </div>
         </div>
       </div>
     </header>
@@ -33,7 +26,7 @@ export function renderHeader(): string {
 export function updateCartBadge(): void {
   const badge = document.querySelector('.cart-badge');
   const itemCount = cartManager.getItemCount();
-  
+
   if (badge) {
     if (itemCount > 0) {
       badge.textContent = itemCount.toString();
