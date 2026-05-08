@@ -8,6 +8,11 @@ export default defineConfig({
                 changeOrigin: true,
                 secure: false,
             },
+            '/auth': {
+                target: 'https://test.nicehairvietnam.com',
+                changeOrigin: true,
+                secure: false,
+            },
         },
     },
 });

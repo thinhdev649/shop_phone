@@ -93,3 +93,27 @@ export interface ProductDetail {
   variants: ProductVariant[];
   boxGallery: ProductGalleryImage[];
 }
+
+// Authentication API types
+export interface RegisterRequest {
+  username: string;
+  password: string;
+  fullName: string;
+  email: string;
+  role?: 'ADMIN' | 'USER' | string;
+  adminSecret?: string;
+}
+
+export interface LoginRequest {
+  username: string;
+  password: string;
+}
+
+export interface AuthSession {
+  token?: string;
+  username?: string;
+  fullName?: string;
+  email?: string;
+  role?: string;
+  raw: unknown;
+}

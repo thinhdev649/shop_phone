@@ -7,6 +7,8 @@ import { renderCartPage } from './pages/cart'
 import { renderCheckoutPage } from './pages/checkout'
 import { renderBrandPage } from './pages/brand'
 import { renderCategoriesPage } from './pages/categories'
+import { renderLoginPage } from './pages/login'
+import { renderRegisterPage } from './pages/register'
 
 // Define routes
 router.addRoute('/', () => {
@@ -35,6 +37,14 @@ router.addRoute('/cart', () => {
 
 router.addRoute('/checkout', () => {
   renderCheckoutPage()
+})
+
+router.addRoute('/login', () => {
+  renderLoginPage()
+})
+
+router.addRoute('/register', () => {
+  renderRegisterPage()
 })
 
 

@@ -1,7 +1,10 @@
 // Header component
+import { authService } from '../api/authService';
 import { cartManager } from '../utils/cart';
 
 export function renderHeader(): string {
+  const isLoggedIn = authService.isAuthenticated();
+  const displayName = authService.getDisplayName();
 
   return `
     <header class="header">
@@ -17,6 +20,19 @@ export function renderHeader(): string {
             <a href="/categories" data-link class="nav-link">Danh mục</a>
             <a href="/phones" data-link class="nav-link">Tất cả sản phẩm</a>
           </nav>
+
+          <div class="header-actions">
+            ${isLoggedIn ? `
+              <span class="auth-user">${displayName}</span>
+              <button type="button" class="auth-link" data-auth-action="logout">Đăng xuất</button>
+            ` : `
+              <a href="/login" data-link class="auth-link">Đăng nhập</a>
+              <a href="/register" data-link class="btn btn-primary btn-small">Đăng ký</a>
+            `}
+            <a href="/cart" data-link class="cart-button" aria-label="Giỏ hàng">
+              <span class="cart-icon">🛒</span>
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -43,3 +59,14 @@ export function updateCartBadge(): void {
     }
   }
 }
+
+document.addEventListener('click', (event) => {
+  const target = event.target as HTMLElement;
+  const logoutButton = target.closest('[data-auth-action="logout"]');
+
+  if (!logoutButton) return;
+
+  authService.logout();
+  window.history.pushState({}, '', '/');
+  window.dispatchEvent(new PopStateEvent('popstate'));
+});
