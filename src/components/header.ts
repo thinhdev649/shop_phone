@@ -19,6 +19,7 @@ export function renderHeader(): string {
             <a href="/" data-link class="nav-link">Trang chủ</a>
             <a href="/categories" data-link class="nav-link">Danh mục</a>
             <a href="/phones" data-link class="nav-link">Tất cả sản phẩm</a>
+            ${authService.hasRole('ADMIN') ? '<a href="/admin" data-link class="nav-link">Quản trị</a>' : ''}
           </nav>
 
           <div class="header-actions">

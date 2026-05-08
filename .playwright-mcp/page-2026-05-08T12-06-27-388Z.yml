@@ -1,0 +1,721 @@
+- generic [ref=e2]:
+  - banner [ref=e24]:
+    - generic [ref=e26]:
+      - link "⚡ TechVision" [ref=e27] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e28]: ⚡
+        - generic [ref=e29]: TechVision
+      - navigation [ref=e30]:
+        - link "Trang chủ" [ref=e31] [cursor=pointer]:
+          - /url: /
+        - link "Danh mục" [ref=e32] [cursor=pointer]:
+          - /url: /categories
+        - link "Tất cả sản phẩm" [ref=e33] [cursor=pointer]:
+          - /url: /phones
+        - link "Quản trị" [ref=e34] [cursor=pointer]:
+          - /url: /admin
+      - generic [ref=e35]:
+        - generic [ref=e36]: admin01
+        - button "Đăng xuất" [ref=e37] [cursor=pointer]
+        - link "Giỏ hàng" [ref=e38] [cursor=pointer]:
+          - /url: /cart
+          - generic [ref=e39]: 🛒
+  - main [ref=e40]:
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: Trang quản trị
+          - heading "Quản trị cửa hàng điện thoại" [level=1] [ref=e45]
+          - paragraph [ref=e46]: Theo dõi và cập nhật nhanh dữ liệu đang hiển thị trên website bán hàng.
+        - button "Thêm sản phẩm" [ref=e47] [cursor=pointer]
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: Sản phẩm
+          - strong [ref=e51]: "245"
+          - paragraph [ref=e52]: Điện thoại trong hệ thống
+        - generic [ref=e53]:
+          - generic [ref=e54]: Danh mục
+          - strong [ref=e55]: "20"
+          - paragraph [ref=e56]: Hãng điện thoại đang quản lý
+        - generic [ref=e57]:
+          - generic [ref=e58]: Thông số
+          - strong [ref=e59]: "238"
+          - paragraph [ref=e60]: Bản ghi cấu hình chi tiết
+        - generic [ref=e61]:
+          - generic [ref=e62]: Cần bổ sung
+          - strong [ref=e63]: Đơn hàng
+          - paragraph [ref=e64]: Chưa mở chức năng xử lý đơn đặt hàng
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - generic [ref=e67]: Sản phẩm
+          - heading "Quản lý sản phẩm bán hàng" [level=2] [ref=e68]
+        - paragraph [ref=e69]: Danh sách có lọc nhanh theo tên, hãng, giá và trạng thái.
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - generic [ref=e74]: Tìm theo tên/mã
+            - searchbox "Tìm theo tên/mã" [ref=e75]
+          - generic [ref=e76]:
+            - generic [ref=e77]: Hãng
+            - combobox "Hãng" [ref=e78]:
+              - option "Tất cả hãng" [selected]
+              - option "Điện thoại Apple"
+              - option "Điện thoại Samsung"
+              - option "Điện thoại Xiaomi"
+              - option "HONOR"
+              - option "Điện thoại Tecno"
+              - option "Điện thoại OPPO"
+              - option "Điện thoại Nubia"
+              - option "Điện thoại Sony"
+              - option "Điện thoại Nokia"
+              - option "Điện thoại Infinix"
+              - option "Điện thoại Nothing Phone"
+              - option "Điện thoại Masstel"
+              - option "Điện thoại realme"
+              - option "Điện thoại Itel"
+              - option "Điện thoại vivo"
+              - option "Điện thoại OnePlus"
+              - option "Điện thoại TCL"
+              - option "Điện thoại INOI"
+              - option "Điện thoại Benco"
+              - option "Điện thoại ASUS"
+          - generic [ref=e79]:
+            - generic [ref=e80]: Trạng thái
+            - combobox "Trạng thái" [ref=e81]:
+              - option "Tất cả" [selected]
+              - option "Đang bán"
+              - option "Ẩn/xóa mềm"
+          - generic [ref=e82]:
+            - generic [ref=e83]: Giá từ
+            - spinbutton "Giá từ" [ref=e84]
+          - generic [ref=e85]:
+            - generic [ref=e86]: Giá đến
+            - spinbutton "Giá đến" [ref=e87]
+          - generic [ref=e88]:
+            - generic [ref=e89]: Số dòng
+            - combobox "Số dòng" [ref=e90]:
+              - option "10" [selected]
+              - option "20"
+              - option "50"
+          - generic [ref=e91]:
+            - button "Lọc" [ref=e92] [cursor=pointer]
+            - button "Xóa lọc" [ref=e93] [cursor=pointer]
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - generic [ref=e96]:
+              - heading "Danh sách sản phẩm" [level=2] [ref=e97]
+              - paragraph [ref=e98]: 245 sản phẩm, trang 1/25
+            - generic [ref=e99]:
+              - button "Tải lại" [ref=e100] [cursor=pointer]
+              - button "Thêm sản phẩm" [ref=e101] [cursor=pointer]
+          - table [ref=e103]:
+            - rowgroup [ref=e104]:
+              - row "Sản phẩm Giá Cấu hình Ưu tiên Trạng thái Thao tác" [ref=e105]:
+                - columnheader "Sản phẩm" [ref=e106]
+                - columnheader "Giá" [ref=e107]
+                - columnheader "Cấu hình" [ref=e108]
+                - columnheader "Ưu tiên" [ref=e109]
+                - columnheader "Trạng thái" [ref=e110]
+                - columnheader "Thao tác" [ref=e111]
+            - rowgroup [ref=e112]:
+              - row "Nubia Neo 3 GT 12GB 256GB Nubia Neo 3 GT 12GB 256GB dien-thoai-nubia-neo-3-gt-12gb-256gb 6.590.000 ₫ 6.990.000 ₫ 6.8 inches 12 GB 1 Đang bán Sửa Xóa" [ref=e113]:
+                - cell "Nubia Neo 3 GT 12GB 256GB Nubia Neo 3 GT 12GB 256GB dien-thoai-nubia-neo-3-gt-12gb-256gb" [ref=e114]:
+                  - generic [ref=e115]:
+                    - img "Nubia Neo 3 GT 12GB 256GB" [ref=e116]
+                    - generic [ref=e117]:
+                      - strong [ref=e118]: Nubia Neo 3 GT 12GB 256GB
+                      - generic [ref=e119]: dien-thoai-nubia-neo-3-gt-12gb-256gb
+                - cell "6.590.000 ₫ 6.990.000 ₫" [ref=e120]:
+                  - strong [ref=e121]: 6.590.000 ₫
+                  - generic [ref=e122]: 6.990.000 ₫
+                - cell "6.8 inches 12 GB" [ref=e123]:
+                  - text: 6.8 inches
+                  - generic [ref=e124]: 12 GB
+                - cell "1" [ref=e125]
+                - cell "Đang bán" [ref=e126]:
+                  - generic [ref=e127]: Đang bán
+                - cell "Sửa Xóa" [ref=e128]:
+                  - generic [ref=e129]:
+                    - button "Sửa" [ref=e130] [cursor=pointer]
+                    - button "Xóa" [ref=e131] [cursor=pointer]
+              - row "ASUS ROG Phone 6 12GB 256GB ASUS ROG Phone 6 12GB 256GB asus-rog-phone-6-12gb-256gb 14.990.000 ₫ 18.990.000 ₫ 6.78 inches 12 GB 1 Đang bán Sửa Xóa" [ref=e132]:
+                - cell "ASUS ROG Phone 6 12GB 256GB ASUS ROG Phone 6 12GB 256GB asus-rog-phone-6-12gb-256gb" [ref=e133]:
+                  - generic [ref=e134]:
+                    - img "ASUS ROG Phone 6 12GB 256GB" [ref=e135]
+                    - generic [ref=e136]:
+                      - strong [ref=e137]: ASUS ROG Phone 6 12GB 256GB
+                      - generic [ref=e138]: asus-rog-phone-6-12gb-256gb
+                - cell "14.990.000 ₫ 18.990.000 ₫" [ref=e139]:
+                  - strong [ref=e140]: 14.990.000 ₫
+                  - generic [ref=e141]: 18.990.000 ₫
+                - cell "6.78 inches 12 GB" [ref=e142]:
+                  - text: 6.78 inches
+                  - generic [ref=e143]: 12 GB
+                - cell "1" [ref=e144]
+                - cell "Đang bán" [ref=e145]:
+                  - generic [ref=e146]: Đang bán
+                - cell "Sửa Xóa" [ref=e147]:
+                  - generic [ref=e148]:
+                    - button "Sửa" [ref=e149] [cursor=pointer]
+                    - button "Xóa" [ref=e150] [cursor=pointer]
+              - row "TECNO Spark 40 Pro+ 8GB 256GB (Chỉ có tại CellphoneS) TECNO Spark 40 Pro+ 8GB 256GB (Chỉ có tại CellphoneS) dien-thoai-tecno-spark-40-pro-plus 5.190.000 ₫ 5.690.000 ₫ 6.78 inches 8 GB 1 Đang bán Sửa Xóa" [ref=e151]:
+                - cell "TECNO Spark 40 Pro+ 8GB 256GB (Chỉ có tại CellphoneS) TECNO Spark 40 Pro+ 8GB 256GB (Chỉ có tại CellphoneS) dien-thoai-tecno-spark-40-pro-plus" [ref=e152]:
+                  - generic [ref=e153]:
+                    - img "TECNO Spark 40 Pro+ 8GB 256GB (Chỉ có tại CellphoneS)" [ref=e154]
+                    - generic [ref=e155]:
+                      - strong [ref=e156]: TECNO Spark 40 Pro+ 8GB 256GB (Chỉ có tại CellphoneS)
+                      - generic [ref=e157]: dien-thoai-tecno-spark-40-pro-plus
+                - cell "5.190.000 ₫ 5.690.000 ₫" [ref=e158]:
+                  - strong [ref=e159]: 5.190.000 ₫
+                  - generic [ref=e160]: 5.690.000 ₫
+                - cell "6.78 inches 8 GB" [ref=e161]:
+                  - text: 6.78 inches
+                  - generic [ref=e162]: 8 GB
+                - cell "1" [ref=e163]
+                - cell "Đang bán" [ref=e164]:
+                  - generic [ref=e165]: Đang bán
+                - cell "Sửa Xóa" [ref=e166]:
+                  - generic [ref=e167]:
+                    - button "Sửa" [ref=e168] [cursor=pointer]
+                    - button "Xóa" [ref=e169] [cursor=pointer]
+              - row "Benco S1 Pro 8GB 256GB Benco S1 Pro 8GB 256GB dien-thoai-benco-s1-pro 3.590.000 ₫ 4.290.000 ₫ Chưa có màn hình Chưa có RAM/ROM 1 Đang bán Sửa Xóa" [ref=e170]:
+                - cell "Benco S1 Pro 8GB 256GB Benco S1 Pro 8GB 256GB dien-thoai-benco-s1-pro" [ref=e171]:
+                  - generic [ref=e172]:
+                    - img "Benco S1 Pro 8GB 256GB" [ref=e173]
+                    - generic [ref=e174]:
+                      - strong [ref=e175]: Benco S1 Pro 8GB 256GB
+                      - generic [ref=e176]: dien-thoai-benco-s1-pro
+                - cell "3.590.000 ₫ 4.290.000 ₫" [ref=e177]:
+                  - strong [ref=e178]: 3.590.000 ₫
+                  - generic [ref=e179]: 4.290.000 ₫
+                - cell "Chưa có màn hình Chưa có RAM/ROM" [ref=e180]:
+                  - text: Chưa có màn hình
+                  - generic [ref=e181]: Chưa có RAM/ROM
+                - cell "1" [ref=e182]
+                - cell "Đang bán" [ref=e183]:
+                  - generic [ref=e184]: Đang bán
+                - cell "Sửa Xóa" [ref=e185]:
+                  - generic [ref=e186]:
+                    - button "Sửa" [ref=e187] [cursor=pointer]
+                    - button "Xóa" [ref=e188] [cursor=pointer]
+              - row "Nokia 3210 4G Nokia 3210 4G nokia-3210-4g 1.430.000 ₫ 1.490.000 ₫ 2.4 inches 128 MB 1 Đang bán Sửa Xóa" [ref=e189]:
+                - cell "Nokia 3210 4G Nokia 3210 4G nokia-3210-4g" [ref=e190]:
+                  - generic [ref=e191]:
+                    - img "Nokia 3210 4G" [ref=e192]
+                    - generic [ref=e193]:
+                      - strong [ref=e194]: Nokia 3210 4G
+                      - generic [ref=e195]: nokia-3210-4g
+                - cell "1.430.000 ₫ 1.490.000 ₫" [ref=e196]:
+                  - strong [ref=e197]: 1.430.000 ₫
+                  - generic [ref=e198]: 1.490.000 ₫
+                - cell "2.4 inches 128 MB" [ref=e199]:
+                  - text: 2.4 inches
+                  - generic [ref=e200]: 128 MB
+                - cell "1" [ref=e201]
+                - cell "Đang bán" [ref=e202]:
+                  - generic [ref=e203]: Đang bán
+                - cell "Sửa Xóa" [ref=e204]:
+                  - generic [ref=e205]:
+                    - button "Sửa" [ref=e206] [cursor=pointer]
+                    - button "Xóa" [ref=e207] [cursor=pointer]
+              - row "Điện thoại Itel P55 Plus NFC 8GB 256GB Điện thoại Itel P55 Plus NFC 8GB 256GB dien-thoai-itel-p55-plus-8gb-256gb 2.990.000 ₫ 3.490.000 ₫ 6.6 inches 8 GB 1 Đang bán Sửa Xóa" [ref=e208]:
+                - cell "Điện thoại Itel P55 Plus NFC 8GB 256GB Điện thoại Itel P55 Plus NFC 8GB 256GB dien-thoai-itel-p55-plus-8gb-256gb" [ref=e209]:
+                  - generic [ref=e210]:
+                    - img "Điện thoại Itel P55 Plus NFC 8GB 256GB" [ref=e211]
+                    - generic [ref=e212]:
+                      - strong [ref=e213]: Điện thoại Itel P55 Plus NFC 8GB 256GB
+                      - generic [ref=e214]: dien-thoai-itel-p55-plus-8gb-256gb
+                - cell "2.990.000 ₫ 3.490.000 ₫" [ref=e215]:
+                  - strong [ref=e216]: 2.990.000 ₫
+                  - generic [ref=e217]: 3.490.000 ₫
+                - cell "6.6 inches 8 GB" [ref=e218]:
+                  - text: 6.6 inches
+                  - generic [ref=e219]: 8 GB
+                - cell "1" [ref=e220]
+                - cell "Đang bán" [ref=e221]:
+                  - generic [ref=e222]: Đang bán
+                - cell "Sửa Xóa" [ref=e223]:
+                  - generic [ref=e224]:
+                    - button "Sửa" [ref=e225] [cursor=pointer]
+                    - button "Xóa" [ref=e226] [cursor=pointer]
+              - row "Samsung Galaxy S25 Ultra 12GB 256GB Samsung Galaxy S25 Ultra 12GB 256GB dien-thoai-samsung-galaxy-s25-ultra 27.280.000 ₫ 33.380.000 ₫ 6.9 inches 12 GB 1 Đang bán Sửa Xóa" [ref=e227]:
+                - cell "Samsung Galaxy S25 Ultra 12GB 256GB Samsung Galaxy S25 Ultra 12GB 256GB dien-thoai-samsung-galaxy-s25-ultra" [ref=e228]:
+                  - generic [ref=e229]:
+                    - img "Samsung Galaxy S25 Ultra 12GB 256GB" [ref=e230]
+                    - generic [ref=e231]:
+                      - strong [ref=e232]: Samsung Galaxy S25 Ultra 12GB 256GB
+                      - generic [ref=e233]: dien-thoai-samsung-galaxy-s25-ultra
+                - cell "27.280.000 ₫ 33.380.000 ₫" [ref=e234]:
+                  - strong [ref=e235]: 27.280.000 ₫
+                  - generic [ref=e236]: 33.380.000 ₫
+                - cell "6.9 inches 12 GB" [ref=e237]:
+                  - text: 6.9 inches
+                  - generic [ref=e238]: 12 GB
+                - cell "1" [ref=e239]
+                - cell "Đang bán" [ref=e240]:
+                  - generic [ref=e241]: Đang bán
+                - cell "Sửa Xóa" [ref=e242]:
+                  - generic [ref=e243]:
+                    - button "Sửa" [ref=e244] [cursor=pointer]
+                    - button "Xóa" [ref=e245] [cursor=pointer]
+              - row "Xiaomi 15T 5G 12GB 512GB Xiaomi 15T 5G 12GB 512GB dien-thoai-xiaomi-15t-5g 14.490.000 ₫ 14.990.000 ₫ 6.83 inches 12 GB 1 Đang bán Sửa Xóa" [ref=e246]:
+                - cell "Xiaomi 15T 5G 12GB 512GB Xiaomi 15T 5G 12GB 512GB dien-thoai-xiaomi-15t-5g" [ref=e247]:
+                  - generic [ref=e248]:
+                    - img "Xiaomi 15T 5G 12GB 512GB" [ref=e249]
+                    - generic [ref=e250]:
+                      - strong [ref=e251]: Xiaomi 15T 5G 12GB 512GB
+                      - generic [ref=e252]: dien-thoai-xiaomi-15t-5g
+                - cell "14.490.000 ₫ 14.990.000 ₫" [ref=e253]:
+                  - strong [ref=e254]: 14.490.000 ₫
+                  - generic [ref=e255]: 14.990.000 ₫
+                - cell "6.83 inches 12 GB" [ref=e256]:
+                  - text: 6.83 inches
+                  - generic [ref=e257]: 12 GB
+                - cell "1" [ref=e258]
+                - cell "Đang bán" [ref=e259]:
+                  - generic [ref=e260]: Đang bán
+                - cell "Sửa Xóa" [ref=e261]:
+                  - generic [ref=e262]:
+                    - button "Sửa" [ref=e263] [cursor=pointer]
+                    - button "Xóa" [ref=e264] [cursor=pointer]
+              - row "realme C61 4GB 128GB realme C61 4GB 128GB dien-thoai-realme-c61 2.390.000 ₫ 3.590.000 ₫ 6.745 inches 4 GB 1 Đang bán Sửa Xóa" [ref=e265]:
+                - cell "realme C61 4GB 128GB realme C61 4GB 128GB dien-thoai-realme-c61" [ref=e266]:
+                  - generic [ref=e267]:
+                    - img "realme C61 4GB 128GB" [ref=e268]
+                    - generic [ref=e269]:
+                      - strong [ref=e270]: realme C61 4GB 128GB
+                      - generic [ref=e271]: dien-thoai-realme-c61
+                - cell "2.390.000 ₫ 3.590.000 ₫" [ref=e272]:
+                  - strong [ref=e273]: 2.390.000 ₫
+                  - generic [ref=e274]: 3.590.000 ₫
+                - cell "6.745 inches 4 GB" [ref=e275]:
+                  - text: 6.745 inches
+                  - generic [ref=e276]: 4 GB
+                - cell "1" [ref=e277]
+                - cell "Đang bán" [ref=e278]:
+                  - generic [ref=e279]: Đang bán
+                - cell "Sửa Xóa" [ref=e280]:
+                  - generic [ref=e281]:
+                    - button "Sửa" [ref=e282] [cursor=pointer]
+                    - button "Xóa" [ref=e283] [cursor=pointer]
+              - row "vivo Y19S 8GB 128GB vivo Y19S 8GB 128GB dien-thoai-vivo-y19s 4.390.000 ₫ 4.790.000 ₫ 6.68 inches 8 GB 1 Đang bán Sửa Xóa" [ref=e284]:
+                - cell "vivo Y19S 8GB 128GB vivo Y19S 8GB 128GB dien-thoai-vivo-y19s" [ref=e285]:
+                  - generic [ref=e286]:
+                    - img "vivo Y19S 8GB 128GB" [ref=e287]
+                    - generic [ref=e288]:
+                      - strong [ref=e289]: vivo Y19S 8GB 128GB
+                      - generic [ref=e290]: dien-thoai-vivo-y19s
+                - cell "4.390.000 ₫ 4.790.000 ₫" [ref=e291]:
+                  - strong [ref=e292]: 4.390.000 ₫
+                  - generic [ref=e293]: 4.790.000 ₫
+                - cell "6.68 inches 8 GB" [ref=e294]:
+                  - text: 6.68 inches
+                  - generic [ref=e295]: 8 GB
+                - cell "1" [ref=e296]
+                - cell "Đang bán" [ref=e297]:
+                  - generic [ref=e298]: Đang bán
+                - cell "Sửa Xóa" [ref=e299]:
+                  - generic [ref=e300]:
+                    - button "Sửa" [ref=e301] [cursor=pointer]
+                    - button "Xóa" [ref=e302] [cursor=pointer]
+          - generic [ref=e303]:
+            - button "Trang trước" [disabled] [ref=e304] [cursor=pointer]
+            - generic [ref=e305]: Trang 1 / 25
+            - button "Trang sau" [ref=e306] [cursor=pointer]
+      - generic [ref=e307]:
+        - generic [ref=e308]:
+          - generic [ref=e309]:
+            - generic [ref=e310]: Dữ liệu chi tiết
+            - heading "Hoàn thiện nội dung sản phẩm" [level=2] [ref=e311]
+          - paragraph [ref=e312]: "Các mục bên dưới phục vụ trang chi tiết: danh mục hãng, thông số, phiên bản mua hàng và bộ ảnh sản phẩm."
+        - tablist "Dữ liệu chi tiết sản phẩm" [ref=e313]:
+          - button "Danh mục" [ref=e314] [cursor=pointer]
+          - button "Thông số" [ref=e315] [cursor=pointer]
+          - button "Phiên bản" [ref=e316] [cursor=pointer]
+          - button "Hình ảnh" [ref=e317] [cursor=pointer]
+        - generic [ref=e320]:
+          - generic [ref=e321]:
+            - generic [ref=e322]:
+              - generic [ref=e323]: Trạng thái
+              - combobox "Trạng thái" [ref=e324]:
+                - option "Tất cả" [selected]
+                - option "Đang dùng"
+                - option "Ẩn/xóa mềm"
+            - generic [ref=e325]:
+              - button "Lọc" [ref=e326] [cursor=pointer]
+              - button "Xóa lọc" [ref=e327] [cursor=pointer]
+          - generic [ref=e328]:
+            - generic [ref=e329]:
+              - heading "Danh mục hãng" [level=2] [ref=e330]
+              - paragraph [ref=e331]: 20 danh mục đang quản lý
+            - generic [ref=e332]:
+              - button "Tải lại" [ref=e333] [cursor=pointer]
+              - button "Thêm danh mục" [ref=e334] [cursor=pointer]
+          - table [ref=e336]:
+            - rowgroup [ref=e337]:
+              - row "Danh mục Ưu tiên Trạng thái Thao tác" [ref=e338]:
+                - columnheader "Danh mục" [ref=e339]
+                - columnheader "Ưu tiên" [ref=e340]
+                - columnheader "Trạng thái" [ref=e341]
+                - columnheader "Thao tác" [ref=e342]
+            - rowgroup [ref=e343]:
+              - row "Điện thoại Apple Điện thoại Apple apple - Đang dùng Sửa Xóa" [ref=e344]:
+                - cell "Điện thoại Apple Điện thoại Apple apple" [ref=e345]:
+                  - generic [ref=e346]:
+                    - img "Điện thoại Apple" [ref=e347]
+                    - generic [ref=e348]:
+                      - strong [ref=e349]: Điện thoại Apple
+                      - generic [ref=e350]: apple
+                - cell "-" [ref=e351]
+                - cell "Đang dùng" [ref=e352]:
+                  - generic [ref=e353]: Đang dùng
+                - cell "Sửa Xóa" [ref=e354]:
+                  - generic [ref=e355]:
+                    - button "Sửa" [ref=e356] [cursor=pointer]
+                    - button "Xóa" [ref=e357] [cursor=pointer]
+              - row "Điện thoại Samsung Điện thoại Samsung samsung - Đang dùng Sửa Xóa" [ref=e358]:
+                - cell "Điện thoại Samsung Điện thoại Samsung samsung" [ref=e359]:
+                  - generic [ref=e360]:
+                    - img "Điện thoại Samsung" [ref=e361]
+                    - generic [ref=e362]:
+                      - strong [ref=e363]: Điện thoại Samsung
+                      - generic [ref=e364]: samsung
+                - cell "-" [ref=e365]
+                - cell "Đang dùng" [ref=e366]:
+                  - generic [ref=e367]: Đang dùng
+                - cell "Sửa Xóa" [ref=e368]:
+                  - generic [ref=e369]:
+                    - button "Sửa" [ref=e370] [cursor=pointer]
+                    - button "Xóa" [ref=e371] [cursor=pointer]
+              - row "Điện thoại Xiaomi Điện thoại Xiaomi xiaomi - Đang dùng Sửa Xóa" [ref=e372]:
+                - cell "Điện thoại Xiaomi Điện thoại Xiaomi xiaomi" [ref=e373]:
+                  - generic [ref=e374]:
+                    - img "Điện thoại Xiaomi" [ref=e375]
+                    - generic [ref=e376]:
+                      - strong [ref=e377]: Điện thoại Xiaomi
+                      - generic [ref=e378]: xiaomi
+                - cell "-" [ref=e379]
+                - cell "Đang dùng" [ref=e380]:
+                  - generic [ref=e381]: Đang dùng
+                - cell "Sửa Xóa" [ref=e382]:
+                  - generic [ref=e383]:
+                    - button "Sửa" [ref=e384] [cursor=pointer]
+                    - button "Xóa" [ref=e385] [cursor=pointer]
+              - row "HONOR HONOR honor - Đang dùng Sửa Xóa" [ref=e386]:
+                - cell "HONOR HONOR honor" [ref=e387]:
+                  - generic [ref=e388]:
+                    - img "HONOR" [ref=e389]
+                    - generic [ref=e390]:
+                      - strong [ref=e391]: HONOR
+                      - generic [ref=e392]: honor
+                - cell "-" [ref=e393]
+                - cell "Đang dùng" [ref=e394]:
+                  - generic [ref=e395]: Đang dùng
+                - cell "Sửa Xóa" [ref=e396]:
+                  - generic [ref=e397]:
+                    - button "Sửa" [ref=e398] [cursor=pointer]
+                    - button "Xóa" [ref=e399] [cursor=pointer]
+              - row "Điện thoại Tecno Điện thoại Tecno tecno - Đang dùng Sửa Xóa" [ref=e400]:
+                - cell "Điện thoại Tecno Điện thoại Tecno tecno" [ref=e401]:
+                  - generic [ref=e402]:
+                    - img "Điện thoại Tecno" [ref=e403]
+                    - generic [ref=e404]:
+                      - strong [ref=e405]: Điện thoại Tecno
+                      - generic [ref=e406]: tecno
+                - cell "-" [ref=e407]
+                - cell "Đang dùng" [ref=e408]:
+                  - generic [ref=e409]: Đang dùng
+                - cell "Sửa Xóa" [ref=e410]:
+                  - generic [ref=e411]:
+                    - button "Sửa" [ref=e412] [cursor=pointer]
+                    - button "Xóa" [ref=e413] [cursor=pointer]
+              - row "Điện thoại OPPO Điện thoại OPPO oppo - Đang dùng Sửa Xóa" [ref=e414]:
+                - cell "Điện thoại OPPO Điện thoại OPPO oppo" [ref=e415]:
+                  - generic [ref=e416]:
+                    - img "Điện thoại OPPO" [ref=e417]
+                    - generic [ref=e418]:
+                      - strong [ref=e419]: Điện thoại OPPO
+                      - generic [ref=e420]: oppo
+                - cell "-" [ref=e421]
+                - cell "Đang dùng" [ref=e422]:
+                  - generic [ref=e423]: Đang dùng
+                - cell "Sửa Xóa" [ref=e424]:
+                  - generic [ref=e425]:
+                    - button "Sửa" [ref=e426] [cursor=pointer]
+                    - button "Xóa" [ref=e427] [cursor=pointer]
+              - row "Điện thoại Nubia Điện thoại Nubia nubia - Đang dùng Sửa Xóa" [ref=e428]:
+                - cell "Điện thoại Nubia Điện thoại Nubia nubia" [ref=e429]:
+                  - generic [ref=e430]:
+                    - img "Điện thoại Nubia" [ref=e431]
+                    - generic [ref=e432]:
+                      - strong [ref=e433]: Điện thoại Nubia
+                      - generic [ref=e434]: nubia
+                - cell "-" [ref=e435]
+                - cell "Đang dùng" [ref=e436]:
+                  - generic [ref=e437]: Đang dùng
+                - cell "Sửa Xóa" [ref=e438]:
+                  - generic [ref=e439]:
+                    - button "Sửa" [ref=e440] [cursor=pointer]
+                    - button "Xóa" [ref=e441] [cursor=pointer]
+              - row "Điện thoại Sony Điện thoại Sony sony - Đang dùng Sửa Xóa" [ref=e442]:
+                - cell "Điện thoại Sony Điện thoại Sony sony" [ref=e443]:
+                  - generic [ref=e444]:
+                    - img "Điện thoại Sony" [ref=e445]
+                    - generic [ref=e446]:
+                      - strong [ref=e447]: Điện thoại Sony
+                      - generic [ref=e448]: sony
+                - cell "-" [ref=e449]
+                - cell "Đang dùng" [ref=e450]:
+                  - generic [ref=e451]: Đang dùng
+                - cell "Sửa Xóa" [ref=e452]:
+                  - generic [ref=e453]:
+                    - button "Sửa" [ref=e454] [cursor=pointer]
+                    - button "Xóa" [ref=e455] [cursor=pointer]
+              - row "Điện thoại Nokia Điện thoại Nokia nokia - Đang dùng Sửa Xóa" [ref=e456]:
+                - cell "Điện thoại Nokia Điện thoại Nokia nokia" [ref=e457]:
+                  - generic [ref=e458]:
+                    - img "Điện thoại Nokia" [ref=e459]
+                    - generic [ref=e460]:
+                      - strong [ref=e461]: Điện thoại Nokia
+                      - generic [ref=e462]: nokia
+                - cell "-" [ref=e463]
+                - cell "Đang dùng" [ref=e464]:
+                  - generic [ref=e465]: Đang dùng
+                - cell "Sửa Xóa" [ref=e466]:
+                  - generic [ref=e467]:
+                    - button "Sửa" [ref=e468] [cursor=pointer]
+                    - button "Xóa" [ref=e469] [cursor=pointer]
+              - row "Điện thoại Infinix Điện thoại Infinix infinix - Đang dùng Sửa Xóa" [ref=e470]:
+                - cell "Điện thoại Infinix Điện thoại Infinix infinix" [ref=e471]:
+                  - generic [ref=e472]:
+                    - img "Điện thoại Infinix" [ref=e473]
+                    - generic [ref=e474]:
+                      - strong [ref=e475]: Điện thoại Infinix
+                      - generic [ref=e476]: infinix
+                - cell "-" [ref=e477]
+                - cell "Đang dùng" [ref=e478]:
+                  - generic [ref=e479]: Đang dùng
+                - cell "Sửa Xóa" [ref=e480]:
+                  - generic [ref=e481]:
+                    - button "Sửa" [ref=e482] [cursor=pointer]
+                    - button "Xóa" [ref=e483] [cursor=pointer]
+              - row "Điện thoại Nothing Phone Điện thoại Nothing Phone nothingphone - Đang dùng Sửa Xóa" [ref=e484]:
+                - cell "Điện thoại Nothing Phone Điện thoại Nothing Phone nothingphone" [ref=e485]:
+                  - generic [ref=e486]:
+                    - img "Điện thoại Nothing Phone" [ref=e487]
+                    - generic [ref=e488]:
+                      - strong [ref=e489]: Điện thoại Nothing Phone
+                      - generic [ref=e490]: nothingphone
+                - cell "-" [ref=e491]
+                - cell "Đang dùng" [ref=e492]:
+                  - generic [ref=e493]: Đang dùng
+                - cell "Sửa Xóa" [ref=e494]:
+                  - generic [ref=e495]:
+                    - button "Sửa" [ref=e496] [cursor=pointer]
+                    - button "Xóa" [ref=e497] [cursor=pointer]
+              - row "Điện thoại Masstel Điện thoại Masstel masstel - Đang dùng Sửa Xóa" [ref=e498]:
+                - cell "Điện thoại Masstel Điện thoại Masstel masstel" [ref=e499]:
+                  - generic [ref=e500]:
+                    - img "Điện thoại Masstel" [ref=e501]
+                    - generic [ref=e502]:
+                      - strong [ref=e503]: Điện thoại Masstel
+                      - generic [ref=e504]: masstel
+                - cell "-" [ref=e505]
+                - cell "Đang dùng" [ref=e506]:
+                  - generic [ref=e507]: Đang dùng
+                - cell "Sửa Xóa" [ref=e508]:
+                  - generic [ref=e509]:
+                    - button "Sửa" [ref=e510] [cursor=pointer]
+                    - button "Xóa" [ref=e511] [cursor=pointer]
+              - row "Điện thoại realme Điện thoại realme realme - Đang dùng Sửa Xóa" [ref=e512]:
+                - cell "Điện thoại realme Điện thoại realme realme" [ref=e513]:
+                  - generic [ref=e514]:
+                    - img "Điện thoại realme" [ref=e515]
+                    - generic [ref=e516]:
+                      - strong [ref=e517]: Điện thoại realme
+                      - generic [ref=e518]: realme
+                - cell "-" [ref=e519]
+                - cell "Đang dùng" [ref=e520]:
+                  - generic [ref=e521]: Đang dùng
+                - cell "Sửa Xóa" [ref=e522]:
+                  - generic [ref=e523]:
+                    - button "Sửa" [ref=e524] [cursor=pointer]
+                    - button "Xóa" [ref=e525] [cursor=pointer]
+              - row "Điện thoại Itel Điện thoại Itel itel - Đang dùng Sửa Xóa" [ref=e526]:
+                - cell "Điện thoại Itel Điện thoại Itel itel" [ref=e527]:
+                  - generic [ref=e528]:
+                    - img "Điện thoại Itel" [ref=e529]
+                    - generic [ref=e530]:
+                      - strong [ref=e531]: Điện thoại Itel
+                      - generic [ref=e532]: itel
+                - cell "-" [ref=e533]
+                - cell "Đang dùng" [ref=e534]:
+                  - generic [ref=e535]: Đang dùng
+                - cell "Sửa Xóa" [ref=e536]:
+                  - generic [ref=e537]:
+                    - button "Sửa" [ref=e538] [cursor=pointer]
+                    - button "Xóa" [ref=e539] [cursor=pointer]
+              - row "Điện thoại vivo Điện thoại vivo vivo - Đang dùng Sửa Xóa" [ref=e540]:
+                - cell "Điện thoại vivo Điện thoại vivo vivo" [ref=e541]:
+                  - generic [ref=e542]:
+                    - img "Điện thoại vivo" [ref=e543]
+                    - generic [ref=e544]:
+                      - strong [ref=e545]: Điện thoại vivo
+                      - generic [ref=e546]: vivo
+                - cell "-" [ref=e547]
+                - cell "Đang dùng" [ref=e548]:
+                  - generic [ref=e549]: Đang dùng
+                - cell "Sửa Xóa" [ref=e550]:
+                  - generic [ref=e551]:
+                    - button "Sửa" [ref=e552] [cursor=pointer]
+                    - button "Xóa" [ref=e553] [cursor=pointer]
+              - row "Điện thoại OnePlus Điện thoại OnePlus oneplus - Đang dùng Sửa Xóa" [ref=e554]:
+                - cell "Điện thoại OnePlus Điện thoại OnePlus oneplus" [ref=e555]:
+                  - generic [ref=e556]:
+                    - img "Điện thoại OnePlus" [ref=e557]
+                    - generic [ref=e558]:
+                      - strong [ref=e559]: Điện thoại OnePlus
+                      - generic [ref=e560]: oneplus
+                - cell "-" [ref=e561]
+                - cell "Đang dùng" [ref=e562]:
+                  - generic [ref=e563]: Đang dùng
+                - cell "Sửa Xóa" [ref=e564]:
+                  - generic [ref=e565]:
+                    - button "Sửa" [ref=e566] [cursor=pointer]
+                    - button "Xóa" [ref=e567] [cursor=pointer]
+              - row "Điện thoại TCL Điện thoại TCL tcl - Đang dùng Sửa Xóa" [ref=e568]:
+                - cell "Điện thoại TCL Điện thoại TCL tcl" [ref=e569]:
+                  - generic [ref=e570]:
+                    - img "Điện thoại TCL" [ref=e571]
+                    - generic [ref=e572]:
+                      - strong [ref=e573]: Điện thoại TCL
+                      - generic [ref=e574]: tcl
+                - cell "-" [ref=e575]
+                - cell "Đang dùng" [ref=e576]:
+                  - generic [ref=e577]: Đang dùng
+                - cell "Sửa Xóa" [ref=e578]:
+                  - generic [ref=e579]:
+                    - button "Sửa" [ref=e580] [cursor=pointer]
+                    - button "Xóa" [ref=e581] [cursor=pointer]
+              - row "Điện thoại INOI Điện thoại INOI inoi - Đang dùng Sửa Xóa" [ref=e582]:
+                - cell "Điện thoại INOI Điện thoại INOI inoi" [ref=e583]:
+                  - generic [ref=e584]:
+                    - img "Điện thoại INOI" [ref=e585]
+                    - generic [ref=e586]:
+                      - strong [ref=e587]: Điện thoại INOI
+                      - generic [ref=e588]: inoi
+                - cell "-" [ref=e589]
+                - cell "Đang dùng" [ref=e590]:
+                  - generic [ref=e591]: Đang dùng
+                - cell "Sửa Xóa" [ref=e592]:
+                  - generic [ref=e593]:
+                    - button "Sửa" [ref=e594] [cursor=pointer]
+                    - button "Xóa" [ref=e595] [cursor=pointer]
+              - row "Điện thoại Benco Điện thoại Benco benco - Đang dùng Sửa Xóa" [ref=e596]:
+                - cell "Điện thoại Benco Điện thoại Benco benco" [ref=e597]:
+                  - generic [ref=e598]:
+                    - img "Điện thoại Benco" [ref=e599]
+                    - generic [ref=e600]:
+                      - strong [ref=e601]: Điện thoại Benco
+                      - generic [ref=e602]: benco
+                - cell "-" [ref=e603]
+                - cell "Đang dùng" [ref=e604]:
+                  - generic [ref=e605]: Đang dùng
+                - cell "Sửa Xóa" [ref=e606]:
+                  - generic [ref=e607]:
+                    - button "Sửa" [ref=e608] [cursor=pointer]
+                    - button "Xóa" [ref=e609] [cursor=pointer]
+              - row "Điện thoại ASUS Điện thoại ASUS asus - Đang dùng Sửa Xóa" [ref=e610]:
+                - cell "Điện thoại ASUS Điện thoại ASUS asus" [ref=e611]:
+                  - generic [ref=e612]:
+                    - img "Điện thoại ASUS" [ref=e613]
+                    - generic [ref=e614]:
+                      - strong [ref=e615]: Điện thoại ASUS
+                      - generic [ref=e616]: asus
+                - cell "-" [ref=e617]
+                - cell "Đang dùng" [ref=e618]:
+                  - generic [ref=e619]: Đang dùng
+                - cell "Sửa Xóa" [ref=e620]:
+                  - generic [ref=e621]:
+                    - button "Sửa" [ref=e622] [cursor=pointer]
+                    - button "Xóa" [ref=e623] [cursor=pointer]
+      - dialog "Thêm sản phẩm" [ref=e626]:
+        - generic [ref=e627]:
+          - generic [ref=e628]:
+            - generic [ref=e629]:
+              - generic [ref=e630]: Thông tin sản phẩm
+              - heading "Thêm sản phẩm" [level=2] [ref=e631]
+            - button "Đóng" [ref=e633] [cursor=pointer]: ×
+          - generic [ref=e634]:
+            - generic [ref=e635]: Mã sản phẩm *
+            - textbox "Mã sản phẩm *" [active] [ref=e636]
+          - generic [ref=e637]:
+            - generic [ref=e638]: Tên sản phẩm *
+            - textbox "Tên sản phẩm *" [ref=e639]
+          - generic [ref=e640]:
+            - generic [ref=e641]: Hãng *
+            - combobox "Hãng *" [ref=e642]:
+              - option "Chọn hãng" [selected]
+              - option "Điện thoại Apple"
+              - option "Điện thoại Samsung"
+              - option "Điện thoại Xiaomi"
+              - option "HONOR"
+              - option "Điện thoại Tecno"
+              - option "Điện thoại OPPO"
+              - option "Điện thoại Nubia"
+              - option "Điện thoại Sony"
+              - option "Điện thoại Nokia"
+              - option "Điện thoại Infinix"
+              - option "Điện thoại Nothing Phone"
+              - option "Điện thoại Masstel"
+              - option "Điện thoại realme"
+              - option "Điện thoại Itel"
+              - option "Điện thoại vivo"
+              - option "Điện thoại OnePlus"
+              - option "Điện thoại TCL"
+              - option "Điện thoại INOI"
+              - option "Điện thoại Benco"
+              - option "Điện thoại ASUS"
+          - generic [ref=e643]:
+            - generic [ref=e644]:
+              - generic [ref=e645]: Giá bán *
+              - spinbutton "Giá bán *" [ref=e646]
+            - generic [ref=e647]:
+              - generic [ref=e648]: Giá gốc
+              - spinbutton "Giá gốc" [ref=e649]
+          - generic [ref=e650]:
+            - generic [ref=e651]:
+              - generic [ref=e652]: Màn hình
+              - textbox "Màn hình" [ref=e653]:
+                - /placeholder: 6.9 inches
+            - generic [ref=e654]:
+              - generic [ref=e655]: RAM/Bộ nhớ
+              - textbox "RAM/Bộ nhớ" [ref=e656]:
+                - /placeholder: 8 GB / 256 GB
+          - generic [ref=e657]:
+            - generic [ref=e658]:
+              - generic [ref=e659]: Giảm giá (%)
+              - textbox "Giảm giá (%)" [ref=e660]
+            - generic [ref=e661]:
+              - generic [ref=e662]: Ưu tiên
+              - spinbutton "Ưu tiên" [ref=e663]: "1"
+          - generic [ref=e664]:
+            - generic [ref=e665]: Khuyến mãi
+            - textbox "Khuyến mãi" [ref=e666]
+          - generic [ref=e667]:
+            - generic [ref=e668]: URL ảnh hiện có
+            - textbox "URL ảnh hiện có" [ref=e669]:
+              - /placeholder: Dán link ảnh sản phẩm
+          - generic [ref=e670]:
+            - generic [ref=e671]: Chọn ảnh mới
+            - button "Chọn ảnh mới" [ref=e672]
+          - generic [ref=e673]:
+            - generic [ref=e674]:
+              - generic [ref=e675]: Trạng thái
+              - combobox "Trạng thái" [ref=e676]:
+                - option "Đang bán" [selected]
+                - option "Ẩn/xóa mềm"
+            - generic [ref=e677]:
+              - generic [ref=e678]: Trả góp
+              - spinbutton "Trả góp" [ref=e679]: "0"
+          - button "Thêm sản phẩm" [ref=e680] [cursor=pointer]

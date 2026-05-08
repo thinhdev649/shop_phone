@@ -1,0 +1,24 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "⚡ TechVision" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: ⚡
+        - generic [ref=e8]: TechVision
+      - navigation [ref=e9]:
+        - link "Trang chủ" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "Danh mục" [ref=e11] [cursor=pointer]:
+          - /url: /categories
+        - link "Tất cả sản phẩm" [ref=e12] [cursor=pointer]:
+          - /url: /phones
+        - link "Quản trị" [ref=e13] [cursor=pointer]:
+          - /url: /admin
+      - generic [ref=e14]:
+        - generic [ref=e15]: admin01
+        - button "Đăng xuất" [ref=e16] [cursor=pointer]
+        - link "Giỏ hàng" [ref=e17] [cursor=pointer]:
+          - /url: /cart
+          - generic [ref=e18]: 🛒
+  - main [ref=e19]:
+    - paragraph [ref=e23]: Đang tải trang quản trị...

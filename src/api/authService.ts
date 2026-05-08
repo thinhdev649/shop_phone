@@ -57,8 +57,14 @@ class AuthService {
   }
 
   getAuthHeader(): Record<string, string> {
-    const token = this.getSession()?.token;
-    return token ? { Authorization: `Bearer ${token}` } : {};
+    const session = this.getSession();
+    const token = session?.token;
+    const tokenType = session?.tokenType || 'Bearer';
+    return token ? { Authorization: `${tokenType} ${token}` } : {};
+  }
+
+  hasRole(role: string): boolean {
+    return this.getSession()?.role?.toUpperCase() === role.toUpperCase();
   }
 
   getDisplayName(): string {
@@ -114,6 +120,8 @@ class AuthService {
 
     return {
       token: this.extractToken(response, data),
+      tokenType: this.pickString(data, ['tokenType', 'token_type']) || 'Bearer',
+      expiresAt: this.pickNumber(data, ['expiresAt', 'expires_at', 'exp']),
       username: this.pickString(user, ['username', 'userName', 'login']) || fallbackUsername,
       fullName: this.pickString(user, ['fullName', 'name']),
       email: this.pickString(user, ['email']),
@@ -156,6 +164,18 @@ class AuthService {
     }
 
     return '';
+  }
+
+  private pickNumber(source: Record<string, unknown>, keys: string[]): number | undefined {
+    for (const key of keys) {
+      const value = source[key];
+      if (typeof value === 'number') return value;
+      if (typeof value === 'string' && value.trim() && !Number.isNaN(Number(value))) {
+        return Number(value);
+      }
+    }
+
+    return undefined;
   }
 }
 

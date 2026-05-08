@@ -1,0 +1,1966 @@
+- generic [ref=e2]:
+  - banner [ref=e24]:
+    - generic [ref=e26]:
+      - link "⚡ TechVision" [ref=e27] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e28]: ⚡
+        - generic [ref=e29]: TechVision
+      - navigation [ref=e30]:
+        - link "Trang chủ" [ref=e31] [cursor=pointer]:
+          - /url: /
+        - link "Danh mục" [ref=e32] [cursor=pointer]:
+          - /url: /categories
+        - link "Tất cả sản phẩm" [ref=e33] [cursor=pointer]:
+          - /url: /phones
+        - link "Quản trị" [ref=e34] [cursor=pointer]:
+          - /url: /admin
+      - generic [ref=e35]:
+        - generic [ref=e36]: admin01
+        - button "Đăng xuất" [ref=e37] [cursor=pointer]
+        - link "Giỏ hàng" [ref=e38] [cursor=pointer]:
+          - /url: /cart
+          - generic [ref=e39]: 🛒
+  - main [ref=e40]:
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: Trang quản trị
+          - heading "Quản trị cửa hàng điện thoại" [level=1] [ref=e45]
+          - paragraph [ref=e46]: Theo dõi và cập nhật nhanh dữ liệu đang hiển thị trên website bán hàng.
+        - button "Thêm sản phẩm" [ref=e47] [cursor=pointer]
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: Sản phẩm
+          - strong [ref=e51]: "245"
+          - paragraph [ref=e52]: Điện thoại trong hệ thống
+        - generic [ref=e53]:
+          - generic [ref=e54]: Danh mục
+          - strong [ref=e55]: "20"
+          - paragraph [ref=e56]: Hãng điện thoại đang quản lý
+        - generic [ref=e57]:
+          - generic [ref=e58]: Thông số
+          - strong [ref=e59]: "238"
+          - paragraph [ref=e60]: Bản ghi cấu hình chi tiết
+        - generic [ref=e61]:
+          - generic [ref=e62]: Cần bổ sung
+          - strong [ref=e63]: Đơn hàng
+          - paragraph [ref=e64]: Chưa mở chức năng xử lý đơn đặt hàng
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - generic [ref=e67]: Sản phẩm
+          - heading "Quản lý sản phẩm bán hàng" [level=2] [ref=e68]
+        - paragraph [ref=e69]: Danh sách có lọc nhanh theo tên, hãng, giá và trạng thái.
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - generic [ref=e74]: Tìm theo tên/mã
+            - searchbox "Tìm theo tên/mã" [ref=e75]
+          - generic [ref=e76]:
+            - generic [ref=e77]: Hãng
+            - combobox "Hãng" [ref=e78]:
+              - option "Tất cả hãng" [selected]
+              - option "Điện thoại Apple"
+              - option "Điện thoại Samsung"
+              - option "Điện thoại Xiaomi"
+              - option "HONOR"
+              - option "Điện thoại Tecno"
+              - option "Điện thoại OPPO"
+              - option "Điện thoại Nubia"
+              - option "Điện thoại Sony"
+              - option "Điện thoại Nokia"
+              - option "Điện thoại Infinix"
+              - option "Điện thoại Nothing Phone"
+              - option "Điện thoại Masstel"
+              - option "Điện thoại realme"
+              - option "Điện thoại Itel"
+              - option "Điện thoại vivo"
+              - option "Điện thoại OnePlus"
+              - option "Điện thoại TCL"
+              - option "Điện thoại INOI"
+              - option "Điện thoại Benco"
+              - option "Điện thoại ASUS"
+          - generic [ref=e79]:
+            - generic [ref=e80]: Trạng thái
+            - combobox "Trạng thái" [ref=e81]:
+              - option "Tất cả" [selected]
+              - option "Đang bán"
+              - option "Ẩn/xóa mềm"
+          - generic [ref=e82]:
+            - generic [ref=e83]: Giá từ
+            - spinbutton "Giá từ" [ref=e84]
+          - generic [ref=e85]:
+            - generic [ref=e86]: Giá đến
+            - spinbutton "Giá đến" [ref=e87]
+          - generic [ref=e88]:
+            - generic [ref=e89]: Số dòng
+            - combobox "Số dòng" [ref=e90]:
+              - option "10" [selected]
+              - option "20"
+              - option "50"
+          - generic [ref=e91]:
+            - button "Lọc" [ref=e92] [cursor=pointer]
+            - button "Xóa lọc" [ref=e93] [cursor=pointer]
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - generic [ref=e96]:
+              - heading "Danh sách sản phẩm" [level=2] [ref=e97]
+              - paragraph [ref=e98]: 245 sản phẩm, trang 1/25
+            - generic [ref=e99]:
+              - button "Tải lại" [ref=e100] [cursor=pointer]
+              - button "Thêm sản phẩm" [ref=e101] [cursor=pointer]
+          - table [ref=e103]:
+            - rowgroup [ref=e104]:
+              - row "Sản phẩm Giá Cấu hình Ưu tiên Trạng thái Thao tác" [ref=e105]:
+                - columnheader "Sản phẩm" [ref=e106]
+                - columnheader "Giá" [ref=e107]
+                - columnheader "Cấu hình" [ref=e108]
+                - columnheader "Ưu tiên" [ref=e109]
+                - columnheader "Trạng thái" [ref=e110]
+                - columnheader "Thao tác" [ref=e111]
+            - rowgroup [ref=e112]:
+              - row "Nubia Neo 3 GT 12GB 256GB Nubia Neo 3 GT 12GB 256GB dien-thoai-nubia-neo-3-gt-12gb-256gb 6.590.000 ₫ 6.990.000 ₫ 6.8 inches 12 GB 1 Đang bán Sửa Xóa" [ref=e113]:
+                - cell "Nubia Neo 3 GT 12GB 256GB Nubia Neo 3 GT 12GB 256GB dien-thoai-nubia-neo-3-gt-12gb-256gb" [ref=e114]:
+                  - generic [ref=e115]:
+                    - img "Nubia Neo 3 GT 12GB 256GB" [ref=e116]
+                    - generic [ref=e117]:
+                      - strong [ref=e118]: Nubia Neo 3 GT 12GB 256GB
+                      - generic [ref=e119]: dien-thoai-nubia-neo-3-gt-12gb-256gb
+                - cell "6.590.000 ₫ 6.990.000 ₫" [ref=e120]:
+                  - strong [ref=e121]: 6.590.000 ₫
+                  - generic [ref=e122]: 6.990.000 ₫
+                - cell "6.8 inches 12 GB" [ref=e123]:
+                  - text: 6.8 inches
+                  - generic [ref=e124]: 12 GB
+                - cell "1" [ref=e125]
+                - cell "Đang bán" [ref=e126]:
+                  - generic [ref=e127]: Đang bán
+                - cell "Sửa Xóa" [ref=e128]:
+                  - generic [ref=e129]:
+                    - button "Sửa" [ref=e130] [cursor=pointer]
+                    - button "Xóa" [ref=e131] [cursor=pointer]
+              - row "ASUS ROG Phone 6 12GB 256GB ASUS ROG Phone 6 12GB 256GB asus-rog-phone-6-12gb-256gb 14.990.000 ₫ 18.990.000 ₫ 6.78 inches 12 GB 1 Đang bán Sửa Xóa" [ref=e132]:
+                - cell "ASUS ROG Phone 6 12GB 256GB ASUS ROG Phone 6 12GB 256GB asus-rog-phone-6-12gb-256gb" [ref=e133]:
+                  - generic [ref=e134]:
+                    - img "ASUS ROG Phone 6 12GB 256GB" [ref=e135]
+                    - generic [ref=e136]:
+                      - strong [ref=e137]: ASUS ROG Phone 6 12GB 256GB
+                      - generic [ref=e138]: asus-rog-phone-6-12gb-256gb
+                - cell "14.990.000 ₫ 18.990.000 ₫" [ref=e139]:
+                  - strong [ref=e140]: 14.990.000 ₫
+                  - generic [ref=e141]: 18.990.000 ₫
+                - cell "6.78 inches 12 GB" [ref=e142]:
+                  - text: 6.78 inches
+                  - generic [ref=e143]: 12 GB
+                - cell "1" [ref=e144]
+                - cell "Đang bán" [ref=e145]:
+                  - generic [ref=e146]: Đang bán
+                - cell "Sửa Xóa" [ref=e147]:
+                  - generic [ref=e148]:
+                    - button "Sửa" [ref=e149] [cursor=pointer]
+                    - button "Xóa" [ref=e150] [cursor=pointer]
+              - row "TECNO Spark 40 Pro+ 8GB 256GB (Chỉ có tại CellphoneS) TECNO Spark 40 Pro+ 8GB 256GB (Chỉ có tại CellphoneS) dien-thoai-tecno-spark-40-pro-plus 5.190.000 ₫ 5.690.000 ₫ 6.78 inches 8 GB 1 Đang bán Sửa Xóa" [ref=e151]:
+                - cell "TECNO Spark 40 Pro+ 8GB 256GB (Chỉ có tại CellphoneS) TECNO Spark 40 Pro+ 8GB 256GB (Chỉ có tại CellphoneS) dien-thoai-tecno-spark-40-pro-plus" [ref=e152]:
+                  - generic [ref=e153]:
+                    - img "TECNO Spark 40 Pro+ 8GB 256GB (Chỉ có tại CellphoneS)" [ref=e154]
+                    - generic [ref=e155]:
+                      - strong [ref=e156]: TECNO Spark 40 Pro+ 8GB 256GB (Chỉ có tại CellphoneS)
+                      - generic [ref=e157]: dien-thoai-tecno-spark-40-pro-plus
+                - cell "5.190.000 ₫ 5.690.000 ₫" [ref=e158]:
+                  - strong [ref=e159]: 5.190.000 ₫
+                  - generic [ref=e160]: 5.690.000 ₫
+                - cell "6.78 inches 8 GB" [ref=e161]:
+                  - text: 6.78 inches
+                  - generic [ref=e162]: 8 GB
+                - cell "1" [ref=e163]
+                - cell "Đang bán" [ref=e164]:
+                  - generic [ref=e165]: Đang bán
+                - cell "Sửa Xóa" [ref=e166]:
+                  - generic [ref=e167]:
+                    - button "Sửa" [ref=e168] [cursor=pointer]
+                    - button "Xóa" [ref=e169] [cursor=pointer]
+              - row "Benco S1 Pro 8GB 256GB Benco S1 Pro 8GB 256GB dien-thoai-benco-s1-pro 3.590.000 ₫ 4.290.000 ₫ Chưa có màn hình Chưa có RAM/ROM 1 Đang bán Sửa Xóa" [ref=e170]:
+                - cell "Benco S1 Pro 8GB 256GB Benco S1 Pro 8GB 256GB dien-thoai-benco-s1-pro" [ref=e171]:
+                  - generic [ref=e172]:
+                    - img "Benco S1 Pro 8GB 256GB" [ref=e173]
+                    - generic [ref=e174]:
+                      - strong [ref=e175]: Benco S1 Pro 8GB 256GB
+                      - generic [ref=e176]: dien-thoai-benco-s1-pro
+                - cell "3.590.000 ₫ 4.290.000 ₫" [ref=e177]:
+                  - strong [ref=e178]: 3.590.000 ₫
+                  - generic [ref=e179]: 4.290.000 ₫
+                - cell "Chưa có màn hình Chưa có RAM/ROM" [ref=e180]:
+                  - text: Chưa có màn hình
+                  - generic [ref=e181]: Chưa có RAM/ROM
+                - cell "1" [ref=e182]
+                - cell "Đang bán" [ref=e183]:
+                  - generic [ref=e184]: Đang bán
+                - cell "Sửa Xóa" [ref=e185]:
+                  - generic [ref=e186]:
+                    - button "Sửa" [ref=e187] [cursor=pointer]
+                    - button "Xóa" [ref=e188] [cursor=pointer]
+              - row "Nokia 3210 4G Nokia 3210 4G nokia-3210-4g 1.430.000 ₫ 1.490.000 ₫ 2.4 inches 128 MB 1 Đang bán Sửa Xóa" [ref=e189]:
+                - cell "Nokia 3210 4G Nokia 3210 4G nokia-3210-4g" [ref=e190]:
+                  - generic [ref=e191]:
+                    - img "Nokia 3210 4G" [ref=e192]
+                    - generic [ref=e193]:
+                      - strong [ref=e194]: Nokia 3210 4G
+                      - generic [ref=e195]: nokia-3210-4g
+                - cell "1.430.000 ₫ 1.490.000 ₫" [ref=e196]:
+                  - strong [ref=e197]: 1.430.000 ₫
+                  - generic [ref=e198]: 1.490.000 ₫
+                - cell "2.4 inches 128 MB" [ref=e199]:
+                  - text: 2.4 inches
+                  - generic [ref=e200]: 128 MB
+                - cell "1" [ref=e201]
+                - cell "Đang bán" [ref=e202]:
+                  - generic [ref=e203]: Đang bán
+                - cell "Sửa Xóa" [ref=e204]:
+                  - generic [ref=e205]:
+                    - button "Sửa" [ref=e206] [cursor=pointer]
+                    - button "Xóa" [ref=e207] [cursor=pointer]
+              - row "Điện thoại Itel P55 Plus NFC 8GB 256GB Điện thoại Itel P55 Plus NFC 8GB 256GB dien-thoai-itel-p55-plus-8gb-256gb 2.990.000 ₫ 3.490.000 ₫ 6.6 inches 8 GB 1 Đang bán Sửa Xóa" [ref=e208]:
+                - cell "Điện thoại Itel P55 Plus NFC 8GB 256GB Điện thoại Itel P55 Plus NFC 8GB 256GB dien-thoai-itel-p55-plus-8gb-256gb" [ref=e209]:
+                  - generic [ref=e210]:
+                    - img "Điện thoại Itel P55 Plus NFC 8GB 256GB" [ref=e211]
+                    - generic [ref=e212]:
+                      - strong [ref=e213]: Điện thoại Itel P55 Plus NFC 8GB 256GB
+                      - generic [ref=e214]: dien-thoai-itel-p55-plus-8gb-256gb
+                - cell "2.990.000 ₫ 3.490.000 ₫" [ref=e215]:
+                  - strong [ref=e216]: 2.990.000 ₫
+                  - generic [ref=e217]: 3.490.000 ₫
+                - cell "6.6 inches 8 GB" [ref=e218]:
+                  - text: 6.6 inches
+                  - generic [ref=e219]: 8 GB
+                - cell "1" [ref=e220]
+                - cell "Đang bán" [ref=e221]:
+                  - generic [ref=e222]: Đang bán
+                - cell "Sửa Xóa" [ref=e223]:
+                  - generic [ref=e224]:
+                    - button "Sửa" [ref=e225] [cursor=pointer]
+                    - button "Xóa" [ref=e226] [cursor=pointer]
+              - row "Samsung Galaxy S25 Ultra 12GB 256GB Samsung Galaxy S25 Ultra 12GB 256GB dien-thoai-samsung-galaxy-s25-ultra 27.280.000 ₫ 33.380.000 ₫ 6.9 inches 12 GB 1 Đang bán Sửa Xóa" [ref=e227]:
+                - cell "Samsung Galaxy S25 Ultra 12GB 256GB Samsung Galaxy S25 Ultra 12GB 256GB dien-thoai-samsung-galaxy-s25-ultra" [ref=e228]:
+                  - generic [ref=e229]:
+                    - img "Samsung Galaxy S25 Ultra 12GB 256GB" [ref=e230]
+                    - generic [ref=e231]:
+                      - strong [ref=e232]: Samsung Galaxy S25 Ultra 12GB 256GB
+                      - generic [ref=e233]: dien-thoai-samsung-galaxy-s25-ultra
+                - cell "27.280.000 ₫ 33.380.000 ₫" [ref=e234]:
+                  - strong [ref=e235]: 27.280.000 ₫
+                  - generic [ref=e236]: 33.380.000 ₫
+                - cell "6.9 inches 12 GB" [ref=e237]:
+                  - text: 6.9 inches
+                  - generic [ref=e238]: 12 GB
+                - cell "1" [ref=e239]
+                - cell "Đang bán" [ref=e240]:
+                  - generic [ref=e241]: Đang bán
+                - cell "Sửa Xóa" [ref=e242]:
+                  - generic [ref=e243]:
+                    - button "Sửa" [ref=e244] [cursor=pointer]
+                    - button "Xóa" [ref=e245] [cursor=pointer]
+              - row "Xiaomi 15T 5G 12GB 512GB Xiaomi 15T 5G 12GB 512GB dien-thoai-xiaomi-15t-5g 14.490.000 ₫ 14.990.000 ₫ 6.83 inches 12 GB 1 Đang bán Sửa Xóa" [ref=e246]:
+                - cell "Xiaomi 15T 5G 12GB 512GB Xiaomi 15T 5G 12GB 512GB dien-thoai-xiaomi-15t-5g" [ref=e247]:
+                  - generic [ref=e248]:
+                    - img "Xiaomi 15T 5G 12GB 512GB" [ref=e249]
+                    - generic [ref=e250]:
+                      - strong [ref=e251]: Xiaomi 15T 5G 12GB 512GB
+                      - generic [ref=e252]: dien-thoai-xiaomi-15t-5g
+                - cell "14.490.000 ₫ 14.990.000 ₫" [ref=e253]:
+                  - strong [ref=e254]: 14.490.000 ₫
+                  - generic [ref=e255]: 14.990.000 ₫
+                - cell "6.83 inches 12 GB" [ref=e256]:
+                  - text: 6.83 inches
+                  - generic [ref=e257]: 12 GB
+                - cell "1" [ref=e258]
+                - cell "Đang bán" [ref=e259]:
+                  - generic [ref=e260]: Đang bán
+                - cell "Sửa Xóa" [ref=e261]:
+                  - generic [ref=e262]:
+                    - button "Sửa" [ref=e263] [cursor=pointer]
+                    - button "Xóa" [ref=e264] [cursor=pointer]
+              - row "realme C61 4GB 128GB realme C61 4GB 128GB dien-thoai-realme-c61 2.390.000 ₫ 3.590.000 ₫ 6.745 inches 4 GB 1 Đang bán Sửa Xóa" [ref=e265]:
+                - cell "realme C61 4GB 128GB realme C61 4GB 128GB dien-thoai-realme-c61" [ref=e266]:
+                  - generic [ref=e267]:
+                    - img "realme C61 4GB 128GB" [ref=e268]
+                    - generic [ref=e269]:
+                      - strong [ref=e270]: realme C61 4GB 128GB
+                      - generic [ref=e271]: dien-thoai-realme-c61
+                - cell "2.390.000 ₫ 3.590.000 ₫" [ref=e272]:
+                  - strong [ref=e273]: 2.390.000 ₫
+                  - generic [ref=e274]: 3.590.000 ₫
+                - cell "6.745 inches 4 GB" [ref=e275]:
+                  - text: 6.745 inches
+                  - generic [ref=e276]: 4 GB
+                - cell "1" [ref=e277]
+                - cell "Đang bán" [ref=e278]:
+                  - generic [ref=e279]: Đang bán
+                - cell "Sửa Xóa" [ref=e280]:
+                  - generic [ref=e281]:
+                    - button "Sửa" [ref=e282] [cursor=pointer]
+                    - button "Xóa" [ref=e283] [cursor=pointer]
+              - row "vivo Y19S 8GB 128GB vivo Y19S 8GB 128GB dien-thoai-vivo-y19s 4.390.000 ₫ 4.790.000 ₫ 6.68 inches 8 GB 1 Đang bán Sửa Xóa" [ref=e284]:
+                - cell "vivo Y19S 8GB 128GB vivo Y19S 8GB 128GB dien-thoai-vivo-y19s" [ref=e285]:
+                  - generic [ref=e286]:
+                    - img "vivo Y19S 8GB 128GB" [ref=e287]
+                    - generic [ref=e288]:
+                      - strong [ref=e289]: vivo Y19S 8GB 128GB
+                      - generic [ref=e290]: dien-thoai-vivo-y19s
+                - cell "4.390.000 ₫ 4.790.000 ₫" [ref=e291]:
+                  - strong [ref=e292]: 4.390.000 ₫
+                  - generic [ref=e293]: 4.790.000 ₫
+                - cell "6.68 inches 8 GB" [ref=e294]:
+                  - text: 6.68 inches
+                  - generic [ref=e295]: 8 GB
+                - cell "1" [ref=e296]
+                - cell "Đang bán" [ref=e297]:
+                  - generic [ref=e298]: Đang bán
+                - cell "Sửa Xóa" [ref=e299]:
+                  - generic [ref=e300]:
+                    - button "Sửa" [ref=e301] [cursor=pointer]
+                    - button "Xóa" [ref=e302] [cursor=pointer]
+          - generic [ref=e303]:
+            - button "Trang trước" [disabled] [ref=e304] [cursor=pointer]
+            - generic [ref=e305]: Trang 1 / 25
+            - button "Trang sau" [ref=e306] [cursor=pointer]
+      - generic [ref=e307]:
+        - generic [ref=e308]:
+          - generic [ref=e309]:
+            - generic [ref=e310]: Dữ liệu chi tiết
+            - heading "Hoàn thiện nội dung sản phẩm" [level=2] [ref=e311]
+          - paragraph [ref=e312]: "Các mục bên dưới phục vụ trang chi tiết: danh mục hãng, thông số, phiên bản mua hàng và bộ ảnh sản phẩm."
+        - tablist "Dữ liệu chi tiết sản phẩm" [ref=e313]:
+          - button "Danh mục" [ref=e314] [cursor=pointer]
+          - button "Thông số" [ref=e315] [cursor=pointer]
+          - button "Phiên bản" [ref=e316] [cursor=pointer]
+          - button "Hình ảnh" [ref=e317] [cursor=pointer]
+        - generic [ref=e685]:
+          - generic [ref=e686]:
+            - generic [ref=e687]:
+              - generic [ref=e688]: Sản phẩm liên kết
+              - textbox "Sản phẩm liên kết" [ref=e689]:
+                - /placeholder: Dán mã liên kết sản phẩm
+            - generic [ref=e690]:
+              - generic [ref=e691]: Trạng thái
+              - combobox "Trạng thái" [ref=e692]:
+                - option "Tất cả" [selected]
+                - option "Đang dùng"
+                - option "Ẩn/xóa mềm"
+            - generic [ref=e693]:
+              - button "Lọc" [ref=e694] [cursor=pointer]
+              - button "Xóa lọc" [ref=e695] [cursor=pointer]
+          - generic [ref=e696]:
+            - generic [ref=e697]:
+              - heading "Thư viện ảnh sản phẩm" [level=2] [ref=e698]
+              - paragraph [ref=e699]: Hiển thị 100/3,330 ảnh, dùng bộ lọc để thu hẹp
+            - generic [ref=e700]:
+              - button "Tải lại" [ref=e701] [cursor=pointer]
+              - button "Thêm ảnh" [ref=e702] [cursor=pointer]
+          - table [ref=e704]:
+            - rowgroup [ref=e705]:
+              - row "Ảnh Liên kết Ưu tiên Trạng thái Thao tác" [ref=e706]:
+                - columnheader "Ảnh" [ref=e707]
+                - columnheader "Liên kết" [ref=e708]
+                - columnheader "Ưu tiên" [ref=e709]
+                - columnheader "Trạng thái" [ref=e710]
+                - columnheader "Thao tác" [ref=e711]
+            - rowgroup [ref=e712]:
+              - row "TCL 406S 4GB 64GB - 1 TCL 406S 4GB 64GB 0002ef81...ce72 98e4bfc5...a63a 0 Đang dùng Sửa Xóa" [ref=e713]:
+                - cell "TCL 406S 4GB 64GB - 1 TCL 406S 4GB 64GB 0002ef81...ce72" [ref=e714]:
+                  - generic [ref=e715]:
+                    - img "TCL 406S 4GB 64GB - 1" [ref=e716]
+                    - generic [ref=e717]:
+                      - strong [ref=e718]: TCL 406S 4GB 64GB
+                      - generic [ref=e719]: 0002ef81...ce72
+                - cell "98e4bfc5...a63a" [ref=e720]:
+                  - generic "98e4bfc5-2150-4788-a09f-9b4a8009a63a" [ref=e721]: 98e4bfc5...a63a
+                - cell "0" [ref=e722]
+                - cell "Đang dùng" [ref=e723]:
+                  - generic [ref=e724]: Đang dùng
+                - cell "Sửa Xóa" [ref=e725]:
+                  - generic [ref=e726]:
+                    - button "Sửa" [ref=e727] [cursor=pointer]
+                    - button "Xóa" [ref=e728] [cursor=pointer]
+              - row "TECNO Camon 20 - 1 TECNO Camon 20 002d07fc...173e d05c5e42...baf4 0 Đang dùng Sửa Xóa" [ref=e729]:
+                - cell "TECNO Camon 20 - 1 TECNO Camon 20 002d07fc...173e" [ref=e730]:
+                  - generic [ref=e731]:
+                    - img "TECNO Camon 20 - 1" [ref=e732]
+                    - generic [ref=e733]:
+                      - strong [ref=e734]: TECNO Camon 20
+                      - generic [ref=e735]: 002d07fc...173e
+                - cell "d05c5e42...baf4" [ref=e736]:
+                  - generic "d05c5e42-0e0d-4cc9-8b81-6290deb0baf4" [ref=e737]: d05c5e42...baf4
+                - cell "0" [ref=e738]
+                - cell "Đang dùng" [ref=e739]:
+                  - generic [ref=e740]: Đang dùng
+                - cell "Sửa Xóa" [ref=e741]:
+                  - generic [ref=e742]:
+                    - button "Sửa" [ref=e743] [cursor=pointer]
+                    - button "Xóa" [ref=e744] [cursor=pointer]
+              - row "Nothing Phone CMF 1 8GB 128GB - 1 Nothing Phone CMF 1 8GB 128GB 00c38694...933b 7220d0be...dd8b 0 Đang dùng Sửa Xóa" [ref=e745]:
+                - cell "Nothing Phone CMF 1 8GB 128GB - 1 Nothing Phone CMF 1 8GB 128GB 00c38694...933b" [ref=e746]:
+                  - generic [ref=e747]:
+                    - img "Nothing Phone CMF 1 8GB 128GB - 1" [ref=e748]
+                    - generic [ref=e749]:
+                      - strong [ref=e750]: Nothing Phone CMF 1 8GB 128GB
+                      - generic [ref=e751]: 00c38694...933b
+                - cell "7220d0be...dd8b" [ref=e752]:
+                  - generic "7220d0be-0bf4-4e3d-9c76-fe7f0f3cdd8b" [ref=e753]: 7220d0be...dd8b
+                - cell "0" [ref=e754]
+                - cell "Đang dùng" [ref=e755]:
+                  - generic [ref=e756]: Đang dùng
+                - cell "Sửa Xóa" [ref=e757]:
+                  - generic [ref=e758]:
+                    - button "Sửa" [ref=e759] [cursor=pointer]
+                    - button "Xóa" [ref=e760] [cursor=pointer]
+              - row "Nokia 150 - 1 Nokia 150 00eb0077...1529 fce66dfe...2c8f 0 Đang dùng Sửa Xóa" [ref=e761]:
+                - cell "Nokia 150 - 1 Nokia 150 00eb0077...1529" [ref=e762]:
+                  - generic [ref=e763]:
+                    - img "Nokia 150 - 1" [ref=e764]
+                    - generic [ref=e765]:
+                      - strong [ref=e766]: Nokia 150
+                      - generic [ref=e767]: 00eb0077...1529
+                - cell "fce66dfe...2c8f" [ref=e768]:
+                  - generic "fce66dfe-8d43-4808-a6a7-3ee08d502c8f" [ref=e769]: fce66dfe...2c8f
+                - cell "0" [ref=e770]
+                - cell "Đang dùng" [ref=e771]:
+                  - generic [ref=e772]: Đang dùng
+                - cell "Sửa Xóa" [ref=e773]:
+                  - generic [ref=e774]:
+                    - button "Sửa" [ref=e775] [cursor=pointer]
+                    - button "Xóa" [ref=e776] [cursor=pointer]
+              - row "Itel RS4 12GB 256GB NFC - 1 Itel RS4 12GB 256GB NFC 01695b27...8685 bc978e79...8fba 0 Đang dùng Sửa Xóa" [ref=e777]:
+                - cell "Itel RS4 12GB 256GB NFC - 1 Itel RS4 12GB 256GB NFC 01695b27...8685" [ref=e778]:
+                  - generic [ref=e779]:
+                    - img "Itel RS4 12GB 256GB NFC - 1" [ref=e780]
+                    - generic [ref=e781]:
+                      - strong [ref=e782]: Itel RS4 12GB 256GB NFC
+                      - generic [ref=e783]: 01695b27...8685
+                - cell "bc978e79...8fba" [ref=e784]:
+                  - generic "bc978e79-18b3-4cea-a9a2-730897568fba" [ref=e785]: bc978e79...8fba
+                - cell "0" [ref=e786]
+                - cell "Đang dùng" [ref=e787]:
+                  - generic [ref=e788]: Đang dùng
+                - cell "Sửa Xóa" [ref=e789]:
+                  - generic [ref=e790]:
+                    - button "Sửa" [ref=e791] [cursor=pointer]
+                    - button "Xóa" [ref=e792] [cursor=pointer]
+              - row "Nokia 105 4G Pro - 1 Nokia 105 4G Pro 01eb0bf8...edec d17363c3...3324 0 Đang dùng Sửa Xóa" [ref=e793]:
+                - cell "Nokia 105 4G Pro - 1 Nokia 105 4G Pro 01eb0bf8...edec" [ref=e794]:
+                  - generic [ref=e795]:
+                    - img "Nokia 105 4G Pro - 1" [ref=e796]
+                    - generic [ref=e797]:
+                      - strong [ref=e798]: Nokia 105 4G Pro
+                      - generic [ref=e799]: 01eb0bf8...edec
+                - cell "d17363c3...3324" [ref=e800]:
+                  - generic "d17363c3-ff18-4ea7-90b3-4989f0f13324" [ref=e801]: d17363c3...3324
+                - cell "0" [ref=e802]
+                - cell "Đang dùng" [ref=e803]:
+                  - generic [ref=e804]: Đang dùng
+                - cell "Sửa Xóa" [ref=e805]:
+                  - generic [ref=e806]:
+                    - button "Sửa" [ref=e807] [cursor=pointer]
+                    - button "Xóa" [ref=e808] [cursor=pointer]
+              - row "Xiaomi 15T Pro 5G 12GB 512GB - 1 Xiaomi 15T Pro 5G 12GB 512GB 04efe3a8...5527 fa52e95a...f744 0 Đang dùng Sửa Xóa" [ref=e809]:
+                - cell "Xiaomi 15T Pro 5G 12GB 512GB - 1 Xiaomi 15T Pro 5G 12GB 512GB 04efe3a8...5527" [ref=e810]:
+                  - generic [ref=e811]:
+                    - img "Xiaomi 15T Pro 5G 12GB 512GB - 1" [ref=e812]
+                    - generic [ref=e813]:
+                      - strong [ref=e814]: Xiaomi 15T Pro 5G 12GB 512GB
+                      - generic [ref=e815]: 04efe3a8...5527
+                - cell "fa52e95a...f744" [ref=e816]:
+                  - generic "fa52e95a-0264-4e45-b9ef-ab2b66b4f744" [ref=e817]: fa52e95a...f744
+                - cell "0" [ref=e818]
+                - cell "Đang dùng" [ref=e819]:
+                  - generic [ref=e820]: Đang dùng
+                - cell "Sửa Xóa" [ref=e821]:
+                  - generic [ref=e822]:
+                    - button "Sửa" [ref=e823] [cursor=pointer]
+                    - button "Xóa" [ref=e824] [cursor=pointer]
+              - row "Nubia Air 5G 8GB 256GB - 1 Nubia Air 5G 8GB 256GB 051e31dd...9bab 045f9beb...d381 0 Đang dùng Sửa Xóa" [ref=e825]:
+                - cell "Nubia Air 5G 8GB 256GB - 1 Nubia Air 5G 8GB 256GB 051e31dd...9bab" [ref=e826]:
+                  - generic [ref=e827]:
+                    - img "Nubia Air 5G 8GB 256GB - 1" [ref=e828]
+                    - generic [ref=e829]:
+                      - strong [ref=e830]: Nubia Air 5G 8GB 256GB
+                      - generic [ref=e831]: 051e31dd...9bab
+                - cell "045f9beb...d381" [ref=e832]:
+                  - generic "045f9beb-9908-49e3-b67d-7cf1059ed381" [ref=e833]: 045f9beb...d381
+                - cell "0" [ref=e834]
+                - cell "Đang dùng" [ref=e835]:
+                  - generic [ref=e836]: Đang dùng
+                - cell "Sửa Xóa" [ref=e837]:
+                  - generic [ref=e838]:
+                    - button "Sửa" [ref=e839] [cursor=pointer]
+                    - button "Xóa" [ref=e840] [cursor=pointer]
+              - row "iPhone 16 Pro 128GB | Chính hãng VN/A - 1 iPhone 16 Pro 128GB | Chính hãng VN/A 055013dd...4e4b 57c7cd63...5f1c 0 Đang dùng Sửa Xóa" [ref=e841]:
+                - cell "iPhone 16 Pro 128GB | Chính hãng VN/A - 1 iPhone 16 Pro 128GB | Chính hãng VN/A 055013dd...4e4b" [ref=e842]:
+                  - generic [ref=e843]:
+                    - img "iPhone 16 Pro 128GB | Chính hãng VN/A - 1" [ref=e844]
+                    - generic [ref=e845]:
+                      - strong [ref=e846]: iPhone 16 Pro 128GB | Chính hãng VN/A
+                      - generic [ref=e847]: 055013dd...4e4b
+                - cell "57c7cd63...5f1c" [ref=e848]:
+                  - generic "57c7cd63-5be8-4669-94dc-a2aedd195f1c" [ref=e849]: 57c7cd63...5f1c
+                - cell "0" [ref=e850]
+                - cell "Đang dùng" [ref=e851]:
+                  - generic [ref=e852]: Đang dùng
+                - cell "Sửa Xóa" [ref=e853]:
+                  - generic [ref=e854]:
+                    - button "Sửa" [ref=e855] [cursor=pointer]
+                    - button "Xóa" [ref=e856] [cursor=pointer]
+              - row "Nubia Neo 3 5G 8GB 256GB - 1 Nubia Neo 3 5G 8GB 256GB 06525719...6169 4be92684...f5ff 0 Đang dùng Sửa Xóa" [ref=e857]:
+                - cell "Nubia Neo 3 5G 8GB 256GB - 1 Nubia Neo 3 5G 8GB 256GB 06525719...6169" [ref=e858]:
+                  - generic [ref=e859]:
+                    - img "Nubia Neo 3 5G 8GB 256GB - 1" [ref=e860]
+                    - generic [ref=e861]:
+                      - strong [ref=e862]: Nubia Neo 3 5G 8GB 256GB
+                      - generic [ref=e863]: 06525719...6169
+                - cell "4be92684...f5ff" [ref=e864]:
+                  - generic "4be92684-53eb-4e59-ae31-f3ffea1cf5ff" [ref=e865]: 4be92684...f5ff
+                - cell "0" [ref=e866]
+                - cell "Đang dùng" [ref=e867]:
+                  - generic [ref=e868]: Đang dùng
+                - cell "Sửa Xóa" [ref=e869]:
+                  - generic [ref=e870]:
+                    - button "Sửa" [ref=e871] [cursor=pointer]
+                    - button "Xóa" [ref=e872] [cursor=pointer]
+              - row "vivo Y22S 4GB 128GB - 1 vivo Y22S 4GB 128GB 07b1a853...0905 1d594d05...e802 0 Đang dùng Sửa Xóa" [ref=e873]:
+                - cell "vivo Y22S 4GB 128GB - 1 vivo Y22S 4GB 128GB 07b1a853...0905" [ref=e874]:
+                  - generic [ref=e875]:
+                    - img "vivo Y22S 4GB 128GB - 1" [ref=e876]
+                    - generic [ref=e877]:
+                      - strong [ref=e878]: vivo Y22S 4GB 128GB
+                      - generic [ref=e879]: 07b1a853...0905
+                - cell "1d594d05...e802" [ref=e880]:
+                  - generic "1d594d05-7021-4154-8a84-dbbeb109e802" [ref=e881]: 1d594d05...e802
+                - cell "0" [ref=e882]
+                - cell "Đang dùng" [ref=e883]:
+                  - generic [ref=e884]: Đang dùng
+                - cell "Sửa Xóa" [ref=e885]:
+                  - generic [ref=e886]:
+                    - button "Sửa" [ref=e887] [cursor=pointer]
+                    - button "Xóa" [ref=e888] [cursor=pointer]
+              - row "Xiaomi Redmi Note 14 Pro Plus 5G 8GB 256GB - 1 Xiaomi Redmi Note 14 Pro Plus 5G 8GB 256GB 0843911b...6e2a 13b5fdfa...aa22 0 Đang dùng Sửa Xóa" [ref=e889]:
+                - cell "Xiaomi Redmi Note 14 Pro Plus 5G 8GB 256GB - 1 Xiaomi Redmi Note 14 Pro Plus 5G 8GB 256GB 0843911b...6e2a" [ref=e890]:
+                  - generic [ref=e891]:
+                    - img "Xiaomi Redmi Note 14 Pro Plus 5G 8GB 256GB - 1" [ref=e892]
+                    - generic [ref=e893]:
+                      - strong [ref=e894]: Xiaomi Redmi Note 14 Pro Plus 5G 8GB 256GB
+                      - generic [ref=e895]: 0843911b...6e2a
+                - cell "13b5fdfa...aa22" [ref=e896]:
+                  - generic "13b5fdfa-bf05-40a1-82b9-e0640cdfaa22" [ref=e897]: 13b5fdfa...aa22
+                - cell "0" [ref=e898]
+                - cell "Đang dùng" [ref=e899]:
+                  - generic [ref=e900]: Đang dùng
+                - cell "Sửa Xóa" [ref=e901]:
+                  - generic [ref=e902]:
+                    - button "Sửa" [ref=e903] [cursor=pointer]
+                    - button "Xóa" [ref=e904] [cursor=pointer]
+              - row "Nubia Neo 3 GT 12GB 256GB - 1 Nubia Neo 3 GT 12GB 256GB 0947f201...b96c 46df6db3...1e84 0 Đang dùng Sửa Xóa" [ref=e905]:
+                - cell "Nubia Neo 3 GT 12GB 256GB - 1 Nubia Neo 3 GT 12GB 256GB 0947f201...b96c" [ref=e906]:
+                  - generic [ref=e907]:
+                    - img "Nubia Neo 3 GT 12GB 256GB - 1" [ref=e908]
+                    - generic [ref=e909]:
+                      - strong [ref=e910]: Nubia Neo 3 GT 12GB 256GB
+                      - generic [ref=e911]: 0947f201...b96c
+                - cell "46df6db3...1e84" [ref=e912]:
+                  - generic "46df6db3-94ae-4b10-bb87-39eb08b31e84" [ref=e913]: 46df6db3...1e84
+                - cell "0" [ref=e914]
+                - cell "Đang dùng" [ref=e915]:
+                  - generic [ref=e916]: Đang dùng
+                - cell "Sửa Xóa" [ref=e917]:
+                  - generic [ref=e918]:
+                    - button "Sửa" [ref=e919] [cursor=pointer]
+                    - button "Xóa" [ref=e920] [cursor=pointer]
+              - row "Infinix Note 50 Pro 12GB 256GB - 1 Infinix Note 50 Pro 12GB 256GB 09a83d8e...f9b6 396308dc...774f 0 Đang dùng Sửa Xóa" [ref=e921]:
+                - cell "Infinix Note 50 Pro 12GB 256GB - 1 Infinix Note 50 Pro 12GB 256GB 09a83d8e...f9b6" [ref=e922]:
+                  - generic [ref=e923]:
+                    - img "Infinix Note 50 Pro 12GB 256GB - 1" [ref=e924]
+                    - generic [ref=e925]:
+                      - strong [ref=e926]: Infinix Note 50 Pro 12GB 256GB
+                      - generic [ref=e927]: 09a83d8e...f9b6
+                - cell "396308dc...774f" [ref=e928]:
+                  - generic "396308dc-462c-4c68-ab10-1bf4256c774f" [ref=e929]: 396308dc...774f
+                - cell "0" [ref=e930]
+                - cell "Đang dùng" [ref=e931]:
+                  - generic [ref=e932]: Đang dùng
+                - cell "Sửa Xóa" [ref=e933]:
+                  - generic [ref=e934]:
+                    - button "Sửa" [ref=e935] [cursor=pointer]
+                    - button "Xóa" [ref=e936] [cursor=pointer]
+              - row "Nothing Phone 2A 5G 8GB 128GB - Chỉ có tại CellphoneS - 1 Nothing Phone 2A 5G 8GB 128GB - Chỉ có tại CellphoneS 0a29abf2...1aad 71a7f6c0...13c8 0 Đang dùng Sửa Xóa" [ref=e937]:
+                - cell "Nothing Phone 2A 5G 8GB 128GB - Chỉ có tại CellphoneS - 1 Nothing Phone 2A 5G 8GB 128GB - Chỉ có tại CellphoneS 0a29abf2...1aad" [ref=e938]:
+                  - generic [ref=e939]:
+                    - img "Nothing Phone 2A 5G 8GB 128GB - Chỉ có tại CellphoneS - 1" [ref=e940]
+                    - generic [ref=e941]:
+                      - strong [ref=e942]: Nothing Phone 2A 5G 8GB 128GB - Chỉ có tại CellphoneS
+                      - generic [ref=e943]: 0a29abf2...1aad
+                - cell "71a7f6c0...13c8" [ref=e944]:
+                  - generic "71a7f6c0-b8e4-4f08-ad2e-b2d2d8a913c8" [ref=e945]: 71a7f6c0...13c8
+                - cell "0" [ref=e946]
+                - cell "Đang dùng" [ref=e947]:
+                  - generic [ref=e948]: Đang dùng
+                - cell "Sửa Xóa" [ref=e949]:
+                  - generic [ref=e950]:
+                    - button "Sửa" [ref=e951] [cursor=pointer]
+                    - button "Xóa" [ref=e952] [cursor=pointer]
+              - row "Honor Magic 5 Pro - 1 Honor Magic 5 Pro 0aa2f121...7ab3 bbb2e434...5a55 0 Đang dùng Sửa Xóa" [ref=e953]:
+                - cell "Honor Magic 5 Pro - 1 Honor Magic 5 Pro 0aa2f121...7ab3" [ref=e954]:
+                  - generic [ref=e955]:
+                    - img "Honor Magic 5 Pro - 1" [ref=e956]
+                    - generic [ref=e957]:
+                      - strong [ref=e958]: Honor Magic 5 Pro
+                      - generic [ref=e959]: 0aa2f121...7ab3
+                - cell "bbb2e434...5a55" [ref=e960]:
+                  - generic "bbb2e434-1b22-4e19-a716-51ece3825a55" [ref=e961]: bbb2e434...5a55
+                - cell "0" [ref=e962]
+                - cell "Đang dùng" [ref=e963]:
+                  - generic [ref=e964]: Đang dùng
+                - cell "Sửa Xóa" [ref=e965]:
+                  - generic [ref=e966]:
+                    - button "Sửa" [ref=e967] [cursor=pointer]
+                    - button "Xóa" [ref=e968] [cursor=pointer]
+              - row "vivo Y22S 8GB 128GB - 1 vivo Y22S 8GB 128GB 0af3ee85...dad9 30b7a99e...fb68 0 Đang dùng Sửa Xóa" [ref=e969]:
+                - cell "vivo Y22S 8GB 128GB - 1 vivo Y22S 8GB 128GB 0af3ee85...dad9" [ref=e970]:
+                  - generic [ref=e971]:
+                    - img "vivo Y22S 8GB 128GB - 1" [ref=e972]
+                    - generic [ref=e973]:
+                      - strong [ref=e974]: vivo Y22S 8GB 128GB
+                      - generic [ref=e975]: 0af3ee85...dad9
+                - cell "30b7a99e...fb68" [ref=e976]:
+                  - generic "30b7a99e-1ed8-4708-87e1-fb85dea1fb68" [ref=e977]: 30b7a99e...fb68
+                - cell "0" [ref=e978]
+                - cell "Đang dùng" [ref=e979]:
+                  - generic [ref=e980]: Đang dùng
+                - cell "Sửa Xóa" [ref=e981]:
+                  - generic [ref=e982]:
+                    - button "Sửa" [ref=e983] [cursor=pointer]
+                    - button "Xóa" [ref=e984] [cursor=pointer]
+              - row "Nothing Phone 3A 8GB 128GB - 1 Nothing Phone 3A 8GB 128GB 0b668be2...edba d06ceec0...ef98 0 Đang dùng Sửa Xóa" [ref=e985]:
+                - cell "Nothing Phone 3A 8GB 128GB - 1 Nothing Phone 3A 8GB 128GB 0b668be2...edba" [ref=e986]:
+                  - generic [ref=e987]:
+                    - img "Nothing Phone 3A 8GB 128GB - 1" [ref=e988]
+                    - generic [ref=e989]:
+                      - strong [ref=e990]: Nothing Phone 3A 8GB 128GB
+                      - generic [ref=e991]: 0b668be2...edba
+                - cell "d06ceec0...ef98" [ref=e992]:
+                  - generic "d06ceec0-908a-44ef-b05a-880fe206ef98" [ref=e993]: d06ceec0...ef98
+                - cell "0" [ref=e994]
+                - cell "Đang dùng" [ref=e995]:
+                  - generic [ref=e996]: Đang dùng
+                - cell "Sửa Xóa" [ref=e997]:
+                  - generic [ref=e998]:
+                    - button "Sửa" [ref=e999] [cursor=pointer]
+                    - button "Xóa" [ref=e1000] [cursor=pointer]
+              - row "Samsung Galaxy S25 512GB - 1 Samsung Galaxy S25 512GB 0c9d7d24...b35d c6617c46...fe62 0 Đang dùng Sửa Xóa" [ref=e1001]:
+                - cell "Samsung Galaxy S25 512GB - 1 Samsung Galaxy S25 512GB 0c9d7d24...b35d" [ref=e1002]:
+                  - generic [ref=e1003]:
+                    - img "Samsung Galaxy S25 512GB - 1" [ref=e1004]
+                    - generic [ref=e1005]:
+                      - strong [ref=e1006]: Samsung Galaxy S25 512GB
+                      - generic [ref=e1007]: 0c9d7d24...b35d
+                - cell "c6617c46...fe62" [ref=e1008]:
+                  - generic "c6617c46-b9a3-469c-9c09-8559aaabfe62" [ref=e1009]: c6617c46...fe62
+                - cell "0" [ref=e1010]
+                - cell "Đang dùng" [ref=e1011]:
+                  - generic [ref=e1012]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1013]:
+                  - generic [ref=e1014]:
+                    - button "Sửa" [ref=e1015] [cursor=pointer]
+                    - button "Xóa" [ref=e1016] [cursor=pointer]
+              - row "Masstel Fami 12S 4G - 1 Masstel Fami 12S 4G 0cc36d8d...6120 19bbe94c...e354 0 Đang dùng Sửa Xóa" [ref=e1017]:
+                - cell "Masstel Fami 12S 4G - 1 Masstel Fami 12S 4G 0cc36d8d...6120" [ref=e1018]:
+                  - generic [ref=e1019]:
+                    - img "Masstel Fami 12S 4G - 1" [ref=e1020]
+                    - generic [ref=e1021]:
+                      - strong [ref=e1022]: Masstel Fami 12S 4G
+                      - generic [ref=e1023]: 0cc36d8d...6120
+                - cell "19bbe94c...e354" [ref=e1024]:
+                  - generic "19bbe94c-526a-4b4d-a0b8-2fff4752e354" [ref=e1025]: 19bbe94c...e354
+                - cell "0" [ref=e1026]
+                - cell "Đang dùng" [ref=e1027]:
+                  - generic [ref=e1028]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1029]:
+                  - generic [ref=e1030]:
+                    - button "Sửa" [ref=e1031] [cursor=pointer]
+                    - button "Xóa" [ref=e1032] [cursor=pointer]
+              - row "Samsung Galaxy S25 FE 8GB 512GB - 1 Samsung Galaxy S25 FE 8GB 512GB 0d04d34b...c8df 1eebfc09...64bc 0 Đang dùng Sửa Xóa" [ref=e1033]:
+                - cell "Samsung Galaxy S25 FE 8GB 512GB - 1 Samsung Galaxy S25 FE 8GB 512GB 0d04d34b...c8df" [ref=e1034]:
+                  - generic [ref=e1035]:
+                    - img "Samsung Galaxy S25 FE 8GB 512GB - 1" [ref=e1036]
+                    - generic [ref=e1037]:
+                      - strong [ref=e1038]: Samsung Galaxy S25 FE 8GB 512GB
+                      - generic [ref=e1039]: 0d04d34b...c8df
+                - cell "1eebfc09...64bc" [ref=e1040]:
+                  - generic "1eebfc09-9515-4333-b9e9-fc206a7664bc" [ref=e1041]: 1eebfc09...64bc
+                - cell "0" [ref=e1042]
+                - cell "Đang dùng" [ref=e1043]:
+                  - generic [ref=e1044]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1045]:
+                  - generic [ref=e1046]:
+                    - button "Sửa" [ref=e1047] [cursor=pointer]
+                    - button "Xóa" [ref=e1048] [cursor=pointer]
+              - row "Xiaomi Redmi Note 11 Pro - 1 Xiaomi Redmi Note 11 Pro 0e11493b...3426 9d29e75f...4d94 0 Đang dùng Sửa Xóa" [ref=e1049]:
+                - cell "Xiaomi Redmi Note 11 Pro - 1 Xiaomi Redmi Note 11 Pro 0e11493b...3426" [ref=e1050]:
+                  - generic [ref=e1051]:
+                    - img "Xiaomi Redmi Note 11 Pro - 1" [ref=e1052]
+                    - generic [ref=e1053]:
+                      - strong [ref=e1054]: Xiaomi Redmi Note 11 Pro
+                      - generic [ref=e1055]: 0e11493b...3426
+                - cell "9d29e75f...4d94" [ref=e1056]:
+                  - generic "9d29e75f-e7f4-40a3-a423-4bf61cd34d94" [ref=e1057]: 9d29e75f...4d94
+                - cell "0" [ref=e1058]
+                - cell "Đang dùng" [ref=e1059]:
+                  - generic [ref=e1060]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1061]:
+                  - generic [ref=e1062]:
+                    - button "Sửa" [ref=e1063] [cursor=pointer]
+                    - button "Xóa" [ref=e1064] [cursor=pointer]
+              - row "Điện thoại Nubia Z70 Ultra 5G 16GB 512GB bản đặc biệt - 1 Điện thoại Nubia Z70 Ultra 5G 16GB 512GB bản đặc biệt 0e36f940...bd34 828a865e...9b2a 0 Đang dùng Sửa Xóa" [ref=e1065]:
+                - cell "Điện thoại Nubia Z70 Ultra 5G 16GB 512GB bản đặc biệt - 1 Điện thoại Nubia Z70 Ultra 5G 16GB 512GB bản đặc biệt 0e36f940...bd34" [ref=e1066]:
+                  - generic [ref=e1067]:
+                    - img "Điện thoại Nubia Z70 Ultra 5G 16GB 512GB bản đặc biệt - 1" [ref=e1068]
+                    - generic [ref=e1069]:
+                      - strong [ref=e1070]: Điện thoại Nubia Z70 Ultra 5G 16GB 512GB bản đặc biệt
+                      - generic [ref=e1071]: 0e36f940...bd34
+                - cell "828a865e...9b2a" [ref=e1072]:
+                  - generic "828a865e-3ce9-48b9-8d8d-4722d0189b2a" [ref=e1073]: 828a865e...9b2a
+                - cell "0" [ref=e1074]
+                - cell "Đang dùng" [ref=e1075]:
+                  - generic [ref=e1076]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1077]:
+                  - generic [ref=e1078]:
+                    - button "Sửa" [ref=e1079] [cursor=pointer]
+                    - button "Xóa" [ref=e1080] [cursor=pointer]
+              - row "HONOR X6c 6GB 128GB - 1 HONOR X6c 6GB 128GB 0e67d2c9...4ba7 d7cb0fee...9a7a 0 Đang dùng Sửa Xóa" [ref=e1081]:
+                - cell "HONOR X6c 6GB 128GB - 1 HONOR X6c 6GB 128GB 0e67d2c9...4ba7" [ref=e1082]:
+                  - generic [ref=e1083]:
+                    - img "HONOR X6c 6GB 128GB - 1" [ref=e1084]
+                    - generic [ref=e1085]:
+                      - strong [ref=e1086]: HONOR X6c 6GB 128GB
+                      - generic [ref=e1087]: 0e67d2c9...4ba7
+                - cell "d7cb0fee...9a7a" [ref=e1088]:
+                  - generic "d7cb0fee-ba80-4bd0-9d10-51bf88009a7a" [ref=e1089]: d7cb0fee...9a7a
+                - cell "0" [ref=e1090]
+                - cell "Đang dùng" [ref=e1091]:
+                  - generic [ref=e1092]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1093]:
+                  - generic [ref=e1094]:
+                    - button "Sửa" [ref=e1095] [cursor=pointer]
+                    - button "Xóa" [ref=e1096] [cursor=pointer]
+              - row "Xiaomi Redmi Note 14 5G 8GB 256GB - 1 Xiaomi Redmi Note 14 5G 8GB 256GB 0ebf922a...64e6 39d2eb3f...e439 0 Đang dùng Sửa Xóa" [ref=e1097]:
+                - cell "Xiaomi Redmi Note 14 5G 8GB 256GB - 1 Xiaomi Redmi Note 14 5G 8GB 256GB 0ebf922a...64e6" [ref=e1098]:
+                  - generic [ref=e1099]:
+                    - img "Xiaomi Redmi Note 14 5G 8GB 256GB - 1" [ref=e1100]
+                    - generic [ref=e1101]:
+                      - strong [ref=e1102]: Xiaomi Redmi Note 14 5G 8GB 256GB
+                      - generic [ref=e1103]: 0ebf922a...64e6
+                - cell "39d2eb3f...e439" [ref=e1104]:
+                  - generic "39d2eb3f-bed1-413e-aa22-7ca3503ce439" [ref=e1105]: 39d2eb3f...e439
+                - cell "0" [ref=e1106]
+                - cell "Đang dùng" [ref=e1107]:
+                  - generic [ref=e1108]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1109]:
+                  - generic [ref=e1110]:
+                    - button "Sửa" [ref=e1111] [cursor=pointer]
+                    - button "Xóa" [ref=e1112] [cursor=pointer]
+              - row "HONOR 400 Lite 5G 12GB 256GB - 1 HONOR 400 Lite 5G 12GB 256GB 0ff4fb67...1fa9 f72a12c5...0fb4 0 Đang dùng Sửa Xóa" [ref=e1113]:
+                - cell "HONOR 400 Lite 5G 12GB 256GB - 1 HONOR 400 Lite 5G 12GB 256GB 0ff4fb67...1fa9" [ref=e1114]:
+                  - generic [ref=e1115]:
+                    - img "HONOR 400 Lite 5G 12GB 256GB - 1" [ref=e1116]
+                    - generic [ref=e1117]:
+                      - strong [ref=e1118]: HONOR 400 Lite 5G 12GB 256GB
+                      - generic [ref=e1119]: 0ff4fb67...1fa9
+                - cell "f72a12c5...0fb4" [ref=e1120]:
+                  - generic "f72a12c5-75cb-4741-8a71-89a4327a0fb4" [ref=e1121]: f72a12c5...0fb4
+                - cell "0" [ref=e1122]
+                - cell "Đang dùng" [ref=e1123]:
+                  - generic [ref=e1124]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1125]:
+                  - generic [ref=e1126]:
+                    - button "Sửa" [ref=e1127] [cursor=pointer]
+                    - button "Xóa" [ref=e1128] [cursor=pointer]
+              - row "HONOR 400 5G 12GB 256GB - 1 HONOR 400 5G 12GB 256GB 12434d88...58cf f5f28421...80df 0 Đang dùng Sửa Xóa" [ref=e1129]:
+                - cell "HONOR 400 5G 12GB 256GB - 1 HONOR 400 5G 12GB 256GB 12434d88...58cf" [ref=e1130]:
+                  - generic [ref=e1131]:
+                    - img "HONOR 400 5G 12GB 256GB - 1" [ref=e1132]
+                    - generic [ref=e1133]:
+                      - strong [ref=e1134]: HONOR 400 5G 12GB 256GB
+                      - generic [ref=e1135]: 12434d88...58cf
+                - cell "f5f28421...80df" [ref=e1136]:
+                  - generic "f5f28421-f8fb-4431-ae35-440d1c0380df" [ref=e1137]: f5f28421...80df
+                - cell "0" [ref=e1138]
+                - cell "Đang dùng" [ref=e1139]:
+                  - generic [ref=e1140]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1141]:
+                  - generic [ref=e1142]:
+                    - button "Sửa" [ref=e1143] [cursor=pointer]
+                    - button "Xóa" [ref=e1144] [cursor=pointer]
+              - row "TECNO SPARK Go 2024 4GB 64GB - 1 TECNO SPARK Go 2024 4GB 64GB 1262ad5e...96ad a19a239b...dbf7 0 Đang dùng Sửa Xóa" [ref=e1145]:
+                - cell "TECNO SPARK Go 2024 4GB 64GB - 1 TECNO SPARK Go 2024 4GB 64GB 1262ad5e...96ad" [ref=e1146]:
+                  - generic [ref=e1147]:
+                    - img "TECNO SPARK Go 2024 4GB 64GB - 1" [ref=e1148]
+                    - generic [ref=e1149]:
+                      - strong [ref=e1150]: TECNO SPARK Go 2024 4GB 64GB
+                      - generic [ref=e1151]: 1262ad5e...96ad
+                - cell "a19a239b...dbf7" [ref=e1152]:
+                  - generic "a19a239b-8cf7-4677-98c9-870266e5dbf7" [ref=e1153]: a19a239b...dbf7
+                - cell "0" [ref=e1154]
+                - cell "Đang dùng" [ref=e1155]:
+                  - generic [ref=e1156]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1157]:
+                  - generic [ref=e1158]:
+                    - button "Sửa" [ref=e1159] [cursor=pointer]
+                    - button "Xóa" [ref=e1160] [cursor=pointer]
+              - row "Honor X40 5G - 1 Honor X40 5G 1471e765...4990 c2b0697a...bc53 0 Đang dùng Sửa Xóa" [ref=e1161]:
+                - cell "Honor X40 5G - 1 Honor X40 5G 1471e765...4990" [ref=e1162]:
+                  - generic [ref=e1163]:
+                    - img "Honor X40 5G - 1" [ref=e1164]
+                    - generic [ref=e1165]:
+                      - strong [ref=e1166]: Honor X40 5G
+                      - generic [ref=e1167]: 1471e765...4990
+                - cell "c2b0697a...bc53" [ref=e1168]:
+                  - generic "c2b0697a-ae27-400e-bf9e-da6ee5e2bc53" [ref=e1169]: c2b0697a...bc53
+                - cell "0" [ref=e1170]
+                - cell "Đang dùng" [ref=e1171]:
+                  - generic [ref=e1172]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1173]:
+                  - generic [ref=e1174]:
+                    - button "Sửa" [ref=e1175] [cursor=pointer]
+                    - button "Xóa" [ref=e1176] [cursor=pointer]
+              - row "Samsung Galaxy A07 4GB 128GB - 1 Samsung Galaxy A07 4GB 128GB 16462a4a...c30c 6c724c37...9106 0 Đang dùng Sửa Xóa" [ref=e1177]:
+                - cell "Samsung Galaxy A07 4GB 128GB - 1 Samsung Galaxy A07 4GB 128GB 16462a4a...c30c" [ref=e1178]:
+                  - generic [ref=e1179]:
+                    - img "Samsung Galaxy A07 4GB 128GB - 1" [ref=e1180]
+                    - generic [ref=e1181]:
+                      - strong [ref=e1182]: Samsung Galaxy A07 4GB 128GB
+                      - generic [ref=e1183]: 16462a4a...c30c
+                - cell "6c724c37...9106" [ref=e1184]:
+                  - generic "6c724c37-076b-47cd-9e05-293a85f19106" [ref=e1185]: 6c724c37...9106
+                - cell "0" [ref=e1186]
+                - cell "Đang dùng" [ref=e1187]:
+                  - generic [ref=e1188]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1189]:
+                  - generic [ref=e1190]:
+                    - button "Sửa" [ref=e1191] [cursor=pointer]
+                    - button "Xóa" [ref=e1192] [cursor=pointer]
+              - row "realme GT Neo 5 - 1 realme GT Neo 5 16a55d44...9e04 992d3b4d...1b2c 0 Đang dùng Sửa Xóa" [ref=e1193]:
+                - cell "realme GT Neo 5 - 1 realme GT Neo 5 16a55d44...9e04" [ref=e1194]:
+                  - generic [ref=e1195]:
+                    - img "realme GT Neo 5 - 1" [ref=e1196]
+                    - generic [ref=e1197]:
+                      - strong [ref=e1198]: realme GT Neo 5
+                      - generic [ref=e1199]: 16a55d44...9e04
+                - cell "992d3b4d...1b2c" [ref=e1200]:
+                  - generic "992d3b4d-26c3-45b9-8630-d7e615631b2c" [ref=e1201]: 992d3b4d...1b2c
+                - cell "0" [ref=e1202]
+                - cell "Đang dùng" [ref=e1203]:
+                  - generic [ref=e1204]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1205]:
+                  - generic [ref=e1206]:
+                    - button "Sửa" [ref=e1207] [cursor=pointer]
+                    - button "Xóa" [ref=e1208] [cursor=pointer]
+              - row "Itel P55 Plus 8GB 128GB - 1 Itel P55 Plus 8GB 128GB 18d62859...d86b 11e734fb...8c64 0 Đang dùng Sửa Xóa" [ref=e1209]:
+                - cell "Itel P55 Plus 8GB 128GB - 1 Itel P55 Plus 8GB 128GB 18d62859...d86b" [ref=e1210]:
+                  - generic [ref=e1211]:
+                    - img "Itel P55 Plus 8GB 128GB - 1" [ref=e1212]
+                    - generic [ref=e1213]:
+                      - strong [ref=e1214]: Itel P55 Plus 8GB 128GB
+                      - generic [ref=e1215]: 18d62859...d86b
+                - cell "11e734fb...8c64" [ref=e1216]:
+                  - generic "11e734fb-2f7e-412a-ad8e-c21397058c64" [ref=e1217]: 11e734fb...8c64
+                - cell "0" [ref=e1218]
+                - cell "Đang dùng" [ref=e1219]:
+                  - generic [ref=e1220]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1221]:
+                  - generic [ref=e1222]:
+                    - button "Sửa" [ref=e1223] [cursor=pointer]
+                    - button "Xóa" [ref=e1224] [cursor=pointer]
+              - row "OnePlus Nord N20 SE - 1 OnePlus Nord N20 SE 199f4ffe...8faf 04bbd6c9...bda5 0 Đang dùng Sửa Xóa" [ref=e1225]:
+                - cell "OnePlus Nord N20 SE - 1 OnePlus Nord N20 SE 199f4ffe...8faf" [ref=e1226]:
+                  - generic [ref=e1227]:
+                    - img "OnePlus Nord N20 SE - 1" [ref=e1228]
+                    - generic [ref=e1229]:
+                      - strong [ref=e1230]: OnePlus Nord N20 SE
+                      - generic [ref=e1231]: 199f4ffe...8faf
+                - cell "04bbd6c9...bda5" [ref=e1232]:
+                  - generic "04bbd6c9-90df-496b-88ee-62c48f92bda5" [ref=e1233]: 04bbd6c9...bda5
+                - cell "0" [ref=e1234]
+                - cell "Đang dùng" [ref=e1235]:
+                  - generic [ref=e1236]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1237]:
+                  - generic [ref=e1238]:
+                    - button "Sửa" [ref=e1239] [cursor=pointer]
+                    - button "Xóa" [ref=e1240] [cursor=pointer]
+              - row "ASUS ROG Phone 6 12GB 256GB - 1 ASUS ROG Phone 6 12GB 256GB 1a54cd23...aa85 88f626d1...c684 0 Đang dùng Sửa Xóa" [ref=e1241]:
+                - cell "ASUS ROG Phone 6 12GB 256GB - 1 ASUS ROG Phone 6 12GB 256GB 1a54cd23...aa85" [ref=e1242]:
+                  - generic [ref=e1243]:
+                    - img "ASUS ROG Phone 6 12GB 256GB - 1" [ref=e1244]
+                    - generic [ref=e1245]:
+                      - strong [ref=e1246]: ASUS ROG Phone 6 12GB 256GB
+                      - generic [ref=e1247]: 1a54cd23...aa85
+                - cell "88f626d1...c684" [ref=e1248]:
+                  - generic "88f626d1-693b-45de-8e45-70fce051c684" [ref=e1249]: 88f626d1...c684
+                - cell "0" [ref=e1250]
+                - cell "Đang dùng" [ref=e1251]:
+                  - generic [ref=e1252]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1253]:
+                  - generic [ref=e1254]:
+                    - button "Sửa" [ref=e1255] [cursor=pointer]
+                    - button "Xóa" [ref=e1256] [cursor=pointer]
+              - row "Samsung Galaxy S25 FE 8GB 128GB - 1 Samsung Galaxy S25 FE 8GB 128GB 1bc6308f...7632 15cbf2e2...9be7 0 Đang dùng Sửa Xóa" [ref=e1257]:
+                - cell "Samsung Galaxy S25 FE 8GB 128GB - 1 Samsung Galaxy S25 FE 8GB 128GB 1bc6308f...7632" [ref=e1258]:
+                  - generic [ref=e1259]:
+                    - img "Samsung Galaxy S25 FE 8GB 128GB - 1" [ref=e1260]
+                    - generic [ref=e1261]:
+                      - strong [ref=e1262]: Samsung Galaxy S25 FE 8GB 128GB
+                      - generic [ref=e1263]: 1bc6308f...7632
+                - cell "15cbf2e2...9be7" [ref=e1264]:
+                  - generic "15cbf2e2-3840-4562-a94d-e3cf1e149be7" [ref=e1265]: 15cbf2e2...9be7
+                - cell "0" [ref=e1266]
+                - cell "Đang dùng" [ref=e1267]:
+                  - generic [ref=e1268]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1269]:
+                  - generic [ref=e1270]:
+                    - button "Sửa" [ref=e1271] [cursor=pointer]
+                    - button "Xóa" [ref=e1272] [cursor=pointer]
+              - row "Tecno Pova 7 8GB 256GB - 1 Tecno Pova 7 8GB 256GB 1bfbfbd9...1aa7 edc57848...1634 0 Đang dùng Sửa Xóa" [ref=e1273]:
+                - cell "Tecno Pova 7 8GB 256GB - 1 Tecno Pova 7 8GB 256GB 1bfbfbd9...1aa7" [ref=e1274]:
+                  - generic [ref=e1275]:
+                    - img "Tecno Pova 7 8GB 256GB - 1" [ref=e1276]
+                    - generic [ref=e1277]:
+                      - strong [ref=e1278]: Tecno Pova 7 8GB 256GB
+                      - generic [ref=e1279]: 1bfbfbd9...1aa7
+                - cell "edc57848...1634" [ref=e1280]:
+                  - generic "edc57848-bab2-40e3-a6f2-9f4ed1eb1634" [ref=e1281]: edc57848...1634
+                - cell "0" [ref=e1282]
+                - cell "Đang dùng" [ref=e1283]:
+                  - generic [ref=e1284]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1285]:
+                  - generic [ref=e1286]:
+                    - button "Sửa" [ref=e1287] [cursor=pointer]
+                    - button "Xóa" [ref=e1288] [cursor=pointer]
+              - row "Samsung Galaxy A17 5G 8GB 128GB - 1 Samsung Galaxy A17 5G 8GB 128GB 1c505674...52b7 1ad6ec12...5d7e 0 Đang dùng Sửa Xóa" [ref=e1289]:
+                - cell "Samsung Galaxy A17 5G 8GB 128GB - 1 Samsung Galaxy A17 5G 8GB 128GB 1c505674...52b7" [ref=e1290]:
+                  - generic [ref=e1291]:
+                    - img "Samsung Galaxy A17 5G 8GB 128GB - 1" [ref=e1292]
+                    - generic [ref=e1293]:
+                      - strong [ref=e1294]: Samsung Galaxy A17 5G 8GB 128GB
+                      - generic [ref=e1295]: 1c505674...52b7
+                - cell "1ad6ec12...5d7e" [ref=e1296]:
+                  - generic "1ad6ec12-7080-4233-9927-198f16065d7e" [ref=e1297]: 1ad6ec12...5d7e
+                - cell "0" [ref=e1298]
+                - cell "Đang dùng" [ref=e1299]:
+                  - generic [ref=e1300]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1301]:
+                  - generic [ref=e1302]:
+                    - button "Sửa" [ref=e1303] [cursor=pointer]
+                    - button "Xóa" [ref=e1304] [cursor=pointer]
+              - row "realme C61 4GB 128GB - 1 realme C61 4GB 128GB 1d91ec79...8082 6a690875...d16d 0 Đang dùng Sửa Xóa" [ref=e1305]:
+                - cell "realme C61 4GB 128GB - 1 realme C61 4GB 128GB 1d91ec79...8082" [ref=e1306]:
+                  - generic [ref=e1307]:
+                    - img "realme C61 4GB 128GB - 1" [ref=e1308]
+                    - generic [ref=e1309]:
+                      - strong [ref=e1310]: realme C61 4GB 128GB
+                      - generic [ref=e1311]: 1d91ec79...8082
+                - cell "6a690875...d16d" [ref=e1312]:
+                  - generic "6a690875-fb02-4d01-93e1-d30bae9fd16d" [ref=e1313]: 6a690875...d16d
+                - cell "0" [ref=e1314]
+                - cell "Đang dùng" [ref=e1315]:
+                  - generic [ref=e1316]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1317]:
+                  - generic [ref=e1318]:
+                    - button "Sửa" [ref=e1319] [cursor=pointer]
+                    - button "Xóa" [ref=e1320] [cursor=pointer]
+              - row "TECNO Spark Go 2 4GB 64GB - 1 TECNO Spark Go 2 4GB 64GB 1ddf05e5...2720 98630550...ad62 0 Đang dùng Sửa Xóa" [ref=e1321]:
+                - cell "TECNO Spark Go 2 4GB 64GB - 1 TECNO Spark Go 2 4GB 64GB 1ddf05e5...2720" [ref=e1322]:
+                  - generic [ref=e1323]:
+                    - img "TECNO Spark Go 2 4GB 64GB - 1" [ref=e1324]
+                    - generic [ref=e1325]:
+                      - strong [ref=e1326]: TECNO Spark Go 2 4GB 64GB
+                      - generic [ref=e1327]: 1ddf05e5...2720
+                - cell "98630550...ad62" [ref=e1328]:
+                  - generic "98630550-ef55-40ce-a49c-d7187e16ad62" [ref=e1329]: 98630550...ad62
+                - cell "0" [ref=e1330]
+                - cell "Đang dùng" [ref=e1331]:
+                  - generic [ref=e1332]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1333]:
+                  - generic [ref=e1334]:
+                    - button "Sửa" [ref=e1335] [cursor=pointer]
+                    - button "Xóa" [ref=e1336] [cursor=pointer]
+              - row "Nubia Music NFC 4GB 128GB (Bản đặc biệt) - 1 Nubia Music NFC 4GB 128GB (Bản đặc biệt) 1e20a8b1...1d79 6c3632bd...04b5 0 Đang dùng Sửa Xóa" [ref=e1337]:
+                - cell "Nubia Music NFC 4GB 128GB (Bản đặc biệt) - 1 Nubia Music NFC 4GB 128GB (Bản đặc biệt) 1e20a8b1...1d79" [ref=e1338]:
+                  - generic [ref=e1339]:
+                    - img "Nubia Music NFC 4GB 128GB (Bản đặc biệt) - 1" [ref=e1340]
+                    - generic [ref=e1341]:
+                      - strong [ref=e1342]: Nubia Music NFC 4GB 128GB (Bản đặc biệt)
+                      - generic [ref=e1343]: 1e20a8b1...1d79
+                - cell "6c3632bd...04b5" [ref=e1344]:
+                  - generic "6c3632bd-d768-4d38-bea1-4df6b1b804b5" [ref=e1345]: 6c3632bd...04b5
+                - cell "0" [ref=e1346]
+                - cell "Đang dùng" [ref=e1347]:
+                  - generic [ref=e1348]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1349]:
+                  - generic [ref=e1350]:
+                    - button "Sửa" [ref=e1351] [cursor=pointer]
+                    - button "Xóa" [ref=e1352] [cursor=pointer]
+              - row "Xiaomi 15T 5G 12GB 512GB - 1 Xiaomi 15T 5G 12GB 512GB 1eb4e13c...0ff6 e1264f92...fc08 0 Đang dùng Sửa Xóa" [ref=e1353]:
+                - cell "Xiaomi 15T 5G 12GB 512GB - 1 Xiaomi 15T 5G 12GB 512GB 1eb4e13c...0ff6" [ref=e1354]:
+                  - generic [ref=e1355]:
+                    - img "Xiaomi 15T 5G 12GB 512GB - 1" [ref=e1356]
+                    - generic [ref=e1357]:
+                      - strong [ref=e1358]: Xiaomi 15T 5G 12GB 512GB
+                      - generic [ref=e1359]: 1eb4e13c...0ff6
+                - cell "e1264f92...fc08" [ref=e1360]:
+                  - generic "e1264f92-f876-466a-a713-8871cc08fc08" [ref=e1361]: e1264f92...fc08
+                - cell "0" [ref=e1362]
+                - cell "Đang dùng" [ref=e1363]:
+                  - generic [ref=e1364]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1365]:
+                  - generic [ref=e1366]:
+                    - button "Sửa" [ref=e1367] [cursor=pointer]
+                    - button "Xóa" [ref=e1368] [cursor=pointer]
+              - row "Masstel izi T5 plus 4G - 1 Masstel izi T5 plus 4G 2056971d...8ea4 3277de2e...596a 0 Đang dùng Sửa Xóa" [ref=e1369]:
+                - cell "Masstel izi T5 plus 4G - 1 Masstel izi T5 plus 4G 2056971d...8ea4" [ref=e1370]:
+                  - generic [ref=e1371]:
+                    - img "Masstel izi T5 plus 4G - 1" [ref=e1372]
+                    - generic [ref=e1373]:
+                      - strong [ref=e1374]: Masstel izi T5 plus 4G
+                      - generic [ref=e1375]: 2056971d...8ea4
+                - cell "3277de2e...596a" [ref=e1376]:
+                  - generic "3277de2e-de12-453d-b669-89ab3aca596a" [ref=e1377]: 3277de2e...596a
+                - cell "0" [ref=e1378]
+                - cell "Đang dùng" [ref=e1379]:
+                  - generic [ref=e1380]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1381]:
+                  - generic [ref=e1382]:
+                    - button "Sửa" [ref=e1383] [cursor=pointer]
+                    - button "Xóa" [ref=e1384] [cursor=pointer]
+              - row "OnePlus Nord CE - 1 OnePlus Nord CE 222adc55...1e74 5946ddf8...e2b0 0 Đang dùng Sửa Xóa" [ref=e1385]:
+                - cell "OnePlus Nord CE - 1 OnePlus Nord CE 222adc55...1e74" [ref=e1386]:
+                  - generic [ref=e1387]:
+                    - img "OnePlus Nord CE - 1" [ref=e1388]
+                    - generic [ref=e1389]:
+                      - strong [ref=e1390]: OnePlus Nord CE
+                      - generic [ref=e1391]: 222adc55...1e74
+                - cell "5946ddf8...e2b0" [ref=e1392]:
+                  - generic "5946ddf8-1adc-4656-b5f0-7f1eaf02e2b0" [ref=e1393]: 5946ddf8...e2b0
+                - cell "0" [ref=e1394]
+                - cell "Đang dùng" [ref=e1395]:
+                  - generic [ref=e1396]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1397]:
+                  - generic [ref=e1398]:
+                    - button "Sửa" [ref=e1399] [cursor=pointer]
+                    - button "Xóa" [ref=e1400] [cursor=pointer]
+              - row "iPhone 16e 256GB | Chính hãng VN/A - 1 iPhone 16e 256GB | Chính hãng VN/A 236b47b2...b2eb 538254d1...6c45 0 Đang dùng Sửa Xóa" [ref=e1401]:
+                - cell "iPhone 16e 256GB | Chính hãng VN/A - 1 iPhone 16e 256GB | Chính hãng VN/A 236b47b2...b2eb" [ref=e1402]:
+                  - generic [ref=e1403]:
+                    - img "iPhone 16e 256GB | Chính hãng VN/A - 1" [ref=e1404]
+                    - generic [ref=e1405]:
+                      - strong [ref=e1406]: iPhone 16e 256GB | Chính hãng VN/A
+                      - generic [ref=e1407]: 236b47b2...b2eb
+                - cell "538254d1...6c45" [ref=e1408]:
+                  - generic "538254d1-5851-4541-a3c4-bfbd38c66c45" [ref=e1409]: 538254d1...6c45
+                - cell "0" [ref=e1410]
+                - cell "Đang dùng" [ref=e1411]:
+                  - generic [ref=e1412]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1413]:
+                  - generic [ref=e1414]:
+                    - button "Sửa" [ref=e1415] [cursor=pointer]
+                    - button "Xóa" [ref=e1416] [cursor=pointer]
+              - row "Sony Xperia 1VI 12GB 256GB - 1 Sony Xperia 1VI 12GB 256GB 23a8bb92...2742 bc16962d...9a41 0 Đang dùng Sửa Xóa" [ref=e1417]:
+                - cell "Sony Xperia 1VI 12GB 256GB - 1 Sony Xperia 1VI 12GB 256GB 23a8bb92...2742" [ref=e1418]:
+                  - generic [ref=e1419]:
+                    - img "Sony Xperia 1VI 12GB 256GB - 1" [ref=e1420]
+                    - generic [ref=e1421]:
+                      - strong [ref=e1422]: Sony Xperia 1VI 12GB 256GB
+                      - generic [ref=e1423]: 23a8bb92...2742
+                - cell "bc16962d...9a41" [ref=e1424]:
+                  - generic "bc16962d-0a01-4a3f-aca5-c72298459a41" [ref=e1425]: bc16962d...9a41
+                - cell "0" [ref=e1426]
+                - cell "Đang dùng" [ref=e1427]:
+                  - generic [ref=e1428]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1429]:
+                  - generic [ref=e1430]:
+                    - button "Sửa" [ref=e1431] [cursor=pointer]
+                    - button "Xóa" [ref=e1432] [cursor=pointer]
+              - row "Honor X7 - 1 Honor X7 265e4daa...f39a cbe4c7a5...3e72 0 Đang dùng Sửa Xóa" [ref=e1433]:
+                - cell "Honor X7 - 1 Honor X7 265e4daa...f39a" [ref=e1434]:
+                  - generic [ref=e1435]:
+                    - img "Honor X7 - 1" [ref=e1436]
+                    - generic [ref=e1437]:
+                      - strong [ref=e1438]: Honor X7
+                      - generic [ref=e1439]: 265e4daa...f39a
+                - cell "cbe4c7a5...3e72" [ref=e1440]:
+                  - generic "cbe4c7a5-4540-4d76-b99a-f60297323e72" [ref=e1441]: cbe4c7a5...3e72
+                - cell "0" [ref=e1442]
+                - cell "Đang dùng" [ref=e1443]:
+                  - generic [ref=e1444]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1445]:
+                  - generic [ref=e1446]:
+                    - button "Sửa" [ref=e1447] [cursor=pointer]
+                    - button "Xóa" [ref=e1448] [cursor=pointer]
+              - row "iPhone 17 256GB | Chính hãng - 1 iPhone 17 256GB | Chính hãng 2691e04a...c999 e4a4bf56...6ea9 0 Đang dùng Sửa Xóa" [ref=e1449]:
+                - cell "iPhone 17 256GB | Chính hãng - 1 iPhone 17 256GB | Chính hãng 2691e04a...c999" [ref=e1450]:
+                  - generic [ref=e1451]:
+                    - img "iPhone 17 256GB | Chính hãng - 1" [ref=e1452]
+                    - generic [ref=e1453]:
+                      - strong [ref=e1454]: iPhone 17 256GB | Chính hãng
+                      - generic [ref=e1455]: 2691e04a...c999
+                - cell "e4a4bf56...6ea9" [ref=e1456]:
+                  - generic "e4a4bf56-1af6-47b7-96e8-fc0af6c36ea9" [ref=e1457]: e4a4bf56...6ea9
+                - cell "0" [ref=e1458]
+                - cell "Đang dùng" [ref=e1459]:
+                  - generic [ref=e1460]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1461]:
+                  - generic [ref=e1462]:
+                    - button "Sửa" [ref=e1463] [cursor=pointer]
+                    - button "Xóa" [ref=e1464] [cursor=pointer]
+              - row "Nothing Phone 2 - 1 Nothing Phone 2 27241d2c...3763 a141f281...cab1 0 Đang dùng Sửa Xóa" [ref=e1465]:
+                - cell "Nothing Phone 2 - 1 Nothing Phone 2 27241d2c...3763" [ref=e1466]:
+                  - generic [ref=e1467]:
+                    - img "Nothing Phone 2 - 1" [ref=e1468]
+                    - generic [ref=e1469]:
+                      - strong [ref=e1470]: Nothing Phone 2
+                      - generic [ref=e1471]: 27241d2c...3763
+                - cell "a141f281...cab1" [ref=e1472]:
+                  - generic "a141f281-7c4e-48f9-9683-b7c81466cab1" [ref=e1473]: a141f281...cab1
+                - cell "0" [ref=e1474]
+                - cell "Đang dùng" [ref=e1475]:
+                  - generic [ref=e1476]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1477]:
+                  - generic [ref=e1478]:
+                    - button "Sửa" [ref=e1479] [cursor=pointer]
+                    - button "Xóa" [ref=e1480] [cursor=pointer]
+              - row "Masstel izi T2 4G - 1 Masstel izi T2 4G 27a098ed...11c3 90fa7434...1f74 0 Đang dùng Sửa Xóa" [ref=e1481]:
+                - cell "Masstel izi T2 4G - 1 Masstel izi T2 4G 27a098ed...11c3" [ref=e1482]:
+                  - generic [ref=e1483]:
+                    - img "Masstel izi T2 4G - 1" [ref=e1484]
+                    - generic [ref=e1485]:
+                      - strong [ref=e1486]: Masstel izi T2 4G
+                      - generic [ref=e1487]: 27a098ed...11c3
+                - cell "90fa7434...1f74" [ref=e1488]:
+                  - generic "90fa7434-3495-4407-ad39-16148e0b1f74" [ref=e1489]: 90fa7434...1f74
+                - cell "0" [ref=e1490]
+                - cell "Đang dùng" [ref=e1491]:
+                  - generic [ref=e1492]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1493]:
+                  - generic [ref=e1494]:
+                    - button "Sửa" [ref=e1495] [cursor=pointer]
+                    - button "Xóa" [ref=e1496] [cursor=pointer]
+              - row "Nubia Neo 2 5G - 1 Nubia Neo 2 5G 27ae886c...21e0 79d923fe...5801 0 Đang dùng Sửa Xóa" [ref=e1497]:
+                - cell "Nubia Neo 2 5G - 1 Nubia Neo 2 5G 27ae886c...21e0" [ref=e1498]:
+                  - generic [ref=e1499]:
+                    - img "Nubia Neo 2 5G - 1" [ref=e1500]
+                    - generic [ref=e1501]:
+                      - strong [ref=e1502]: Nubia Neo 2 5G
+                      - generic [ref=e1503]: 27ae886c...21e0
+                - cell "79d923fe...5801" [ref=e1504]:
+                  - generic "79d923fe-29b9-4cf6-9c36-adba78155801" [ref=e1505]: 79d923fe...5801
+                - cell "0" [ref=e1506]
+                - cell "Đang dùng" [ref=e1507]:
+                  - generic [ref=e1508]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1509]:
+                  - generic [ref=e1510]:
+                    - button "Sửa" [ref=e1511] [cursor=pointer]
+                    - button "Xóa" [ref=e1512] [cursor=pointer]
+              - row "Nokia C3 - 1 Nokia C3 27ebb609...a9c1 0ef69b48...7a31 0 Đang dùng Sửa Xóa" [ref=e1513]:
+                - cell "Nokia C3 - 1 Nokia C3 27ebb609...a9c1" [ref=e1514]:
+                  - generic [ref=e1515]:
+                    - img "Nokia C3 - 1" [ref=e1516]
+                    - generic [ref=e1517]:
+                      - strong [ref=e1518]: Nokia C3
+                      - generic [ref=e1519]: 27ebb609...a9c1
+                - cell "0ef69b48...7a31" [ref=e1520]:
+                  - generic "0ef69b48-938b-40e5-af99-5aa018f97a31" [ref=e1521]: 0ef69b48...7a31
+                - cell "0" [ref=e1522]
+                - cell "Đang dùng" [ref=e1523]:
+                  - generic [ref=e1524]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1525]:
+                  - generic [ref=e1526]:
+                    - button "Sửa" [ref=e1527] [cursor=pointer]
+                    - button "Xóa" [ref=e1528] [cursor=pointer]
+              - row "TECNO POVA 5 8GB 128GB - 1 TECNO POVA 5 8GB 128GB 28ab0796...7043 007e1c9f...b42a 0 Đang dùng Sửa Xóa" [ref=e1529]:
+                - cell "TECNO POVA 5 8GB 128GB - 1 TECNO POVA 5 8GB 128GB 28ab0796...7043" [ref=e1530]:
+                  - generic [ref=e1531]:
+                    - img "TECNO POVA 5 8GB 128GB - 1" [ref=e1532]
+                    - generic [ref=e1533]:
+                      - strong [ref=e1534]: TECNO POVA 5 8GB 128GB
+                      - generic [ref=e1535]: 28ab0796...7043
+                - cell "007e1c9f...b42a" [ref=e1536]:
+                  - generic "007e1c9f-f2f8-48fd-913a-34d98b68b42a" [ref=e1537]: 007e1c9f...b42a
+                - cell "0" [ref=e1538]
+                - cell "Đang dùng" [ref=e1539]:
+                  - generic [ref=e1540]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1541]:
+                  - generic [ref=e1542]:
+                    - button "Sửa" [ref=e1543] [cursor=pointer]
+                    - button "Xóa" [ref=e1544] [cursor=pointer]
+              - row "Nokia HMD 105 4G - 1 Nokia HMD 105 4G 2a08b435...a72a 4979ae94...cc84 0 Đang dùng Sửa Xóa" [ref=e1545]:
+                - cell "Nokia HMD 105 4G - 1 Nokia HMD 105 4G 2a08b435...a72a" [ref=e1546]:
+                  - generic [ref=e1547]:
+                    - img "Nokia HMD 105 4G - 1" [ref=e1548]
+                    - generic [ref=e1549]:
+                      - strong [ref=e1550]: Nokia HMD 105 4G
+                      - generic [ref=e1551]: 2a08b435...a72a
+                - cell "4979ae94...cc84" [ref=e1552]:
+                  - generic "4979ae94-afd0-4642-a680-875e823dcc84" [ref=e1553]: 4979ae94...cc84
+                - cell "0" [ref=e1554]
+                - cell "Đang dùng" [ref=e1555]:
+                  - generic [ref=e1556]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1557]:
+                  - generic [ref=e1558]:
+                    - button "Sửa" [ref=e1559] [cursor=pointer]
+                    - button "Xóa" [ref=e1560] [cursor=pointer]
+              - row "ZTE Nubia Z60S Pro 12GB 256GB - 1 ZTE Nubia Z60S Pro 12GB 256GB 2ae98eb7...45b3 bcca1fde...eff1 0 Đang dùng Sửa Xóa" [ref=e1561]:
+                - cell "ZTE Nubia Z60S Pro 12GB 256GB - 1 ZTE Nubia Z60S Pro 12GB 256GB 2ae98eb7...45b3" [ref=e1562]:
+                  - generic [ref=e1563]:
+                    - img "ZTE Nubia Z60S Pro 12GB 256GB - 1" [ref=e1564]
+                    - generic [ref=e1565]:
+                      - strong [ref=e1566]: ZTE Nubia Z60S Pro 12GB 256GB
+                      - generic [ref=e1567]: 2ae98eb7...45b3
+                - cell "bcca1fde...eff1" [ref=e1568]:
+                  - generic "bcca1fde-4b2b-44d9-84a6-8aab7ca9eff1" [ref=e1569]: bcca1fde...eff1
+                - cell "0" [ref=e1570]
+                - cell "Đang dùng" [ref=e1571]:
+                  - generic [ref=e1572]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1573]:
+                  - generic [ref=e1574]:
+                    - button "Sửa" [ref=e1575] [cursor=pointer]
+                    - button "Xóa" [ref=e1576] [cursor=pointer]
+              - row "Xiaomi 13T Pro 5G 12GB 512GB - Chỉ có tại CellphoneS - 1 Xiaomi 13T Pro 5G 12GB 512GB - Chỉ có tại CellphoneS 2b064efb...e175 d09a5e98...ccfa 0 Đang dùng Sửa Xóa" [ref=e1577]:
+                - cell "Xiaomi 13T Pro 5G 12GB 512GB - Chỉ có tại CellphoneS - 1 Xiaomi 13T Pro 5G 12GB 512GB - Chỉ có tại CellphoneS 2b064efb...e175" [ref=e1578]:
+                  - generic [ref=e1579]:
+                    - img "Xiaomi 13T Pro 5G 12GB 512GB - Chỉ có tại CellphoneS - 1" [ref=e1580]
+                    - generic [ref=e1581]:
+                      - strong [ref=e1582]: Xiaomi 13T Pro 5G 12GB 512GB - Chỉ có tại CellphoneS
+                      - generic [ref=e1583]: 2b064efb...e175
+                - cell "d09a5e98...ccfa" [ref=e1584]:
+                  - generic "d09a5e98-2f51-468a-acce-1b492fd9ccfa" [ref=e1585]: d09a5e98...ccfa
+                - cell "0" [ref=e1586]
+                - cell "Đang dùng" [ref=e1587]:
+                  - generic [ref=e1588]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1589]:
+                  - generic [ref=e1590]:
+                    - button "Sửa" [ref=e1591] [cursor=pointer]
+                    - button "Xóa" [ref=e1592] [cursor=pointer]
+              - row "Xiaomi 15 5G 12GB 512GB - 1 Xiaomi 15 5G 12GB 512GB 2b766558...a91e 4e294475...fa88 0 Đang dùng Sửa Xóa" [ref=e1593]:
+                - cell "Xiaomi 15 5G 12GB 512GB - 1 Xiaomi 15 5G 12GB 512GB 2b766558...a91e" [ref=e1594]:
+                  - generic [ref=e1595]:
+                    - img "Xiaomi 15 5G 12GB 512GB - 1" [ref=e1596]
+                    - generic [ref=e1597]:
+                      - strong [ref=e1598]: Xiaomi 15 5G 12GB 512GB
+                      - generic [ref=e1599]: 2b766558...a91e
+                - cell "4e294475...fa88" [ref=e1600]:
+                  - generic "4e294475-4e34-43f0-b067-9b6efb63fa88" [ref=e1601]: 4e294475...fa88
+                - cell "0" [ref=e1602]
+                - cell "Đang dùng" [ref=e1603]:
+                  - generic [ref=e1604]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1605]:
+                  - generic [ref=e1606]:
+                    - button "Sửa" [ref=e1607] [cursor=pointer]
+                    - button "Xóa" [ref=e1608] [cursor=pointer]
+              - row "Điện thoại Masstel S7 4GB 128GB - 1 Điện thoại Masstel S7 4GB 128GB 2c56912a...06db 5250e02a...8ffc 0 Đang dùng Sửa Xóa" [ref=e1609]:
+                - cell "Điện thoại Masstel S7 4GB 128GB - 1 Điện thoại Masstel S7 4GB 128GB 2c56912a...06db" [ref=e1610]:
+                  - generic [ref=e1611]:
+                    - img "Điện thoại Masstel S7 4GB 128GB - 1" [ref=e1612]
+                    - generic [ref=e1613]:
+                      - strong [ref=e1614]: Điện thoại Masstel S7 4GB 128GB
+                      - generic [ref=e1615]: 2c56912a...06db
+                - cell "5250e02a...8ffc" [ref=e1616]:
+                  - generic "5250e02a-6792-4dcf-a848-2b4312b18ffc" [ref=e1617]: 5250e02a...8ffc
+                - cell "0" [ref=e1618]
+                - cell "Đang dùng" [ref=e1619]:
+                  - generic [ref=e1620]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1621]:
+                  - generic [ref=e1622]:
+                    - button "Sửa" [ref=e1623] [cursor=pointer]
+                    - button "Xóa" [ref=e1624] [cursor=pointer]
+              - row "HONOR Magic V5 16GB 512GB - 1 HONOR Magic V5 16GB 512GB 2d809042...ae8a 59a9f2bd...d611 0 Đang dùng Sửa Xóa" [ref=e1625]:
+                - cell "HONOR Magic V5 16GB 512GB - 1 HONOR Magic V5 16GB 512GB 2d809042...ae8a" [ref=e1626]:
+                  - generic [ref=e1627]:
+                    - img "HONOR Magic V5 16GB 512GB - 1" [ref=e1628]
+                    - generic [ref=e1629]:
+                      - strong [ref=e1630]: HONOR Magic V5 16GB 512GB
+                      - generic [ref=e1631]: 2d809042...ae8a
+                - cell "59a9f2bd...d611" [ref=e1632]:
+                  - generic "59a9f2bd-531e-4f44-b5d0-be59d49cd611" [ref=e1633]: 59a9f2bd...d611
+                - cell "0" [ref=e1634]
+                - cell "Đang dùng" [ref=e1635]:
+                  - generic [ref=e1636]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1637]:
+                  - generic [ref=e1638]:
+                    - button "Sửa" [ref=e1639] [cursor=pointer]
+                    - button "Xóa" [ref=e1640] [cursor=pointer]
+              - row "HONOR X7c 8GB 256GB - 1 HONOR X7c 8GB 256GB 2d82a27d...a665 9a3e154d...6f33 0 Đang dùng Sửa Xóa" [ref=e1641]:
+                - cell "HONOR X7c 8GB 256GB - 1 HONOR X7c 8GB 256GB 2d82a27d...a665" [ref=e1642]:
+                  - generic [ref=e1643]:
+                    - img "HONOR X7c 8GB 256GB - 1" [ref=e1644]
+                    - generic [ref=e1645]:
+                      - strong [ref=e1646]: HONOR X7c 8GB 256GB
+                      - generic [ref=e1647]: 2d82a27d...a665
+                - cell "9a3e154d...6f33" [ref=e1648]:
+                  - generic "9a3e154d-ad36-4c0e-a923-370bcd186f33" [ref=e1649]: 9a3e154d...6f33
+                - cell "0" [ref=e1650]
+                - cell "Đang dùng" [ref=e1651]:
+                  - generic [ref=e1652]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1653]:
+                  - generic [ref=e1654]:
+                    - button "Sửa" [ref=e1655] [cursor=pointer]
+                    - button "Xóa" [ref=e1656] [cursor=pointer]
+              - row "realme C51 6GB 256GB - 1 realme C51 6GB 256GB 2ec65281...d3cf cdb073dd...538f 0 Đang dùng Sửa Xóa" [ref=e1657]:
+                - cell "realme C51 6GB 256GB - 1 realme C51 6GB 256GB 2ec65281...d3cf" [ref=e1658]:
+                  - generic [ref=e1659]:
+                    - img "realme C51 6GB 256GB - 1" [ref=e1660]
+                    - generic [ref=e1661]:
+                      - strong [ref=e1662]: realme C51 6GB 256GB
+                      - generic [ref=e1663]: 2ec65281...d3cf
+                - cell "cdb073dd...538f" [ref=e1664]:
+                  - generic "cdb073dd-7867-4c94-a2f7-a29a78ba538f" [ref=e1665]: cdb073dd...538f
+                - cell "0" [ref=e1666]
+                - cell "Đang dùng" [ref=e1667]:
+                  - generic [ref=e1668]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1669]:
+                  - generic [ref=e1670]:
+                    - button "Sửa" [ref=e1671] [cursor=pointer]
+                    - button "Xóa" [ref=e1672] [cursor=pointer]
+              - row "Samsung Galaxy S24 Plus 12GB 256GB - 1 Samsung Galaxy S24 Plus 12GB 256GB 32a9c3fd...35a4 bfa9f4d4...3c46 0 Đang dùng Sửa Xóa" [ref=e1673]:
+                - cell "Samsung Galaxy S24 Plus 12GB 256GB - 1 Samsung Galaxy S24 Plus 12GB 256GB 32a9c3fd...35a4" [ref=e1674]:
+                  - generic [ref=e1675]:
+                    - img "Samsung Galaxy S24 Plus 12GB 256GB - 1" [ref=e1676]
+                    - generic [ref=e1677]:
+                      - strong [ref=e1678]: Samsung Galaxy S24 Plus 12GB 256GB
+                      - generic [ref=e1679]: 32a9c3fd...35a4
+                - cell "bfa9f4d4...3c46" [ref=e1680]:
+                  - generic "bfa9f4d4-cb61-40b3-849d-c17994e63c46" [ref=e1681]: bfa9f4d4...3c46
+                - cell "0" [ref=e1682]
+                - cell "Đang dùng" [ref=e1683]:
+                  - generic [ref=e1684]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1685]:
+                  - generic [ref=e1686]:
+                    - button "Sửa" [ref=e1687] [cursor=pointer]
+                    - button "Xóa" [ref=e1688] [cursor=pointer]
+              - row "realme C51 4GB 64GB - 1 realme C51 4GB 64GB 33b957f5...52de 519810a4...1fc0 0 Đang dùng Sửa Xóa" [ref=e1689]:
+                - cell "realme C51 4GB 64GB - 1 realme C51 4GB 64GB 33b957f5...52de" [ref=e1690]:
+                  - generic [ref=e1691]:
+                    - img "realme C51 4GB 64GB - 1" [ref=e1692]
+                    - generic [ref=e1693]:
+                      - strong [ref=e1694]: realme C51 4GB 64GB
+                      - generic [ref=e1695]: 33b957f5...52de
+                - cell "519810a4...1fc0" [ref=e1696]:
+                  - generic "519810a4-1dd8-4c21-a187-f6089b8f1fc0" [ref=e1697]: 519810a4...1fc0
+                - cell "0" [ref=e1698]
+                - cell "Đang dùng" [ref=e1699]:
+                  - generic [ref=e1700]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1701]:
+                  - generic [ref=e1702]:
+                    - button "Sửa" [ref=e1703] [cursor=pointer]
+                    - button "Xóa" [ref=e1704] [cursor=pointer]
+              - row "realme C55 6GB 128GB - 1 realme C55 6GB 128GB 33fdcea2...2850 23a32a1e...62b0 0 Đang dùng Sửa Xóa" [ref=e1705]:
+                - cell "realme C55 6GB 128GB - 1 realme C55 6GB 128GB 33fdcea2...2850" [ref=e1706]:
+                  - generic [ref=e1707]:
+                    - img "realme C55 6GB 128GB - 1" [ref=e1708]
+                    - generic [ref=e1709]:
+                      - strong [ref=e1710]: realme C55 6GB 128GB
+                      - generic [ref=e1711]: 33fdcea2...2850
+                - cell "23a32a1e...62b0" [ref=e1712]:
+                  - generic "23a32a1e-4469-43ee-92b1-0b13064462b0" [ref=e1713]: 23a32a1e...62b0
+                - cell "0" [ref=e1714]
+                - cell "Đang dùng" [ref=e1715]:
+                  - generic [ref=e1716]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1717]:
+                  - generic [ref=e1718]:
+                    - button "Sửa" [ref=e1719] [cursor=pointer]
+                    - button "Xóa" [ref=e1720] [cursor=pointer]
+              - row "HONOR X9c 5G 12GB 256GB - 1 HONOR X9c 5G 12GB 256GB 3567ab9c...54bc ce392364...a380 0 Đang dùng Sửa Xóa" [ref=e1721]:
+                - cell "HONOR X9c 5G 12GB 256GB - 1 HONOR X9c 5G 12GB 256GB 3567ab9c...54bc" [ref=e1722]:
+                  - generic [ref=e1723]:
+                    - img "HONOR X9c 5G 12GB 256GB - 1" [ref=e1724]
+                    - generic [ref=e1725]:
+                      - strong [ref=e1726]: HONOR X9c 5G 12GB 256GB
+                      - generic [ref=e1727]: 3567ab9c...54bc
+                - cell "ce392364...a380" [ref=e1728]:
+                  - generic "ce392364-72ed-496b-9549-c4242057a380" [ref=e1729]: ce392364...a380
+                - cell "0" [ref=e1730]
+                - cell "Đang dùng" [ref=e1731]:
+                  - generic [ref=e1732]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1733]:
+                  - generic [ref=e1734]:
+                    - button "Sửa" [ref=e1735] [cursor=pointer]
+                    - button "Xóa" [ref=e1736] [cursor=pointer]
+              - row "Samsung Galaxy Z Flip6 12GB 256GB - 1 Samsung Galaxy Z Flip6 12GB 256GB 36ccdc25...20ed 3ddf15d7...f004 0 Đang dùng Sửa Xóa" [ref=e1737]:
+                - cell "Samsung Galaxy Z Flip6 12GB 256GB - 1 Samsung Galaxy Z Flip6 12GB 256GB 36ccdc25...20ed" [ref=e1738]:
+                  - generic [ref=e1739]:
+                    - img "Samsung Galaxy Z Flip6 12GB 256GB - 1" [ref=e1740]
+                    - generic [ref=e1741]:
+                      - strong [ref=e1742]: Samsung Galaxy Z Flip6 12GB 256GB
+                      - generic [ref=e1743]: 36ccdc25...20ed
+                - cell "3ddf15d7...f004" [ref=e1744]:
+                  - generic "3ddf15d7-5f3c-4530-b8e3-facde911f004" [ref=e1745]: 3ddf15d7...f004
+                - cell "0" [ref=e1746]
+                - cell "Đang dùng" [ref=e1747]:
+                  - generic [ref=e1748]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1749]:
+                  - generic [ref=e1750]:
+                    - button "Sửa" [ref=e1751] [cursor=pointer]
+                    - button "Xóa" [ref=e1752] [cursor=pointer]
+              - row "OnePlus Ace 3 Pro - 1 OnePlus Ace 3 Pro 399a53d5...fcdd 1dc17dd5...51d3 0 Đang dùng Sửa Xóa" [ref=e1753]:
+                - cell "OnePlus Ace 3 Pro - 1 OnePlus Ace 3 Pro 399a53d5...fcdd" [ref=e1754]:
+                  - generic [ref=e1755]:
+                    - img "OnePlus Ace 3 Pro - 1" [ref=e1756]
+                    - generic [ref=e1757]:
+                      - strong [ref=e1758]: OnePlus Ace 3 Pro
+                      - generic [ref=e1759]: 399a53d5...fcdd
+                - cell "1dc17dd5...51d3" [ref=e1760]:
+                  - generic "1dc17dd5-bd64-4342-a67f-74274a2b51d3" [ref=e1761]: 1dc17dd5...51d3
+                - cell "0" [ref=e1762]
+                - cell "Đang dùng" [ref=e1763]:
+                  - generic [ref=e1764]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1765]:
+                  - generic [ref=e1766]:
+                    - button "Sửa" [ref=e1767] [cursor=pointer]
+                    - button "Xóa" [ref=e1768] [cursor=pointer]
+              - row "OnePlus Nord 2T - 1 OnePlus Nord 2T 3bd28e9b...55e1 6f149d5b...c169 0 Đang dùng Sửa Xóa" [ref=e1769]:
+                - cell "OnePlus Nord 2T - 1 OnePlus Nord 2T 3bd28e9b...55e1" [ref=e1770]:
+                  - generic [ref=e1771]:
+                    - img "OnePlus Nord 2T - 1" [ref=e1772]
+                    - generic [ref=e1773]:
+                      - strong [ref=e1774]: OnePlus Nord 2T
+                      - generic [ref=e1775]: 3bd28e9b...55e1
+                - cell "6f149d5b...c169" [ref=e1776]:
+                  - generic "6f149d5b-d20e-41e0-9c26-12dd1f05c169" [ref=e1777]: 6f149d5b...c169
+                - cell "0" [ref=e1778]
+                - cell "Đang dùng" [ref=e1779]:
+                  - generic [ref=e1780]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1781]:
+                  - generic [ref=e1782]:
+                    - button "Sửa" [ref=e1783] [cursor=pointer]
+                    - button "Xóa" [ref=e1784] [cursor=pointer]
+              - row "Nokia 110 4G Pro - 1 Nokia 110 4G Pro 3c0a467d...7b57 92dbecc0...2385 0 Đang dùng Sửa Xóa" [ref=e1785]:
+                - cell "Nokia 110 4G Pro - 1 Nokia 110 4G Pro 3c0a467d...7b57" [ref=e1786]:
+                  - generic [ref=e1787]:
+                    - img "Nokia 110 4G Pro - 1" [ref=e1788]
+                    - generic [ref=e1789]:
+                      - strong [ref=e1790]: Nokia 110 4G Pro
+                      - generic [ref=e1791]: 3c0a467d...7b57
+                - cell "92dbecc0...2385" [ref=e1792]:
+                  - generic "92dbecc0-e516-4180-b54b-200c79c52385" [ref=e1793]: 92dbecc0...2385
+                - cell "0" [ref=e1794]
+                - cell "Đang dùng" [ref=e1795]:
+                  - generic [ref=e1796]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1797]:
+                  - generic [ref=e1798]:
+                    - button "Sửa" [ref=e1799] [cursor=pointer]
+                    - button "Xóa" [ref=e1800] [cursor=pointer]
+              - row "Xiaomi Redmi Note 13 Pro 5G 8GB 256GB - 1 Xiaomi Redmi Note 13 Pro 5G 8GB 256GB 3d7fdf40...3486 30ffb61d...78db 0 Đang dùng Sửa Xóa" [ref=e1801]:
+                - cell "Xiaomi Redmi Note 13 Pro 5G 8GB 256GB - 1 Xiaomi Redmi Note 13 Pro 5G 8GB 256GB 3d7fdf40...3486" [ref=e1802]:
+                  - generic [ref=e1803]:
+                    - img "Xiaomi Redmi Note 13 Pro 5G 8GB 256GB - 1" [ref=e1804]
+                    - generic [ref=e1805]:
+                      - strong [ref=e1806]: Xiaomi Redmi Note 13 Pro 5G 8GB 256GB
+                      - generic [ref=e1807]: 3d7fdf40...3486
+                - cell "30ffb61d...78db" [ref=e1808]:
+                  - generic "30ffb61d-b139-40aa-ac65-f94cb0fc78db" [ref=e1809]: 30ffb61d...78db
+                - cell "0" [ref=e1810]
+                - cell "Đang dùng" [ref=e1811]:
+                  - generic [ref=e1812]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1813]:
+                  - generic [ref=e1814]:
+                    - button "Sửa" [ref=e1815] [cursor=pointer]
+                    - button "Xóa" [ref=e1816] [cursor=pointer]
+              - row "iPhone 15 Plus 128GB | Chính hãng VN/A - 1 iPhone 15 Plus 128GB | Chính hãng VN/A 3f854bdb...5c7a fff2062a...fa96 0 Đang dùng Sửa Xóa" [ref=e1817]:
+                - cell "iPhone 15 Plus 128GB | Chính hãng VN/A - 1 iPhone 15 Plus 128GB | Chính hãng VN/A 3f854bdb...5c7a" [ref=e1818]:
+                  - generic [ref=e1819]:
+                    - img "iPhone 15 Plus 128GB | Chính hãng VN/A - 1" [ref=e1820]
+                    - generic [ref=e1821]:
+                      - strong [ref=e1822]: iPhone 15 Plus 128GB | Chính hãng VN/A
+                      - generic [ref=e1823]: 3f854bdb...5c7a
+                - cell "fff2062a...fa96" [ref=e1824]:
+                  - generic "fff2062a-8e5c-4e76-b951-9262ea79fa96" [ref=e1825]: fff2062a...fa96
+                - cell "0" [ref=e1826]
+                - cell "Đang dùng" [ref=e1827]:
+                  - generic [ref=e1828]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1829]:
+                  - generic [ref=e1830]:
+                    - button "Sửa" [ref=e1831] [cursor=pointer]
+                    - button "Xóa" [ref=e1832] [cursor=pointer]
+              - row "Xiaomi 15 Ultra 5G 16GB 512GB - 1 Xiaomi 15 Ultra 5G 16GB 512GB 420eb743...bf69 e5789686...e44b 0 Đang dùng Sửa Xóa" [ref=e1833]:
+                - cell "Xiaomi 15 Ultra 5G 16GB 512GB - 1 Xiaomi 15 Ultra 5G 16GB 512GB 420eb743...bf69" [ref=e1834]:
+                  - generic [ref=e1835]:
+                    - img "Xiaomi 15 Ultra 5G 16GB 512GB - 1" [ref=e1836]
+                    - generic [ref=e1837]:
+                      - strong [ref=e1838]: Xiaomi 15 Ultra 5G 16GB 512GB
+                      - generic [ref=e1839]: 420eb743...bf69
+                - cell "e5789686...e44b" [ref=e1840]:
+                  - generic "e5789686-4847-4e39-bd34-581ca002e44b" [ref=e1841]: e5789686...e44b
+                - cell "0" [ref=e1842]
+                - cell "Đang dùng" [ref=e1843]:
+                  - generic [ref=e1844]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1845]:
+                  - generic [ref=e1846]:
+                    - button "Sửa" [ref=e1847] [cursor=pointer]
+                    - button "Xóa" [ref=e1848] [cursor=pointer]
+              - row "Nothing Phone 2A Plus 5G 12GB 256GB - Chỉ có tại CellphoneS - 1 Nothing Phone 2A Plus 5G 12GB 256GB - Chỉ có tại CellphoneS 427ab33f...074a a2814120...8f8f 0 Đang dùng Sửa Xóa" [ref=e1849]:
+                - cell "Nothing Phone 2A Plus 5G 12GB 256GB - Chỉ có tại CellphoneS - 1 Nothing Phone 2A Plus 5G 12GB 256GB - Chỉ có tại CellphoneS 427ab33f...074a" [ref=e1850]:
+                  - generic [ref=e1851]:
+                    - img "Nothing Phone 2A Plus 5G 12GB 256GB - Chỉ có tại CellphoneS - 1" [ref=e1852]
+                    - generic [ref=e1853]:
+                      - strong [ref=e1854]: Nothing Phone 2A Plus 5G 12GB 256GB - Chỉ có tại CellphoneS
+                      - generic [ref=e1855]: 427ab33f...074a
+                - cell "a2814120...8f8f" [ref=e1856]:
+                  - generic "a2814120-4fbd-45ec-9dfd-f2cd8ac78f8f" [ref=e1857]: a2814120...8f8f
+                - cell "0" [ref=e1858]
+                - cell "Đang dùng" [ref=e1859]:
+                  - generic [ref=e1860]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1861]:
+                  - generic [ref=e1862]:
+                    - button "Sửa" [ref=e1863] [cursor=pointer]
+                    - button "Xóa" [ref=e1864] [cursor=pointer]
+              - row "Samsung Galaxy S25 256GB - 1 Samsung Galaxy S25 256GB 4370a10d...b1bd 956eaf50...753c 0 Đang dùng Sửa Xóa" [ref=e1865]:
+                - cell "Samsung Galaxy S25 256GB - 1 Samsung Galaxy S25 256GB 4370a10d...b1bd" [ref=e1866]:
+                  - generic [ref=e1867]:
+                    - img "Samsung Galaxy S25 256GB - 1" [ref=e1868]
+                    - generic [ref=e1869]:
+                      - strong [ref=e1870]: Samsung Galaxy S25 256GB
+                      - generic [ref=e1871]: 4370a10d...b1bd
+                - cell "956eaf50...753c" [ref=e1872]:
+                  - generic "956eaf50-a268-4e39-916a-621ed7df753c" [ref=e1873]: 956eaf50...753c
+                - cell "0" [ref=e1874]
+                - cell "Đang dùng" [ref=e1875]:
+                  - generic [ref=e1876]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1877]:
+                  - generic [ref=e1878]:
+                    - button "Sửa" [ref=e1879] [cursor=pointer]
+                    - button "Xóa" [ref=e1880] [cursor=pointer]
+              - row "Điện thoại Nubia Z70S Ultra 5G 12GB 256GB - 1 Điện thoại Nubia Z70S Ultra 5G 12GB 256GB 4374ee48...b292 d04bc813...f056 0 Đang dùng Sửa Xóa" [ref=e1881]:
+                - cell "Điện thoại Nubia Z70S Ultra 5G 12GB 256GB - 1 Điện thoại Nubia Z70S Ultra 5G 12GB 256GB 4374ee48...b292" [ref=e1882]:
+                  - generic [ref=e1883]:
+                    - img "Điện thoại Nubia Z70S Ultra 5G 12GB 256GB - 1" [ref=e1884]
+                    - generic [ref=e1885]:
+                      - strong [ref=e1886]: Điện thoại Nubia Z70S Ultra 5G 12GB 256GB
+                      - generic [ref=e1887]: 4374ee48...b292
+                - cell "d04bc813...f056" [ref=e1888]:
+                  - generic "d04bc813-334c-40e5-a672-041978d6f056" [ref=e1889]: d04bc813...f056
+                - cell "0" [ref=e1890]
+                - cell "Đang dùng" [ref=e1891]:
+                  - generic [ref=e1892]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1893]:
+                  - generic [ref=e1894]:
+                    - button "Sửa" [ref=e1895] [cursor=pointer]
+                    - button "Xóa" [ref=e1896] [cursor=pointer]
+              - row "Xiaomi POCO X7 Pro 5G 12GB 256GB - Chỉ có tại CellphoneS - 1 Xiaomi POCO X7 Pro 5G 12GB 256GB - Chỉ có tại CellphoneS 44917485...c0ce 7fa57894...5053 0 Đang dùng Sửa Xóa" [ref=e1897]:
+                - cell "Xiaomi POCO X7 Pro 5G 12GB 256GB - Chỉ có tại CellphoneS - 1 Xiaomi POCO X7 Pro 5G 12GB 256GB - Chỉ có tại CellphoneS 44917485...c0ce" [ref=e1898]:
+                  - generic [ref=e1899]:
+                    - img "Xiaomi POCO X7 Pro 5G 12GB 256GB - Chỉ có tại CellphoneS - 1" [ref=e1900]
+                    - generic [ref=e1901]:
+                      - strong [ref=e1902]: Xiaomi POCO X7 Pro 5G 12GB 256GB - Chỉ có tại CellphoneS
+                      - generic [ref=e1903]: 44917485...c0ce
+                - cell "7fa57894...5053" [ref=e1904]:
+                  - generic "7fa57894-bad8-401f-9188-328a24245053" [ref=e1905]: 7fa57894...5053
+                - cell "0" [ref=e1906]
+                - cell "Đang dùng" [ref=e1907]:
+                  - generic [ref=e1908]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1909]:
+                  - generic [ref=e1910]:
+                    - button "Sửa" [ref=e1911] [cursor=pointer]
+                    - button "Xóa" [ref=e1912] [cursor=pointer]
+              - row "HONOR Magic V Flip 2 - 1 HONOR Magic V Flip 2 46057ade...047b 79fe253e...c8a3 0 Đang dùng Sửa Xóa" [ref=e1913]:
+                - cell "HONOR Magic V Flip 2 - 1 HONOR Magic V Flip 2 46057ade...047b" [ref=e1914]:
+                  - generic [ref=e1915]:
+                    - img "HONOR Magic V Flip 2 - 1" [ref=e1916]
+                    - generic [ref=e1917]:
+                      - strong [ref=e1918]: HONOR Magic V Flip 2
+                      - generic [ref=e1919]: 46057ade...047b
+                - cell "79fe253e...c8a3" [ref=e1920]:
+                  - generic "79fe253e-1dfa-4a89-b042-18a0a488c8a3" [ref=e1921]: 79fe253e...c8a3
+                - cell "0" [ref=e1922]
+                - cell "Đang dùng" [ref=e1923]:
+                  - generic [ref=e1924]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1925]:
+                  - generic [ref=e1926]:
+                    - button "Sửa" [ref=e1927] [cursor=pointer]
+                    - button "Xóa" [ref=e1928] [cursor=pointer]
+              - row "Xperia 5 V - 1 Xperia 5 V 4608be60...80c3 00250104...79ab 0 Đang dùng Sửa Xóa" [ref=e1929]:
+                - cell "Xperia 5 V - 1 Xperia 5 V 4608be60...80c3" [ref=e1930]:
+                  - generic [ref=e1931]:
+                    - img "Xperia 5 V - 1" [ref=e1932]
+                    - generic [ref=e1933]:
+                      - strong [ref=e1934]: Xperia 5 V
+                      - generic [ref=e1935]: 4608be60...80c3
+                - cell "00250104...79ab" [ref=e1936]:
+                  - generic "00250104-1e28-4226-8e39-f3505cee79ab" [ref=e1937]: 00250104...79ab
+                - cell "0" [ref=e1938]
+                - cell "Đang dùng" [ref=e1939]:
+                  - generic [ref=e1940]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1941]:
+                  - generic [ref=e1942]:
+                    - button "Sửa" [ref=e1943] [cursor=pointer]
+                    - button "Xóa" [ref=e1944] [cursor=pointer]
+              - row "Xiaomi POCO X7 5G 12GB 512GB - 1 Xiaomi POCO X7 5G 12GB 512GB 4621b921...3dce 0490e8cf...5815 0 Đang dùng Sửa Xóa" [ref=e1945]:
+                - cell "Xiaomi POCO X7 5G 12GB 512GB - 1 Xiaomi POCO X7 5G 12GB 512GB 4621b921...3dce" [ref=e1946]:
+                  - generic [ref=e1947]:
+                    - img "Xiaomi POCO X7 5G 12GB 512GB - 1" [ref=e1948]
+                    - generic [ref=e1949]:
+                      - strong [ref=e1950]: Xiaomi POCO X7 5G 12GB 512GB
+                      - generic [ref=e1951]: 4621b921...3dce
+                - cell "0490e8cf...5815" [ref=e1952]:
+                  - generic "0490e8cf-3b29-425a-8b83-432d848c5815" [ref=e1953]: 0490e8cf...5815
+                - cell "0" [ref=e1954]
+                - cell "Đang dùng" [ref=e1955]:
+                  - generic [ref=e1956]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1957]:
+                  - generic [ref=e1958]:
+                    - button "Sửa" [ref=e1959] [cursor=pointer]
+                    - button "Xóa" [ref=e1960] [cursor=pointer]
+              - row "TECNO CAMON 40 8GB 128GB - 1 TECNO CAMON 40 8GB 128GB 470d8200...0455 1646459b...a733 0 Đang dùng Sửa Xóa" [ref=e1961]:
+                - cell "TECNO CAMON 40 8GB 128GB - 1 TECNO CAMON 40 8GB 128GB 470d8200...0455" [ref=e1962]:
+                  - generic [ref=e1963]:
+                    - img "TECNO CAMON 40 8GB 128GB - 1" [ref=e1964]
+                    - generic [ref=e1965]:
+                      - strong [ref=e1966]: TECNO CAMON 40 8GB 128GB
+                      - generic [ref=e1967]: 470d8200...0455
+                - cell "1646459b...a733" [ref=e1968]:
+                  - generic "1646459b-016a-4a50-9ad3-8995a40da733" [ref=e1969]: 1646459b...a733
+                - cell "0" [ref=e1970]
+                - cell "Đang dùng" [ref=e1971]:
+                  - generic [ref=e1972]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1973]:
+                  - generic [ref=e1974]:
+                    - button "Sửa" [ref=e1975] [cursor=pointer]
+                    - button "Xóa" [ref=e1976] [cursor=pointer]
+              - row "Nubia V60 Design 6GB 256GB - 1 Nubia V60 Design 6GB 256GB 475a051b...e3e5 05ee86e9...f6ca 0 Đang dùng Sửa Xóa" [ref=e1977]:
+                - cell "Nubia V60 Design 6GB 256GB - 1 Nubia V60 Design 6GB 256GB 475a051b...e3e5" [ref=e1978]:
+                  - generic [ref=e1979]:
+                    - img "Nubia V60 Design 6GB 256GB - 1" [ref=e1980]
+                    - generic [ref=e1981]:
+                      - strong [ref=e1982]: Nubia V60 Design 6GB 256GB
+                      - generic [ref=e1983]: 475a051b...e3e5
+                - cell "05ee86e9...f6ca" [ref=e1984]:
+                  - generic "05ee86e9-2a32-4bc2-9996-d2aeb766f6ca" [ref=e1985]: 05ee86e9...f6ca
+                - cell "0" [ref=e1986]
+                - cell "Đang dùng" [ref=e1987]:
+                  - generic [ref=e1988]: Đang dùng
+                - cell "Sửa Xóa" [ref=e1989]:
+                  - generic [ref=e1990]:
+                    - button "Sửa" [ref=e1991] [cursor=pointer]
+                    - button "Xóa" [ref=e1992] [cursor=pointer]
+              - row "OnePlus Ace Pro - 1 OnePlus Ace Pro 48230309...4740 99d5292e...c8d7 0 Đang dùng Sửa Xóa" [ref=e1993]:
+                - cell "OnePlus Ace Pro - 1 OnePlus Ace Pro 48230309...4740" [ref=e1994]:
+                  - generic [ref=e1995]:
+                    - img "OnePlus Ace Pro - 1" [ref=e1996]
+                    - generic [ref=e1997]:
+                      - strong [ref=e1998]: OnePlus Ace Pro
+                      - generic [ref=e1999]: 48230309...4740
+                - cell "99d5292e...c8d7" [ref=e2000]:
+                  - generic "99d5292e-c613-4949-9f50-9ca48bbfc8d7" [ref=e2001]: 99d5292e...c8d7
+                - cell "0" [ref=e2002]
+                - cell "Đang dùng" [ref=e2003]:
+                  - generic [ref=e2004]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2005]:
+                  - generic [ref=e2006]:
+                    - button "Sửa" [ref=e2007] [cursor=pointer]
+                    - button "Xóa" [ref=e2008] [cursor=pointer]
+              - row "Nubia Red Magic 9 Pro - 1 Nubia Red Magic 9 Pro 487e271b...5d3a 8a6443c7...fa50 0 Đang dùng Sửa Xóa" [ref=e2009]:
+                - cell "Nubia Red Magic 9 Pro - 1 Nubia Red Magic 9 Pro 487e271b...5d3a" [ref=e2010]:
+                  - generic [ref=e2011]:
+                    - img "Nubia Red Magic 9 Pro - 1" [ref=e2012]
+                    - generic [ref=e2013]:
+                      - strong [ref=e2014]: Nubia Red Magic 9 Pro
+                      - generic [ref=e2015]: 487e271b...5d3a
+                - cell "8a6443c7...fa50" [ref=e2016]:
+                  - generic "8a6443c7-0055-4a59-839f-b779e3e7fa50" [ref=e2017]: 8a6443c7...fa50
+                - cell "0" [ref=e2018]
+                - cell "Đang dùng" [ref=e2019]:
+                  - generic [ref=e2020]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2021]:
+                  - generic [ref=e2022]:
+                    - button "Sửa" [ref=e2023] [cursor=pointer]
+                    - button "Xóa" [ref=e2024] [cursor=pointer]
+              - row "Redmi Note 13 Pro 5G 12GB 512GB - 1 Redmi Note 13 Pro 5G 12GB 512GB 4b69f4dc...2118 3a2b1fbd...eb4f 0 Đang dùng Sửa Xóa" [ref=e2025]:
+                - cell "Redmi Note 13 Pro 5G 12GB 512GB - 1 Redmi Note 13 Pro 5G 12GB 512GB 4b69f4dc...2118" [ref=e2026]:
+                  - generic [ref=e2027]:
+                    - img "Redmi Note 13 Pro 5G 12GB 512GB - 1" [ref=e2028]
+                    - generic [ref=e2029]:
+                      - strong [ref=e2030]: Redmi Note 13 Pro 5G 12GB 512GB
+                      - generic [ref=e2031]: 4b69f4dc...2118
+                - cell "3a2b1fbd...eb4f" [ref=e2032]:
+                  - generic "3a2b1fbd-4afb-43dd-98bc-43eb6fc4eb4f" [ref=e2033]: 3a2b1fbd...eb4f
+                - cell "0" [ref=e2034]
+                - cell "Đang dùng" [ref=e2035]:
+                  - generic [ref=e2036]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2037]:
+                  - generic [ref=e2038]:
+                    - button "Sửa" [ref=e2039] [cursor=pointer]
+                    - button "Xóa" [ref=e2040] [cursor=pointer]
+              - row "Honor Magic 5 - 1 Honor Magic 5 4ecca0d9...343f 3bc7a0c5...d17e 0 Đang dùng Sửa Xóa" [ref=e2041]:
+                - cell "Honor Magic 5 - 1 Honor Magic 5 4ecca0d9...343f" [ref=e2042]:
+                  - generic [ref=e2043]:
+                    - img "Honor Magic 5 - 1" [ref=e2044]
+                    - generic [ref=e2045]:
+                      - strong [ref=e2046]: Honor Magic 5
+                      - generic [ref=e2047]: 4ecca0d9...343f
+                - cell "3bc7a0c5...d17e" [ref=e2048]:
+                  - generic "3bc7a0c5-525b-4d62-9c87-7ce76e27d17e" [ref=e2049]: 3bc7a0c5...d17e
+                - cell "0" [ref=e2050]
+                - cell "Đang dùng" [ref=e2051]:
+                  - generic [ref=e2052]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2053]:
+                  - generic [ref=e2054]:
+                    - button "Sửa" [ref=e2055] [cursor=pointer]
+                    - button "Xóa" [ref=e2056] [cursor=pointer]
+              - row "Samsung Galaxy S25 Ultra 12GB 256GB - 1 Samsung Galaxy S25 Ultra 12GB 256GB 4fa71e71...3839 a7c3b2d1...c339 0 Đang dùng Sửa Xóa" [ref=e2057]:
+                - cell "Samsung Galaxy S25 Ultra 12GB 256GB - 1 Samsung Galaxy S25 Ultra 12GB 256GB 4fa71e71...3839" [ref=e2058]:
+                  - generic [ref=e2059]:
+                    - img "Samsung Galaxy S25 Ultra 12GB 256GB - 1" [ref=e2060]
+                    - generic [ref=e2061]:
+                      - strong [ref=e2062]: Samsung Galaxy S25 Ultra 12GB 256GB
+                      - generic [ref=e2063]: 4fa71e71...3839
+                - cell "a7c3b2d1...c339" [ref=e2064]:
+                  - generic "a7c3b2d1-a0db-45d9-a8b6-bea50158c339" [ref=e2065]: a7c3b2d1...c339
+                - cell "0" [ref=e2066]
+                - cell "Đang dùng" [ref=e2067]:
+                  - generic [ref=e2068]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2069]:
+                  - generic [ref=e2070]:
+                    - button "Sửa" [ref=e2071] [cursor=pointer]
+                    - button "Xóa" [ref=e2072] [cursor=pointer]
+              - row "Nubia V70 Design 8GB 128GB - 1 Nubia V70 Design 8GB 128GB 516001e8...2da4 0f8bdbb0...5333 0 Đang dùng Sửa Xóa" [ref=e2073]:
+                - cell "Nubia V70 Design 8GB 128GB - 1 Nubia V70 Design 8GB 128GB 516001e8...2da4" [ref=e2074]:
+                  - generic [ref=e2075]:
+                    - img "Nubia V70 Design 8GB 128GB - 1" [ref=e2076]
+                    - generic [ref=e2077]:
+                      - strong [ref=e2078]: Nubia V70 Design 8GB 128GB
+                      - generic [ref=e2079]: 516001e8...2da4
+                - cell "0f8bdbb0...5333" [ref=e2080]:
+                  - generic "0f8bdbb0-c8ab-4172-9452-881d6b9f5333" [ref=e2081]: 0f8bdbb0...5333
+                - cell "0" [ref=e2082]
+                - cell "Đang dùng" [ref=e2083]:
+                  - generic [ref=e2084]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2085]:
+                  - generic [ref=e2086]:
+                    - button "Sửa" [ref=e2087] [cursor=pointer]
+                    - button "Xóa" [ref=e2088] [cursor=pointer]
+              - row "TECNO Spark 40 8GB 256GB - 1 TECNO Spark 40 8GB 256GB 51b671f5...5a99 7631b1be...9bf4 0 Đang dùng Sửa Xóa" [ref=e2089]:
+                - cell "TECNO Spark 40 8GB 256GB - 1 TECNO Spark 40 8GB 256GB 51b671f5...5a99" [ref=e2090]:
+                  - generic [ref=e2091]:
+                    - img "TECNO Spark 40 8GB 256GB - 1" [ref=e2092]
+                    - generic [ref=e2093]:
+                      - strong [ref=e2094]: TECNO Spark 40 8GB 256GB
+                      - generic [ref=e2095]: 51b671f5...5a99
+                - cell "7631b1be...9bf4" [ref=e2096]:
+                  - generic "7631b1be-7a76-4b6f-9987-2984c7fb9bf4" [ref=e2097]: 7631b1be...9bf4
+                - cell "0" [ref=e2098]
+                - cell "Đang dùng" [ref=e2099]:
+                  - generic [ref=e2100]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2101]:
+                  - generic [ref=e2102]:
+                    - button "Sửa" [ref=e2103] [cursor=pointer]
+                    - button "Xóa" [ref=e2104] [cursor=pointer]
+              - row "Xiaomi Redmi Note 14 6GB 128GB - 1 Xiaomi Redmi Note 14 6GB 128GB 524531d5...5499 31814bd8...459d 0 Đang dùng Sửa Xóa" [ref=e2105]:
+                - cell "Xiaomi Redmi Note 14 6GB 128GB - 1 Xiaomi Redmi Note 14 6GB 128GB 524531d5...5499" [ref=e2106]:
+                  - generic [ref=e2107]:
+                    - img "Xiaomi Redmi Note 14 6GB 128GB - 1" [ref=e2108]
+                    - generic [ref=e2109]:
+                      - strong [ref=e2110]: Xiaomi Redmi Note 14 6GB 128GB
+                      - generic [ref=e2111]: 524531d5...5499
+                - cell "31814bd8...459d" [ref=e2112]:
+                  - generic "31814bd8-5322-4c01-8205-0a38fc88459d" [ref=e2113]: 31814bd8...459d
+                - cell "0" [ref=e2114]
+                - cell "Đang dùng" [ref=e2115]:
+                  - generic [ref=e2116]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2117]:
+                  - generic [ref=e2118]:
+                    - button "Sửa" [ref=e2119] [cursor=pointer]
+                    - button "Xóa" [ref=e2120] [cursor=pointer]
+              - row "Realme V25 - 1 Realme V25 53333037...5884 4cc80f34...a2bf 0 Đang dùng Sửa Xóa" [ref=e2121]:
+                - cell "Realme V25 - 1 Realme V25 53333037...5884" [ref=e2122]:
+                  - generic [ref=e2123]:
+                    - img "Realme V25 - 1" [ref=e2124]
+                    - generic [ref=e2125]:
+                      - strong [ref=e2126]: Realme V25
+                      - generic [ref=e2127]: 53333037...5884
+                - cell "4cc80f34...a2bf" [ref=e2128]:
+                  - generic "4cc80f34-f501-453e-9dd9-b6eebfaba2bf" [ref=e2129]: 4cc80f34...a2bf
+                - cell "0" [ref=e2130]
+                - cell "Đang dùng" [ref=e2131]:
+                  - generic [ref=e2132]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2133]:
+                  - generic [ref=e2134]:
+                    - button "Sửa" [ref=e2135] [cursor=pointer]
+                    - button "Xóa" [ref=e2136] [cursor=pointer]
+              - row "TECNO CAMON 40 Pro 8GB 256GB - 1 TECNO CAMON 40 Pro 8GB 256GB 538606cd...e917 a9e0ac76...488c 0 Đang dùng Sửa Xóa" [ref=e2137]:
+                - cell "TECNO CAMON 40 Pro 8GB 256GB - 1 TECNO CAMON 40 Pro 8GB 256GB 538606cd...e917" [ref=e2138]:
+                  - generic [ref=e2139]:
+                    - img "TECNO CAMON 40 Pro 8GB 256GB - 1" [ref=e2140]
+                    - generic [ref=e2141]:
+                      - strong [ref=e2142]: TECNO CAMON 40 Pro 8GB 256GB
+                      - generic [ref=e2143]: 538606cd...e917
+                - cell "a9e0ac76...488c" [ref=e2144]:
+                  - generic "a9e0ac76-ffac-4d9c-9269-2c0cb1eb488c" [ref=e2145]: a9e0ac76...488c
+                - cell "0" [ref=e2146]
+                - cell "Đang dùng" [ref=e2147]:
+                  - generic [ref=e2148]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2149]:
+                  - generic [ref=e2150]:
+                    - button "Sửa" [ref=e2151] [cursor=pointer]
+                    - button "Xóa" [ref=e2152] [cursor=pointer]
+              - row "Xiaomi POCO C71 4GB 128GB - 1 Xiaomi POCO C71 4GB 128GB 53caafdb...3e70 902fb111...8836 0 Đang dùng Sửa Xóa" [ref=e2153]:
+                - cell "Xiaomi POCO C71 4GB 128GB - 1 Xiaomi POCO C71 4GB 128GB 53caafdb...3e70" [ref=e2154]:
+                  - generic [ref=e2155]:
+                    - img "Xiaomi POCO C71 4GB 128GB - 1" [ref=e2156]
+                    - generic [ref=e2157]:
+                      - strong [ref=e2158]: Xiaomi POCO C71 4GB 128GB
+                      - generic [ref=e2159]: 53caafdb...3e70
+                - cell "902fb111...8836" [ref=e2160]:
+                  - generic "902fb111-39fe-42ae-8aec-0b8e8c6b8836" [ref=e2161]: 902fb111...8836
+                - cell "0" [ref=e2162]
+                - cell "Đang dùng" [ref=e2163]:
+                  - generic [ref=e2164]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2165]:
+                  - generic [ref=e2166]:
+                    - button "Sửa" [ref=e2167] [cursor=pointer]
+                    - button "Xóa" [ref=e2168] [cursor=pointer]
+              - row "OnePlus 9 Pro - 1 OnePlus 9 Pro 53fd41f1...0c91 874ee86f...ff79 0 Đang dùng Sửa Xóa" [ref=e2169]:
+                - cell "OnePlus 9 Pro - 1 OnePlus 9 Pro 53fd41f1...0c91" [ref=e2170]:
+                  - generic [ref=e2171]:
+                    - img "OnePlus 9 Pro - 1" [ref=e2172]
+                    - generic [ref=e2173]:
+                      - strong [ref=e2174]: OnePlus 9 Pro
+                      - generic [ref=e2175]: 53fd41f1...0c91
+                - cell "874ee86f...ff79" [ref=e2176]:
+                  - generic "874ee86f-68e4-4de1-ae33-54130569ff79" [ref=e2177]: 874ee86f...ff79
+                - cell "0" [ref=e2178]
+                - cell "Đang dùng" [ref=e2179]:
+                  - generic [ref=e2180]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2181]:
+                  - generic [ref=e2182]:
+                    - button "Sửa" [ref=e2183] [cursor=pointer]
+                    - button "Xóa" [ref=e2184] [cursor=pointer]
+              - row "Nokia XR21 5G - 1 Nokia XR21 5G 571963de...6b47 7216c183...bf32 0 Đang dùng Sửa Xóa" [ref=e2185]:
+                - cell "Nokia XR21 5G - 1 Nokia XR21 5G 571963de...6b47" [ref=e2186]:
+                  - generic [ref=e2187]:
+                    - img "Nokia XR21 5G - 1" [ref=e2188]
+                    - generic [ref=e2189]:
+                      - strong [ref=e2190]: Nokia XR21 5G
+                      - generic [ref=e2191]: 571963de...6b47
+                - cell "7216c183...bf32" [ref=e2192]:
+                  - generic "7216c183-b3f7-41b8-b6d9-be1bc87fbf32" [ref=e2193]: 7216c183...bf32
+                - cell "0" [ref=e2194]
+                - cell "Đang dùng" [ref=e2195]:
+                  - generic [ref=e2196]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2197]:
+                  - generic [ref=e2198]:
+                    - button "Sửa" [ref=e2199] [cursor=pointer]
+                    - button "Xóa" [ref=e2200] [cursor=pointer]
+              - row "Xiaomi 14T Pro 12GB 512GB - 1 Xiaomi 14T Pro 12GB 512GB 58f56adb...fe3b 45fd419d...2afa 0 Đang dùng Sửa Xóa" [ref=e2201]:
+                - cell "Xiaomi 14T Pro 12GB 512GB - 1 Xiaomi 14T Pro 12GB 512GB 58f56adb...fe3b" [ref=e2202]:
+                  - generic [ref=e2203]:
+                    - img "Xiaomi 14T Pro 12GB 512GB - 1" [ref=e2204]
+                    - generic [ref=e2205]:
+                      - strong [ref=e2206]: Xiaomi 14T Pro 12GB 512GB
+                      - generic [ref=e2207]: 58f56adb...fe3b
+                - cell "45fd419d...2afa" [ref=e2208]:
+                  - generic "45fd419d-dae6-48ed-94ac-7d08ae082afa" [ref=e2209]: 45fd419d...2afa
+                - cell "0" [ref=e2210]
+                - cell "Đang dùng" [ref=e2211]:
+                  - generic [ref=e2212]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2213]:
+                  - generic [ref=e2214]:
+                    - button "Sửa" [ref=e2215] [cursor=pointer]
+                    - button "Xóa" [ref=e2216] [cursor=pointer]
+              - row "vivo V30E 12GB 256GB - 1 vivo V30E 12GB 256GB 59a37ff6...3a60 7f94f563...33bd 0 Đang dùng Sửa Xóa" [ref=e2217]:
+                - cell "vivo V30E 12GB 256GB - 1 vivo V30E 12GB 256GB 59a37ff6...3a60" [ref=e2218]:
+                  - generic [ref=e2219]:
+                    - img "vivo V30E 12GB 256GB - 1" [ref=e2220]
+                    - generic [ref=e2221]:
+                      - strong [ref=e2222]: vivo V30E 12GB 256GB
+                      - generic [ref=e2223]: 59a37ff6...3a60
+                - cell "7f94f563...33bd" [ref=e2224]:
+                  - generic "7f94f563-83fe-47c7-8de8-b7cdd56e33bd" [ref=e2225]: 7f94f563...33bd
+                - cell "0" [ref=e2226]
+                - cell "Đang dùng" [ref=e2227]:
+                  - generic [ref=e2228]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2229]:
+                  - generic [ref=e2230]:
+                    - button "Sửa" [ref=e2231] [cursor=pointer]
+                    - button "Xóa" [ref=e2232] [cursor=pointer]
+              - row "Xiaomi 14T 12GB 512GB - 1 Xiaomi 14T 12GB 512GB 59d24bc0...a5cb b7ca6502...cf3c 0 Đang dùng Sửa Xóa" [ref=e2233]:
+                - cell "Xiaomi 14T 12GB 512GB - 1 Xiaomi 14T 12GB 512GB 59d24bc0...a5cb" [ref=e2234]:
+                  - generic [ref=e2235]:
+                    - img "Xiaomi 14T 12GB 512GB - 1" [ref=e2236]
+                    - generic [ref=e2237]:
+                      - strong [ref=e2238]: Xiaomi 14T 12GB 512GB
+                      - generic [ref=e2239]: 59d24bc0...a5cb
+                - cell "b7ca6502...cf3c" [ref=e2240]:
+                  - generic "b7ca6502-14c1-42a3-b580-0ae08155cf3c" [ref=e2241]: b7ca6502...cf3c
+                - cell "0" [ref=e2242]
+                - cell "Đang dùng" [ref=e2243]:
+                  - generic [ref=e2244]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2245]:
+                  - generic [ref=e2246]:
+                    - button "Sửa" [ref=e2247] [cursor=pointer]
+                    - button "Xóa" [ref=e2248] [cursor=pointer]
+              - row "OnePlus Ace 2V - 1 OnePlus Ace 2V 5b8dc38b...bafa 6d73b7d2...1330 0 Đang dùng Sửa Xóa" [ref=e2249]:
+                - cell "OnePlus Ace 2V - 1 OnePlus Ace 2V 5b8dc38b...bafa" [ref=e2250]:
+                  - generic [ref=e2251]:
+                    - img "OnePlus Ace 2V - 1" [ref=e2252]
+                    - generic [ref=e2253]:
+                      - strong [ref=e2254]: OnePlus Ace 2V
+                      - generic [ref=e2255]: 5b8dc38b...bafa
+                - cell "6d73b7d2...1330" [ref=e2256]:
+                  - generic "6d73b7d2-c75f-44d9-ac78-6579faa31330" [ref=e2257]: 6d73b7d2...1330
+                - cell "0" [ref=e2258]
+                - cell "Đang dùng" [ref=e2259]:
+                  - generic [ref=e2260]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2261]:
+                  - generic [ref=e2262]:
+                    - button "Sửa" [ref=e2263] [cursor=pointer]
+                    - button "Xóa" [ref=e2264] [cursor=pointer]
+              - row "INOI A83 6GB 128GB - 1 INOI A83 6GB 128GB 5bb323d9...21ac e749fcba...f80c 0 Đang dùng Sửa Xóa" [ref=e2265]:
+                - cell "INOI A83 6GB 128GB - 1 INOI A83 6GB 128GB 5bb323d9...21ac" [ref=e2266]:
+                  - generic [ref=e2267]:
+                    - img "INOI A83 6GB 128GB - 1" [ref=e2268]
+                    - generic [ref=e2269]:
+                      - strong [ref=e2270]: INOI A83 6GB 128GB
+                      - generic [ref=e2271]: 5bb323d9...21ac
+                - cell "e749fcba...f80c" [ref=e2272]:
+                  - generic "e749fcba-b0cf-491e-9629-acf4309bf80c" [ref=e2273]: e749fcba...f80c
+                - cell "0" [ref=e2274]
+                - cell "Đang dùng" [ref=e2275]:
+                  - generic [ref=e2276]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2277]:
+                  - generic [ref=e2278]:
+                    - button "Sửa" [ref=e2279] [cursor=pointer]
+                    - button "Xóa" [ref=e2280] [cursor=pointer]
+              - row "iPhone 16 Plus 128GB | Chính hãng VN/A - 1 iPhone 16 Plus 128GB | Chính hãng VN/A 5cf2e464...95c8 c27eeaa1...de4f 0 Đang dùng Sửa Xóa" [ref=e2281]:
+                - cell "iPhone 16 Plus 128GB | Chính hãng VN/A - 1 iPhone 16 Plus 128GB | Chính hãng VN/A 5cf2e464...95c8" [ref=e2282]:
+                  - generic [ref=e2283]:
+                    - img "iPhone 16 Plus 128GB | Chính hãng VN/A - 1" [ref=e2284]
+                    - generic [ref=e2285]:
+                      - strong [ref=e2286]: iPhone 16 Plus 128GB | Chính hãng VN/A
+                      - generic [ref=e2287]: 5cf2e464...95c8
+                - cell "c27eeaa1...de4f" [ref=e2288]:
+                  - generic "c27eeaa1-70d1-4de1-bf23-54ece8d4de4f" [ref=e2289]: c27eeaa1...de4f
+                - cell "0" [ref=e2290]
+                - cell "Đang dùng" [ref=e2291]:
+                  - generic [ref=e2292]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2293]:
+                  - generic [ref=e2294]:
+                    - button "Sửa" [ref=e2295] [cursor=pointer]
+                    - button "Xóa" [ref=e2296] [cursor=pointer]
+              - row "Tecno Pova 7 8GB 128GB - 1 Tecno Pova 7 8GB 128GB 5f2a8bb1...8361 7cf8c81f...45a6 0 Đang dùng Sửa Xóa" [ref=e2297]:
+                - cell "Tecno Pova 7 8GB 128GB - 1 Tecno Pova 7 8GB 128GB 5f2a8bb1...8361" [ref=e2298]:
+                  - generic [ref=e2299]:
+                    - img "Tecno Pova 7 8GB 128GB - 1" [ref=e2300]
+                    - generic [ref=e2301]:
+                      - strong [ref=e2302]: Tecno Pova 7 8GB 128GB
+                      - generic [ref=e2303]: 5f2a8bb1...8361
+                - cell "7cf8c81f...45a6" [ref=e2304]:
+                  - generic "7cf8c81f-bbac-4a65-a5c1-ecd9865d45a6" [ref=e2305]: 7cf8c81f...45a6
+                - cell "0" [ref=e2306]
+                - cell "Đang dùng" [ref=e2307]:
+                  - generic [ref=e2308]: Đang dùng
+                - cell "Sửa Xóa" [ref=e2309]:
+                  - generic [ref=e2310]:
+                    - button "Sửa" [ref=e2311] [cursor=pointer]
+                    - button "Xóa" [ref=e2312] [cursor=pointer]

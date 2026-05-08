@@ -9,6 +9,7 @@ import { renderBrandPage } from './pages/brand'
 import { renderCategoriesPage } from './pages/categories'
 import { renderLoginPage } from './pages/login'
 import { renderRegisterPage } from './pages/register'
+import { renderAdminProductsPage } from './pages/adminProducts'
 
 // Define routes
 router.addRoute('/', () => {
@@ -45,6 +46,10 @@ router.addRoute('/login', () => {
 
 router.addRoute('/register', () => {
   renderRegisterPage()
+})
+
+router.addRoute('/admin', () => {
+  renderAdminProductsPage()
 })
 
 
