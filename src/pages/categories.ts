@@ -1,6 +1,6 @@
 // Categories page - Visual directory of all brands
 import { apiService } from '../api/apiService';
-import type { Category } from '../types.ts';
+import type { Category, Phone } from '../types.ts';
 import { renderHeader, updateCartBadge } from '../components/header';
 
 export async function renderCategoriesPage(): Promise<void> {
@@ -11,21 +11,15 @@ export async function renderCategoriesPage(): Promise<void> {
   updateCartBadge();
 
   try {
-    // Fetch all categories
-    const categories = await apiService.getCategories();
-
-    // For each category, fetch products to get count
-    const categoriesWithCount = await Promise.all(
-      categories.map(async (category) => {
-        try {
-          const products = await apiService.getProductsByCategory(category.code || category.id);
-          return { ...category, productCount: products.length };
-        } catch (e) {
-          console.error(`Failed to load products for ${category.name}`, e);
-          return { ...category, productCount: 0 };
-        }
-      })
-    );
+    const [categories, products] = await Promise.all([
+      apiService.getCategories(),
+      apiService.getProducts({ page: 0, size: 500 }),
+    ]);
+    const productCounts = countProductsByCategory(products, categories);
+    const categoriesWithCount = categories.map(category => ({
+      ...category,
+      productCount: productCounts[getCategoryCode(category)] || 0,
+    }));
 
     app.innerHTML = `
       ${renderHeader()}
@@ -109,6 +103,64 @@ interface CategoryWithCount extends Category {
   productCount: number;
 }
 
+const CATEGORY_ALIASES: Record<string, string[]> = {
+  apple: ['apple', 'iphone', 'ipad'],
+  samsung: ['samsung', 'galaxy'],
+  xiaomi: ['xiaomi', 'redmi', 'poco'],
+  honor: ['honor'],
+  tecno: ['tecno'],
+  oppo: ['oppo'],
+  nubia: ['nubia'],
+  sony: ['sony', 'xperia'],
+  nokia: ['nokia'],
+  infinix: ['infinix'],
+  nothingphone: ['nothingphone', 'nothing-phone', 'nothing phone'],
+  masstel: ['masstel'],
+  realme: ['realme'],
+  itel: ['itel'],
+  vivo: ['vivo'],
+  oneplus: ['oneplus', 'one-plus', 'one plus'],
+  tcl: ['tcl'],
+  inoi: ['inoi'],
+  benco: ['benco'],
+  asus: ['asus', 'rog phone', 'rog-phone'],
+};
+
+function countProductsByCategory(products: Phone[], categories: Category[]): Record<string, number> {
+  const counts = Object.fromEntries(categories.map(category => [getCategoryCode(category), 0]));
+  const categoryAliases = categories.map(category => ({
+    code: getCategoryCode(category),
+    aliases: getCategoryAliases(category),
+  }));
+
+  products.forEach(product => {
+    const haystack = normalizeText(`${product.id} ${product.name} ${product.brand}`);
+    const matched = categoryAliases.find(category =>
+      category.aliases.some(alias => haystack.includes(alias))
+    );
+
+    if (matched) counts[matched.code] += 1;
+  });
+
+  return counts;
+}
+
+function getCategoryAliases(category: Category): string[] {
+  const code = getCategoryCode(category);
+  return CATEGORY_ALIASES[code] || [code, normalizeText(category.name)];
+}
+
+function getCategoryCode(category: Category): string {
+  return String(category.code || category.id).toLowerCase();
+}
+
+function normalizeText(value: string): string {
+  return value
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/đ/g, 'd');
+}
 
 function renderCategoryShowcaseCard(category: CategoryWithCount): string {
   const logo = category.iconLink || category.image;

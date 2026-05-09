@@ -1,5 +1,13 @@
 // Real API service to connect to backend
-import type { Category, Phone, ApiResponse, ProductDetail } from '../types';
+import type {
+  ApiResponse,
+  Category,
+  Phone,
+  ProductDetail,
+  ProductListItem,
+  ProductPage,
+  ProductSearchParams,
+} from '../types';
 
 const API_BASE_URL = ''; // Use relative path to leverage Vite proxy
 
@@ -40,33 +48,38 @@ class ApiService {
   }
 
   /**
+   * Public product search endpoint.
+   * Endpoint: GET /api/products
+   */
+  async getProductPage(params: ProductSearchParams = {}): Promise<ProductPage> {
+    const query = new URLSearchParams();
+
+    this.appendQuery(query, 'keyword', params.keyword);
+    this.appendQuery(query, 'categoryCode', params.categoryCode);
+    this.appendQuery(query, 'status', params.status);
+    this.appendQuery(query, 'minPrice', params.minPrice);
+    this.appendQuery(query, 'maxPrice', params.maxPrice);
+    this.appendQuery(query, 'sortBy', params.sortBy);
+    query.set('page', String(params.page ?? 0));
+    query.set('size', String(params.size ?? 500));
+
+    const response = await this.fetchApi<ApiResponse<ProductPage>>(`/api/products?${query.toString()}`);
+    return response.data;
+  }
+
+  async getProducts(params: ProductSearchParams = {}): Promise<Phone[]> {
+    const page = await this.getProductPage(params);
+    const items = Array.isArray(page?.content) ? page.content : [];
+    return items.map(item => this.mapProductItem(item, params.categoryCode || ''));
+  }
+
+  /**
    * API 2: Get list of products by category ID
    * Endpoint: GET /api/list-product-by-category/{categoryId}
    */
   async getProductsByCategory(categoryId: string): Promise<Phone[]> {
     try {
-      const response = await this.fetchApi<ApiResponse<any[]>>(
-        `/api/list-product-by-category/${categoryId}`
-      );
-      const items = Array.isArray(response?.data) ? response.data : [];
-      return items.map((item: any) => ({
-        id: item.code,
-        name: item.name,
-        brand: categoryId,
-        price: Number(item.priceShow) || 0,
-        image: item.iconLink,
-        description: `${item.productDisplay || ''} ${item.productStorage || ''}`.trim(),
-        specs: {
-          screen: item.productDisplay || '',
-          cpu: '',
-          ram: item.productStorage || '',
-          storage: item.productStorage || '',
-          camera: '',
-          battery: '',
-        },
-        inStock: true,
-        featured: false,
-      }));
+      return await this.getProducts({ categoryCode: categoryId, page: 0, size: 500 });
     } catch (error) {
       console.error(`Error fetching products for category ${categoryId}:`, error);
       throw error;
@@ -103,6 +116,34 @@ class ApiService {
       console.error(`Error fetching product detail for ${productCode}:`, error);
       return null;
     }
+  }
+
+  private mapProductItem(item: ProductListItem, brand = ''): Phone {
+    const description = `${item.productDisplay || ''} ${item.productStorage || ''}`.trim();
+
+    return {
+      id: item.code,
+      name: item.name,
+      brand,
+      price: Number(item.priceShow) || 0,
+      image: item.iconLink || '',
+      description,
+      specs: {
+        screen: item.productDisplay || '',
+        cpu: '',
+        ram: item.productStorage || '',
+        storage: item.productStorage || '',
+        camera: '',
+        battery: '',
+      },
+      inStock: item.status !== 0,
+      featured: false,
+    };
+  }
+
+  private appendQuery(query: URLSearchParams, key: string, value?: string): void {
+    const normalized = value?.trim();
+    if (normalized) query.set(key, normalized);
   }
 }
 

@@ -86,10 +86,9 @@ export async function renderHomePage(): Promise<void> {
     const brandList = ['apple', 'samsung', 'xiaomi', 'oppo', 'vivo'];
     const displayBrands = categories.filter(c => brandList.includes((c.code || c.id).toLowerCase()));
 
-    // Fetch "Featured" (Apple) and "New Arrivals" (Samsung)
     const [featuredProducts, newArrivals] = await Promise.all([
-      apiService.getProductsByCategory('apple'),
-      apiService.getProductsByCategory('samsung')
+      apiService.getProducts({ categoryCode: 'apple', page: 0, size: 4 }),
+      apiService.getProducts({ categoryCode: 'samsung', page: 0, size: 4 })
     ]);
 
     // 3. Update Content Area

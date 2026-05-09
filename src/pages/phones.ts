@@ -11,23 +11,7 @@ export async function renderPhonesPage(): Promise<void> {
   updateCartBadge();
 
   try {
-    // Fetch all categories to get all products
-    const categories = await apiService.getCategories();
-
-    // Fetch products for all categories
-    const allProductsArrays = await Promise.all(
-      categories.map(async (category) => {
-        try {
-          return await apiService.getProductsByCategory(category.code || category.id);
-        } catch (e) {
-          console.error(`Failed to load products for ${category.name}`, e);
-          return [];
-        }
-      })
-    );
-
-    // Flatten array
-    const phones = allProductsArrays.flat();
+    const phones = await apiService.getProducts({ page: 0, size: 500 });
 
     app.innerHTML = `
       ${renderHeader()}

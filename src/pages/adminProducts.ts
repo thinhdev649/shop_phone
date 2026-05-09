@@ -20,7 +20,7 @@ import type {
 } from '../types';
 
 type AdminResourceKey = 'categories' | 'details' | 'variants' | 'gallery';
-type AdminViewKey = 'products' | 'resources';
+type AdminModuleKey = 'products' | AdminResourceKey;
 
 type AdminResourceItem = CategoryAdminItem | ProductDetailAdminItem | ProductVariantAdminItem | BoxGalleryAdminItem;
 const RESOURCE_DISPLAY_LIMIT = 100;
@@ -33,7 +33,7 @@ let currentParams: ProductSearchParams = {
   size: 10,
 };
 let editingProductCode = '';
-let activeAdminView: AdminViewKey = 'products';
+let activeAdminModule: AdminModuleKey = 'products';
 let activeResourceKey: AdminResourceKey = 'categories';
 let editingResourceId = '';
 let resourceLoadId = 0;
@@ -111,47 +111,24 @@ function renderAdminShell(): string {
           <div>
             <span class="admin-eyebrow">Trang quản trị</span>
             <h1>Quản trị cửa hàng điện thoại</h1>
-            <p>Theo dõi và cập nhật nhanh dữ liệu đang hiển thị trên website bán hàng.</p>
+            <div class="admin-quick-stats" aria-label="Tổng quan dữ liệu">
+              <span><strong id="admin-stat-products">--</strong> sản phẩm</span>
+              <span><strong id="admin-stat-categories">--</strong> danh mục</span>
+              <span><strong id="admin-stat-details">--</strong> thông số</span>
+            </div>
           </div>
           <button type="button" id="admin-product-new" class="btn btn-primary">Thêm sản phẩm</button>
         </section>
 
-        <section class="admin-api-grid">
-          <div class="admin-api-card active">
-            <span>Sản phẩm</span>
-            <strong id="admin-stat-products">--</strong>
-            <p>Điện thoại trong hệ thống</p>
-          </div>
-          <div class="admin-api-card active">
-            <span>Danh mục</span>
-            <strong id="admin-stat-categories">--</strong>
-            <p>Hãng điện thoại đang quản lý</p>
-          </div>
-          <div class="admin-api-card active">
-            <span>Thông số</span>
-            <strong id="admin-stat-details">--</strong>
-            <p>Bản ghi cấu hình chi tiết</p>
-          </div>
-          <div class="admin-api-card active">
-            <span>Cần bổ sung</span>
-            <strong>Đơn hàng</strong>
-            <p>Chưa mở chức năng xử lý đơn đặt hàng</p>
-          </div>
-        </section>
-
-        <nav class="admin-view-tabs" aria-label="Chọn màn quản trị">
-          <button type="button" class="admin-view-tab ${activeAdminView === 'products' ? 'active' : ''}" data-admin-view-tab="products">Sản phẩm</button>
-          <button type="button" class="admin-view-tab ${activeAdminView === 'resources' ? 'active' : ''}" data-admin-view-tab="resources">Dữ liệu sản phẩm</button>
+        <nav class="admin-view-tabs" aria-label="Chọn nhóm quản trị">
+          <button type="button" class="admin-view-tab ${activeAdminModule === 'products' ? 'active' : ''}" data-admin-module-tab="products">Sản phẩm</button>
+          <button type="button" class="admin-view-tab ${activeAdminModule === 'categories' ? 'active' : ''}" data-admin-module-tab="categories">Danh mục</button>
+          <button type="button" class="admin-view-tab ${activeAdminModule === 'details' ? 'active' : ''}" data-admin-module-tab="details">Thông số</button>
+          <button type="button" class="admin-view-tab ${activeAdminModule === 'variants' ? 'active' : ''}" data-admin-module-tab="variants">Phiên bản</button>
+          <button type="button" class="admin-view-tab ${activeAdminModule === 'gallery' ? 'active' : ''}" data-admin-module-tab="gallery">Hình ảnh</button>
         </nav>
 
-        <section id="admin-products-view" class="admin-workspace" data-admin-view="products" ${activeAdminView === 'products' ? '' : 'hidden'}>
-          <div class="admin-section-heading">
-            <div>
-              <span class="admin-eyebrow">Sản phẩm</span>
-              <h2>Quản lý sản phẩm bán hàng</h2>
-            </div>
-            <p>Danh sách có lọc nhanh theo tên, hãng, giá và trạng thái.</p>
-          </div>
+        <section id="admin-products-view" class="admin-workspace" data-admin-workspace="products" ${activeAdminModule === 'products' ? '' : 'hidden'}>
           <div class="admin-layout">
             <div class="admin-list-panel">
               ${renderFilters()}
@@ -161,14 +138,7 @@ function renderAdminShell(): string {
           </div>
         </section>
 
-        <section id="admin-resources-view" class="admin-workspace" data-admin-view="resources" ${activeAdminView === 'resources' ? '' : 'hidden'}>
-          <div class="admin-section-heading">
-            <div>
-              <span class="admin-eyebrow">Dữ liệu sản phẩm</span>
-              <h2>Quản lý danh mục, thông số và hình ảnh</h2>
-            </div>
-            <p>Mỗi tab bên dưới là một nhóm dữ liệu riêng.</p>
-          </div>
+        <section id="admin-resources-view" class="admin-workspace" data-admin-workspace="resources" ${activeAdminModule === 'products' ? 'hidden' : ''}>
           ${renderAdminResourceSection()}
         </section>
 
@@ -192,13 +162,6 @@ function renderProductModal(): string {
 function renderAdminResourceSection(): string {
   return `
     <section class="admin-resource-section">
-      <div class="admin-resource-tabs" role="tablist" aria-label="Quản lý dữ liệu sản phẩm">
-        <button type="button" class="admin-resource-tab ${activeResourceKey === 'categories' ? 'active' : ''}" data-admin-resource-tab="categories">Danh mục</button>
-        <button type="button" class="admin-resource-tab ${activeResourceKey === 'details' ? 'active' : ''}" data-admin-resource-tab="details">Thông số</button>
-        <button type="button" class="admin-resource-tab ${activeResourceKey === 'variants' ? 'active' : ''}" data-admin-resource-tab="variants">Phiên bản</button>
-        <button type="button" class="admin-resource-tab ${activeResourceKey === 'gallery' ? 'active' : ''}" data-admin-resource-tab="gallery">Hình ảnh</button>
-      </div>
-
       <div id="admin-resource-status" class="admin-status" hidden></div>
       <div id="admin-resource-panel" class="admin-resource-panel">
         ${renderResourceLoading(getResourceLoadingText(activeResourceKey))}
@@ -211,12 +174,10 @@ function renderFilters(): string {
   return `
     <form id="admin-filter-form" class="admin-filter-form">
       <div class="form-group">
-        <label class="form-label" for="admin-keyword">Tìm theo tên/mã</label>
-        <input id="admin-keyword" name="keyword" class="form-input" type="search" placeholder="iPhone, Samsung...">
+        <input id="admin-keyword" name="keyword" class="form-input" type="search" placeholder="Tìm tên hoặc mã sản phẩm">
       </div>
 
       <div class="form-group">
-        <label class="form-label" for="admin-category">Hãng</label>
         <select id="admin-category" name="categoryCode" class="form-select">
           <option value="">Tất cả hãng</option>
           ${categories.map(category => `
@@ -226,30 +187,18 @@ function renderFilters(): string {
       </div>
 
       <div class="form-group">
-        <label class="form-label" for="admin-status-filter">Trạng thái</label>
         <select id="admin-status-filter" name="status" class="form-select">
-          <option value="">Tất cả</option>
+          <option value="">Tất cả trạng thái</option>
           <option value="1">Đang bán</option>
           <option value="0">Ẩn/xóa mềm</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label class="form-label" for="admin-min-price">Giá từ</label>
-        <input id="admin-min-price" name="minPrice" class="form-input" type="number" min="0" step="100000">
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="admin-max-price">Giá đến</label>
-        <input id="admin-max-price" name="maxPrice" class="form-input" type="number" min="0" step="100000">
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="admin-page-size">Số dòng</label>
         <select id="admin-page-size" name="size" class="form-select">
-          <option value="10">10</option>
-          <option value="20">20</option>
-          <option value="50">50</option>
+          <option value="10">10 dòng</option>
+          <option value="20">20 dòng</option>
+          <option value="50">50 dòng</option>
         </select>
       </div>
 
@@ -376,6 +325,8 @@ function setupAdminListeners(): void {
 
   setupAdminViewListeners();
   setupAdminResourceListeners();
+  document.removeEventListener('keydown', handleAdminEscapeKey);
+  document.addEventListener('keydown', handleAdminEscapeKey);
 
   newProductButton?.addEventListener('click', () => {
     resetProductForm();
@@ -412,45 +363,56 @@ function setupAdminListeners(): void {
   });
 }
 
+function handleAdminEscapeKey(event: KeyboardEvent): void {
+  if (event.key !== 'Escape') return;
+
+  const resourceModal = document.getElementById('admin-resource-modal');
+  if (resourceModal && !resourceModal.hidden) {
+    closeAdminResourceModal();
+    return;
+  }
+
+  const productModal = document.getElementById('admin-product-modal');
+  if (productModal && !productModal.hidden) {
+    closeProductModal();
+  }
+}
+
 function setupAdminViewListeners(): void {
-  document.querySelectorAll('[data-admin-view-tab]').forEach(button => {
-    button.addEventListener('click', () => {
-      const key = (button as HTMLElement).dataset.adminViewTab;
-      if (key === 'products' || key === 'resources') {
-        setActiveAdminView(key);
+  document.querySelectorAll('[data-admin-module-tab]').forEach(button => {
+    button.addEventListener('click', async () => {
+      const key = (button as HTMLElement).dataset.adminModuleTab;
+      if (key === 'products') {
+        setActiveAdminModule('products');
+        return;
+      }
+
+      if (isResourceKey(key)) {
+        activeResourceKey = key;
+        editingResourceId = '';
+        setActiveAdminModule(key);
+        await loadAdminResource(key);
       }
     });
   });
 }
 
-function setActiveAdminView(key: AdminViewKey): void {
-  activeAdminView = key;
+function setActiveAdminModule(key: AdminModuleKey): void {
+  activeAdminModule = key;
 
-  document.querySelectorAll<HTMLElement>('[data-admin-view-tab]').forEach(tab => {
-    tab.classList.toggle('active', tab.dataset.adminViewTab === key);
+  document.querySelectorAll<HTMLElement>('[data-admin-module-tab]').forEach(tab => {
+    tab.classList.toggle('active', tab.dataset.adminModuleTab === key);
   });
 
-  document.querySelectorAll<HTMLElement>('[data-admin-view]').forEach(view => {
-    view.hidden = view.dataset.adminView !== key;
-  });
+  const productsView = document.getElementById('admin-products-view');
+  const resourcesView = document.getElementById('admin-resources-view');
+
+  if (productsView) productsView.hidden = key !== 'products';
+  if (resourcesView) resourcesView.hidden = key === 'products';
 }
 
 function setupAdminResourceListeners(): void {
   const panel = document.getElementById('admin-resource-panel');
-
-  document.querySelectorAll('[data-admin-resource-tab]').forEach(button => {
-    button.addEventListener('click', async () => {
-      const key = (button as HTMLElement).dataset.adminResourceTab;
-      if (!isResourceKey(key)) return;
-
-      activeResourceKey = key;
-      editingResourceId = '';
-      document.querySelectorAll('[data-admin-resource-tab]').forEach(tab => {
-        tab.classList.toggle('active', tab === button);
-      });
-      await loadAdminResource(activeResourceKey);
-    });
-  });
 
   panel?.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -755,7 +717,6 @@ function renderResourceFilter(key: AdminResourceKey, filters: Record<string, str
   const parentFilter = key === 'variants' || key === 'gallery'
     ? `
       <div class="form-group">
-        <label class="form-label" for="resource-parent-filter">Sản phẩm liên kết</label>
         <input id="resource-parent-filter" name="parent" class="form-input" type="text" value="${escapeHtml(filters.parent || '')}" placeholder="Dán mã liên kết sản phẩm">
       </div>
     `
@@ -764,7 +725,6 @@ function renderResourceFilter(key: AdminResourceKey, filters: Record<string, str
   const productIdFilter = key === 'details'
     ? `
       <div class="form-group">
-        <label class="form-label" for="resource-product-id-filter">Sản phẩm liên kết</label>
         <input id="resource-product-id-filter" name="productId" class="form-input" type="text" value="${escapeHtml(filters.productId || '')}" placeholder="Dán mã liên kết sản phẩm">
       </div>
     `
@@ -775,9 +735,8 @@ function renderResourceFilter(key: AdminResourceKey, filters: Record<string, str
       ${productIdFilter}
       ${parentFilter}
       <div class="form-group">
-        <label class="form-label" for="resource-status-filter">Trạng thái</label>
         <select id="resource-status-filter" name="status" class="form-select">
-          <option value="" ${!filters.status ? 'selected' : ''}>Tất cả</option>
+          <option value="" ${!filters.status ? 'selected' : ''}>Tất cả trạng thái</option>
           <option value="1" ${filters.status === '1' ? 'selected' : ''}>Đang dùng</option>
           <option value="0" ${filters.status === '0' ? 'selected' : ''}>Ẩn/xóa mềm</option>
         </select>

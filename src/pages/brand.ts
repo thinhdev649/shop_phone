@@ -16,8 +16,7 @@ export async function renderBrandPage(brandId: string): Promise<void> {
     const currentCategory = categories.find(c => (c.code || c.id) === brandId);
     const brandName = currentCategory ? currentCategory.name : brandId;
 
-    // Fetch products for this brand
-    const products = await apiService.getProductsByCategory(brandId);
+    const products = await apiService.getProducts({ categoryCode: brandId, page: 0, size: 500 });
 
     app.innerHTML = `
       ${renderHeader()}

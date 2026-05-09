@@ -273,6 +273,10 @@ class AdminProductService {
     const payload = await this.parseResponse(response);
 
     if (!response.ok) {
+      if (response.status === 403) {
+        throw new Error(this.getForbiddenMessage(endpoint));
+      }
+
       throw new Error(this.getErrorMessage(payload) || `API request failed: ${response.status}`);
     }
 
@@ -312,6 +316,14 @@ class AdminProductService {
       (data && typeof data === 'object' ? (data as Record<string, unknown>).message : '') ||
       ''
     );
+  }
+
+  private getForbiddenMessage(endpoint: string): string {
+    if (endpoint.startsWith('/api/admin/products')) {
+      return 'Backend đang trả 403 khi lưu sản phẩm. Frontend đã gửi token ADMIN, cần backend mở quyền cho API /api/admin/products.';
+    }
+
+    return 'Backend từ chối quyền thao tác (403). Vui lòng đăng nhập lại bằng tài khoản ADMIN hoặc kiểm tra phân quyền API.';
   }
 }
 
